@@ -1,0 +1,11 @@
+kotlin-styled/1.0.0-pre.94-kotlin-1.3.70/1.0.0-pre.94-kotlin-1.3.70/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin-styled/
+kotlin-css-js/1.0.0-pre.94-kotlin-1.3.70/1.0.0-pre.94-kotlin-1.3.70/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin-css-js/
+kotlin-react-dom/16.13.0-pre.94-kotlin-1.3.70/16.13.0-pre.94-kotlin-1.3.70/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin-react-dom/
+kotlin-react/16.13.0-pre.94-kotlin-1.3.70/16.13.0-pre.94-kotlin-1.3.70/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin-react/
+kotlin-extensions/1.0.1-pre.94-kotlin-1.3.70/1.0.1-pre.94-kotlin-1.3.70/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin-extensions/
+kotlinx-coroutines-core/1.3.5/1.3.5/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlinx-coroutines-core/
+kotlin/1.3.70/1.3.70/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin/
+kotlin-material-ui-core/0.3.0/0.3.0/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin-material-ui-core/
+kotlin-material-ui-lab/0.3.0/0.3.0/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin-material-ui-lab/
+kotlinx-html-js/0.7.1/0.7.1/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlinx-html-js/
+kotlin-test/1.3.70/1.3.70/file:///home/petr/IdeaProjects/BUTILKA/build/node_modules_imported/kotlin-test/
