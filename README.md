@@ -24,7 +24,3 @@ React for client
 `./gradlew ktor-run` runs ktor application only.
 
 `./gradlew ktor-stop` stops ktor application only.
-
-### In Intellij IDEA 
-You need to download jdbc connector library and include it by go to 
-    file->project structure -> libraries -> add -> path to your jdbc connector
