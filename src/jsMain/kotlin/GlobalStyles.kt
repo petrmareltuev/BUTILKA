@@ -1,6 +1,6 @@
+// import kotlinext.js.invoke // deprecated?
 import kotlinx.css.*
 import styled.StyledComponents
-import kotlinext.js.invoke
 import styled.injectGlobal
 
 object GlobalStyles {
@@ -14,4 +14,4 @@ object GlobalStyles {
 
         StyledComponents.injectGlobal(styles.toString())
     }
-}
+} 

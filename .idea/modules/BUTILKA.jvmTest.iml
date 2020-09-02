@@ -6,8 +6,8 @@
         <dependsOnModuleNames>BUTILKA:commonTest</dependsOnModuleNames>
         <sourceSets>
           <sourceSet>BUTILKA.jvmMain</sourceSet>
-          <sourceSet>BUTILKA.commonTest</sourceSet>
           <sourceSet>BUTILKA.commonMain</sourceSet>
+          <sourceSet>BUTILKA.commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <externalSystemTestTasks>jvmTest|BUTILKA:jvmTest|jvm</externalSystemTestTasks>
