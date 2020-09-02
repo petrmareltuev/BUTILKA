@@ -7,8 +7,6 @@ import io.ktor.http.content.files
 import io.ktor.http.content.static
 import io.ktor.routing.get
 import io.ktor.routing.routing
-import kotlinx.css.*
-import kotlinx.css.properties.lh
 import kotlinx.html.*
 import java.sql.Connection
 import java.sql.DriverManager
@@ -18,18 +16,18 @@ import java.sql.Statement
 fun Application.main() {
 
 
-    /*val conn: Connection
+    val conn: Connection
     val statement: Statement
 
     val username = "root"
-    val password = "bdgefcbvC"
-    val connectionURL = "jdbc:mysql://localhost:3306/butilka?serverTimezone=Europe/Moscow"
-
+    val password = "mpibutilka"
+    //val connectionURL = "jdbc:mysql://localhost:3306/butilka?serverTimezone=Europe/Moscow"
+    val connectionURL = "jdbc:postgresql://localhost:5432/root"
     conn = DriverManager.getConnection(connectionURL, username, password)
-    print("Connection to butilka DB established`")
     statement = conn.createStatement()
-    databaseInit(statement)*/
+    databaseInit(statement)
 
+    print("HELLO")
 
     routing {
 
@@ -53,7 +51,6 @@ fun Application.main() {
                 }
             }
         }
-
 
         static("/") {
             files("build/bundle")
