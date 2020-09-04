@@ -24,3 +24,6 @@ React for client
 `./gradlew ktor-run` runs ktor application only.
 
 `./gradlew ktor-stop` stops ktor application only.
+
+
+Logs in folder build/logs/

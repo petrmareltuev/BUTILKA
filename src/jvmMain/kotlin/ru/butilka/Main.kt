@@ -2,6 +2,11 @@ package ru.butilka
 
 import io.ktor.application.Application
 import io.ktor.application.call
+import io.ktor.application.install
+import io.ktor.features.CORS
+import io.ktor.features.ContentNegotiation
+import io.ktor.gson.GsonConverter
+import io.ktor.http.ContentType
 import io.ktor.html.respondHtml
 import io.ktor.http.content.files
 import io.ktor.http.content.static
@@ -12,6 +17,8 @@ import org.jetbrains.exposed.sql.SchemaUtils
 import org.jetbrains.exposed.sql.*
 import ru.butilka.database.Users
 import ru.butilka.database.database
+import ru.butilka.routing.login
+
 /*import java.sql.Connection
 import java.sql.DriverManager
 import java.sql.Statement
@@ -19,8 +26,27 @@ import ru.butilka.database.databaseInit*/
 
 fun Application.main() {
 
+    install(CORS) {
+        header("Content-Type")
+        anyHost() // @TODO: Don't do this in production if possible. Specify address of WDS server
+    }
+    install(ContentNegotiation) {
+        register(ContentType.Application.Json, GsonConverter())
+    }
+
+    //TODO go to apache httpclient
+    //TODO add routing of all requests
+    //TODO add serialization for json parsing and delete ToString method in common
+    //TODO refactor react views
+    //TODO launch database queries with coroutines
+    //TODO main.bundle.js is too big
+    //TODO add data validation
+    //TODO strings more than 20 symbols dont accepted by database
+
+
     database {
         SchemaUtils.create(Users)
+
         Users.insert {
             it[username] = "Nick"
             it[password] = "qwerty"
@@ -51,6 +77,7 @@ fun Application.main() {
 
     routing {
 
+        login()
         get("/") {
             call.respondHtml {
                 head {

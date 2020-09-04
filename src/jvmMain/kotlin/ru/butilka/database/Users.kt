@@ -2,8 +2,6 @@ package ru.butilka.database
 
 import org.jetbrains.exposed.dao.id.IntIdTable
 
-//TODO strings more than 20 symbols dont accepted by database
-
 object Users: IntIdTable() {
     val userId = integer("userId").uniqueIndex().autoIncrement()
     val username = varchar("username", 50)
