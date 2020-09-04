@@ -5,9 +5,9 @@
       <configuration version="3" platform="JavaScript " allPlatforms="JS []" useProjectSettings="false" isTestModule="true" externalProjectId="BUTILKA">
         <dependsOnModuleNames>BUTILKA:commonTest</dependsOnModuleNames>
         <sourceSets>
-          <sourceSet>BUTILKA.commonMain</sourceSet>
-          <sourceSet>BUTILKA.jsMain</sourceSet>
           <sourceSet>BUTILKA.commonTest</sourceSet>
+          <sourceSet>BUTILKA.jsMain</sourceSet>
+          <sourceSet>BUTILKA.commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
         <compilerSettings />
