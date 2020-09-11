@@ -19,17 +19,13 @@ import org.jetbrains.exposed.sql.selectAll
 
 fun Route.login() {
     post("/login") {
-        //println("POST received ${call.receiveText()}")
-        //val userData = call.receive<LoginData>()
         val req = call.receiveText()
-
         println(req)
         val userData = Json.parse(LoginData.serializer(), req)
+        println(userData)
 
 
-
-
-        println(userData.username + " " + userData.password)
+        /*println(userData.username + " " + userData.password)
         database {
             val result = Users.select{Users.username eq userData.username and (Users.password eq userData.username)}
             result.forEach { println("$it")}
@@ -48,7 +44,7 @@ fun Route.login() {
                     it[Users.phone],
                     it[Users.email]
             )
-        }
+        }*/
 
         call.respondText("Hello", contentType = ContentType.Application.Json)
 

@@ -25,10 +25,6 @@ class Transport(private val coroutineContext: CoroutineContext) {
         return Json.parse(deserializationStrategy, fetch(url, "POST", body))
     }
 
-    internal suspend fun <T> getList(url: String, deserializationStrategy: KSerializer<T>, vararg args: Pair<String, Any>): List<T> {
-        return Json.parse(deserializationStrategy.list, fetch(url, "GET", ""))
-    }
-
     //, vararg args: Pair<String, Any>
     private suspend fun fetch(ur: String,method: String, body: String): String {
         var url = "/$ur"
