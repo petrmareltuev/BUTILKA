@@ -12,13 +12,13 @@ var RunConfig = {
     "host": "localhost",
     "port": 8080,
     "shutDownPath": "/webpack/dev/server/shutdown",
-    "webPackConfig": "/home/petr/IdeaProjects/BUTILKA/build/webpack.config.js",
+    "webPackConfig": "X:\\Users\\Cuckoos nest\\IdeaProjects\\BUTILKA\\build\\webpack.config.js",
     "contentPath": null,
     "proxyUrl": "http://0.0.0.0:8081",
     "publicPath": "/",
     "sourceMap": false,
     "stats": "errors-only",
-    "bundlePath": "/home/petr/IdeaProjects/BUTILKA/build/classes/kotlin/js/main/BUTILKA.js",
+    "bundlePath": "X:\\Users\\Cuckoos nest\\IdeaProjects\\BUTILKA\\build\\classes\\kotlin\\js\\main\\BUTILKA.js",
     "moduleName": "BUTILKA"
 };
 

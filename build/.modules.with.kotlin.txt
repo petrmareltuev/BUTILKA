@@ -1,22 +1,15 @@
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlinx-coroutines-core
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-wrappers-kotlin-css
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-react-dom
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-css-js/build/classes/main
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-css-js/build/classes/kotlin/test
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-styled
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-css/build/classes/kotlin/main
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-css/build/classes/kotlin/test
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-extensions/build/classes/main
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-react
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlinx-html
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-material-ui-core
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-material-ui-core/node_modules/kotlinx-coroutines-core
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-material-ui-core/node_modules/kotlin
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-react-dom
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-css-js
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-styled
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-test
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlinx-html-js
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-extensions
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-react
-/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\@jetbrains\kotlin-css\build\classes\kotlin\main
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\@jetbrains\kotlin-css\build\classes\kotlin\test
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\@jetbrains\kotlin-css-js\build\classes\kotlin\test
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\@jetbrains\kotlin-css-js\build\classes\main
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\@jetbrains\kotlin-extensions\build\classes\main
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlin
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlin-css-js
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlin-extensions
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlin-react
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlin-react-dom
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlin-styled
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlin-test
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlinx-coroutines-core
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlinx-html
+X:\Users\Cuckoos nest\IdeaProjects\BUTILKA\build\node_modules\kotlinx-html-js

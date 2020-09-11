@@ -8,6 +8,7 @@
           <sourceSet>BUTILKA.commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
+        <productionOutputPath>$MODULE_DIR$/../../build/classes/kotlin/js/main/BUTILKA.js</productionOutputPath>
         <compilerSettings />
         <compilerArguments>
           <option name="outputFile" value="$MODULE_DIR$/../../build/classes/kotlin/js/main/BUTILKA.js" />

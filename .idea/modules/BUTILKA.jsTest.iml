@@ -10,6 +10,7 @@
           <sourceSet>BUTILKA.commonTest</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
+        <testOutputPath>$MODULE_DIR$/../../build/classes/kotlin/js/test/BUTILKA_test.js</testOutputPath>
         <compilerSettings />
         <compilerArguments>
           <option name="outputFile" value="$MODULE_DIR$/../../build/classes/kotlin/js/test/BUTILKA_test.js" />
