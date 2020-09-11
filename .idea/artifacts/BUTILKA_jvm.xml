@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="BUTILKA-jvm">
-    <output-path>$PROJECT_DIR$/build/libs</output-path>
-    <root id="archive" name="BUTILKA-jvm.jar">
-      <element id="module-output" name="BUTILKA.jvmMain" />
-    </root>
-  </artifact>
-</component>

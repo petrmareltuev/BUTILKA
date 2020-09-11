@@ -2,12 +2,13 @@ package view
 
 import httpPOST
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import kotlinx.css.marginBottom
 import kotlinx.css.padding
 import kotlinx.css.px
 import react.*
-import ru.butilka.LoginData
-import ru.butilka.User
+import model.LoginData
+import model.User
 import styled.StyleSheet
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
@@ -15,6 +16,7 @@ import kotlinx.html.js.onClickFunction
 import org.w3c.dom.*
 import org.w3c.dom.events.Event
 import react.dom.*
+import services.LoginService
 
 internal val Event.inputValue: String
     get() = (target as? HTMLInputElement)?.value ?: (target as? HTMLTextAreaElement)?.value ?: ""
@@ -36,13 +38,22 @@ interface LoginPageState : RState{
     var errorMessage:String
 }
 
-class ApplicationComponent : RComponent<RProps, LoginPageState>() {
+interface LoginProps: RProps {
+    var coroutineScope: CoroutineScope
+}
+
+
+class ApplicationComponent : RComponent<LoginProps, LoginPageState>() {
 
     override fun LoginPageState.init(){
         username = ""
         password = ""
         errorMessage = ""
     }
+
+    private val coroutineContext
+        get() = props.coroutineScope.coroutineContext
+
 
     override fun RBuilder.render() {
         div("") {
@@ -107,8 +118,15 @@ class ApplicationComponent : RComponent<RProps, LoginPageState>() {
     }
 
     private fun doLogin() {
+        val loginService = LoginService(coroutineContext)
         val loginData = LoginData(state.username, state.password)
-        httpPOST("/login",loginData.toString(),::loginResponse)
+        props.coroutineScope.launch {
+            val user = loginService.login(loginData)
+            setState {
+                errorMessage = user.toString()
+            }
+        }
+        //httpPOST("/login",loginData.toString(),::loginResponse)
     }
 
     private fun loginResponse(response: String){
@@ -129,7 +147,7 @@ class ApplicationComponent : RComponent<RProps, LoginPageState>() {
 }
 
 
-internal var currentUser :User? = null
+internal var currentUser : User? = null
 
 internal fun logInUser(user: User){
     currentUser = user

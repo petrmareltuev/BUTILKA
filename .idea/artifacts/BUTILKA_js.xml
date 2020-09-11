@@ -1,8 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="jar" name="BUTILKA-js">
-    <output-path>$PROJECT_DIR$/build/libs</output-path>
-    <root id="archive" name="BUTILKA-js.jar">
-      <element id="module-output" name="BUTILKA.jsMain" />
-    </root>
-  </artifact>
-</component>
