@@ -4,12 +4,13 @@ import database.Users
 import database.database
 import model.User
 import model.LoginData
+import org.jetbrains.exposed.sql.and
 import org.jetbrains.exposed.sql.select
 
 actual class LoginService{
     actual suspend fun login(loginData: LoginData): User {
         return database {
-            Users.select { Users.username eq loginData.username }
+            Users.select { Users.username eq loginData.username and (Users.password eq loginData.username)}
                 .firstOrNull()?.let {
                     User(
                         it[Users.username],
@@ -23,7 +24,7 @@ actual class LoginService{
                         it[Users.phone],
                         it[Users.email]
                     )
-                } ?: throw IllegalArgumentException("No such user")
+                } ?: throw IllegalArgumentException("There is not such user")
         }
     }
 }

@@ -11,7 +11,6 @@ import io.ktor.routing.get
 import io.ktor.routing.routing
 import kotlinx.html.*
 import org.jetbrains.exposed.sql.SchemaUtils
-import org.jetbrains.exposed.sql.*
 import database.Users
 import database.database
 import routing.login
@@ -44,7 +43,7 @@ fun Application.main() {
     database {
         SchemaUtils.create(Users)
 
-        Users.insert {
+        /*Users.insert {
             it[username] = "Nick"
             it[password] = "qwerty"
             it[fullname] = "Nick Sinclare"
@@ -58,7 +57,7 @@ fun Application.main() {
             it[isMajor] = false
         }
 
-        Users.selectAll().forEach { println("$it") }
+        Users.selectAll().forEach { println("$it") }*/
     }
 
     /*val conn: Connection
