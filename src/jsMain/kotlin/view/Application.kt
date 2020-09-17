@@ -16,6 +16,7 @@ import kotlinx.html.js.onClickFunction
 import org.w3c.dom.*
 import org.w3c.dom.events.Event
 import react.dom.*
+import rpc.StatusCodeException
 import services.LoginService
 
 internal val Event.inputValue: String
@@ -123,10 +124,18 @@ class ApplicationComponent : RComponent<LoginProps, LoginPageState>() {
         val loginService = LoginService(coroutineContext)
         val loginData = LoginData(state.username, state.password)
         props.coroutineScope.launch {
-            val user = loginService.login(loginData)
-            setState {
-                errorMessage = user.toString()
+            try {
+                val user = loginService.login(loginData)
+                setState {
+                    errorMessage = user.toString()
+                }
             }
+            catch (e: StatusCodeException){
+                setState {
+                    errorMessage = "Пошел нахуй"
+                }
+            }
+
         }
         //httpPOST("/login",loginData.toString(),::loginResponse)
     }

@@ -41,6 +41,9 @@ class Transport(private val coroutineContext: CoroutineContext) {
                 credentials = "same-origin".asDynamic(),
                 body = body)).await()
 
+            if (!response.status.equals(200)){
+                throw StatusCodeException(response.status)
+            }
             response.text().await()
 
         }
