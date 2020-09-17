@@ -1,7 +1,7 @@
 package routing
 
 import io.ktor.application.call
-import io.ktor.http.ContentType
+import io.ktor.http.*
 import io.ktor.request.receiveText
 import io.ktor.response.respondText
 import io.ktor.routing.Route
@@ -22,7 +22,8 @@ fun Route.login() {
             call.respondText(Json.stringify(User.serializer(),user), contentType = ContentType.Application.Json)
         }
         catch (e: IllegalArgumentException){
-            call.respondText("There is not such user", contentType = ContentType.Application.Json)
+            //call.respondText("There is not such user", contentType = ContentType.Application.Json)
+            call.response.status(HttpStatusCode.Unauthorized)
         }
     }
 }

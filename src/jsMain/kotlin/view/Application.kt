@@ -1,11 +1,11 @@
 package view
 
-import httpPOST
+import components.renderAppBar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlinx.css.marginBottom
 import kotlinx.css.padding
-import kotlinx.css.px
+import kotlinx.css.*
 import react.*
 import model.LoginData
 import model.User
@@ -56,7 +56,9 @@ class ApplicationComponent : RComponent<LoginProps, LoginPageState>() {
 
 
     override fun RBuilder.render() {
-        div("") {
+        div("App") {
+
+            renderAppBar()
             div {
                 h1 { +"Login" }
             }

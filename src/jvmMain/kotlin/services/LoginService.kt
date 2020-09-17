@@ -10,7 +10,7 @@ import org.jetbrains.exposed.sql.select
 actual class LoginService{
     actual suspend fun login(loginData: LoginData): User {
         return database {
-            Users.select { Users.username eq loginData.username and (Users.password eq loginData.username)}
+            Users.select { Users.username eq loginData.username and (Users.password eq loginData.password)}
                 .firstOrNull()?.let {
                     User(
                         it[Users.username],
