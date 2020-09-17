@@ -1,38 +1,21 @@
 package view
 
-/*
-import components.renderAppBar
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.launch
-import kotlinx.css.marginBottom
-import kotlinx.css.padding
-import kotlinx.css.*
-import react.*
-import model.LoginData
-import model.User
-import styled.StyleSheet
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
 import kotlinx.html.js.onClickFunction
-import org.w3c.dom.*
-import org.w3c.dom.events.Event
+import react.*
 import react.dom.*
-import rpc.StatusCodeException
-import services.LoginService
+import model.inputValue
+import model.LoginData
+import model.User
 
-internal val Event.inputValue: String
-    get() = (target as? HTMLInputElement)?.value ?: (target as? HTMLTextAreaElement)?.value ?: ""
-
-private object ApplicationStyles: StyleSheet("ApplicationStyles", isStatic = true) {
-    val wrapper by css {
-        padding(32.px, 16.px)
-    }
-
-    val post by css {
-        marginBottom = 32.px
-    }
+fun RBuilder.loginComponent(goUser: () -> Unit) = child(LoginComponent::class) {
+    attrs.goUser = goUser
 }
 
+external interface LoginProps: RProps {
+    var goUser: () -> Unit
+}
 
 interface LoginPageState : RState{
     var username:String
@@ -40,12 +23,7 @@ interface LoginPageState : RState{
     var errorMessage:String
 }
 
-interface LoginProps: RProps {
-    var coroutineScope: CoroutineScope
-}
-
-
-class ApplicationComponent : RComponent<LoginProps, LoginPageState>() {
+class LoginComponent : RComponent<LoginProps, LoginPageState>() {
 
     override fun LoginPageState.init(){
         username = ""
@@ -53,14 +31,8 @@ class ApplicationComponent : RComponent<LoginProps, LoginPageState>() {
         errorMessage = ""
     }
 
-    private val coroutineContext
-        get() = props.coroutineScope.coroutineContext
-
-
     override fun RBuilder.render() {
-        div("App") {
-
-            renderAppBar()
+        div("") {
             div {
                 h1 { +"Login" }
             }
@@ -122,22 +94,7 @@ class ApplicationComponent : RComponent<LoginProps, LoginPageState>() {
     }
 
     private fun doLogin() {
-        val loginService = LoginService(coroutineContext)
         val loginData = LoginData(state.username, state.password)
-        props.coroutineScope.launch {
-            try {
-                val user = loginService.login(loginData)
-                setState {
-                    errorMessage = user.toString()
-                }
-            }
-            catch (e: StatusCodeException){
-                setState {
-                    errorMessage = "Пошел нахуй"
-                }
-            }
-
-        }
         //httpPOST("/login",loginData.toString(),::loginResponse)
     }
 
@@ -152,7 +109,7 @@ class ApplicationComponent : RComponent<LoginProps, LoginPageState>() {
                 errorMessage = "good"
                 val user = JSON.parse<User>(response)
                 logInUser(user)
-
+                props.goUser()
             }
         }
     }
@@ -161,39 +118,10 @@ class ApplicationComponent : RComponent<LoginProps, LoginPageState>() {
 
 internal var currentUser : User? = null
 
-internal fun logInUser(user: User){
+internal fun logInUser(user:User){
     currentUser = user
 }
 
 internal fun logOutUser(){
     currentUser = null
 }
-*/
-
-/*
-interface ApplicationProps: RProps {
-    var coroutineScope: CoroutineScope
-}
-
-class ApplicationState: RState
-
-class ApplicationComponent: RComponent<ApplicationProps, ApplicationState>() {
-    init {
-        state = ApplicationState()
-    }
-
-    private val coroutineContext
-        get() = props.coroutineScope.coroutineContext
-
-    override fun RBuilder.render() {
-        styledDiv {
-            css {
-                +ApplicationStyles.wrapper
-            }
-
-            +"Kotlin multiplatform react application demo"
-        }
-    }
-}
-*/
-

@@ -1,3 +1,4 @@
+import kotlinext.js.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import react.buildElement
@@ -10,6 +11,10 @@ private class Application: CoroutineScope {
     override val coroutineContext: CoroutineContext = Job()
 
     fun start() {
+
+        //TODO styles don't working
+        requireAll(require.context("BUTILKA", true, js("/\\.css$/")))
+
         document.getElementById("react-app")?.let {
             render(buildElement {
                 child(ApplicationComponent::class) {

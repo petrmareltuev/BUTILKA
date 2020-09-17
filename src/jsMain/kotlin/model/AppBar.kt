@@ -1,4 +1,4 @@
-package components
+package model
 
 import com.ccfraser.muirwik.components.*
 import com.ccfraser.muirwik.components.button.mIconButton
