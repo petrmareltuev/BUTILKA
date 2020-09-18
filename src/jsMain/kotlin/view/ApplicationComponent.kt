@@ -1,6 +1,7 @@
 package view
 
 import kotlinx.coroutines.CoroutineScope
+import model.renderAppBar
 import react.*
 import react.dom.div
 import react.dom.h1
@@ -23,6 +24,7 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
 
     override fun RBuilder.render() {
         div {
+            renderAppBar()
             div("App-header") {
                 h2("App-font") {
                     +"BUTILKA"
@@ -32,7 +34,7 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
                 when (state.selected) {
                     Views.Loading -> h1 { +"Loading..." }
                     Views.Home -> homeComponent(::goLogin, ::goRegister)
-                    Views.Login -> loginComponent(::goUser)
+                    Views.Login -> loginComponent(::goUser, props.coroutineScope)
                     Views.Register -> registerComponent(::goHome, ::goUser)
                     Views.User -> userComponent(::goInputCaseInfo, ::goHome)
                     Views.InputCaseInfo -> inputCaseInfoComponent(::goHome)

@@ -1,5 +1,7 @@
 package view
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
 import kotlinx.html.js.onClickFunction
@@ -8,13 +10,17 @@ import react.dom.*
 import model.inputValue
 import model.LoginData
 import model.User
+import rpc.StatusCodeException
+import services.LoginService
 
-fun RBuilder.loginComponent(goUser: () -> Unit) = child(LoginComponent::class) {
+fun RBuilder.loginComponent(goUser: () -> Unit, scope:CoroutineScope) = child(LoginComponent::class) {
     attrs.goUser = goUser
+    attrs.coroutineScope = scope
 }
 
 external interface LoginProps: RProps {
     var goUser: () -> Unit
+    var coroutineScope: CoroutineScope
 }
 
 interface LoginPageState : RState{
@@ -30,6 +36,9 @@ class LoginComponent : RComponent<LoginProps, LoginPageState>() {
         password = ""
         errorMessage = ""
     }
+
+    private val coroutineContext
+        get() = props.coroutineScope.coroutineContext
 
     override fun RBuilder.render() {
         div("") {
@@ -94,25 +103,22 @@ class LoginComponent : RComponent<LoginProps, LoginPageState>() {
     }
 
     private fun doLogin() {
+        val loginService = LoginService(coroutineContext)
         val loginData = LoginData(state.username, state.password)
-        //httpPOST("/login",loginData.toString(),::loginResponse)
+        props.coroutineScope.launch {
+            try {
+                val user = loginService.login(loginData)
+                setState {
+                    errorMessage = user.toString()
+                }
+            } catch (e: StatusCodeException) {
+                setState {
+                    errorMessage = "Пошел нахуй"
+                }
+            }
+        }
     }
 
-    private fun loginResponse(response: String){
-        if (response == "Wrong username or password") {
-            setState {
-                errorMessage = response
-            }
-        }
-        else{
-            setState {
-                errorMessage = "good"
-                val user = JSON.parse<User>(response)
-                logInUser(user)
-                props.goUser()
-            }
-        }
-    }
 }
 
 

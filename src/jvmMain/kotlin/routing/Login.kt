@@ -17,6 +17,7 @@ fun Route.login() {
         val receivedText = call.receiveText()
         println("login request: $receivedText")
         val loginData = Json.parse(LoginData.serializer(), receivedText)
+
         val loginService = LoginService()
         try{
             val user = loginService.login(loginData)

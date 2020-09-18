@@ -15,11 +15,6 @@ import database.Users
 import database.database
 import routing.login
 
-/*import java.sql.Connection
-import java.sql.DriverManager
-import java.sql.Statement
-import ru.butilka.database.databaseInit*/
-
 fun Application.main() {
 
     install(CORS) {
@@ -60,20 +55,10 @@ fun Application.main() {
         Users.selectAll().forEach { println("$it") }*/
     }
 
-    /*val conn: Connection
-    val statement: Statement
-
-    val username = "root"
-    val password = "mpibutilka"
-    //val connectionURL = "jdbc:mysql://localhost:3306/butilka?serverTimezone=Europe/Moscow"
-    val connectionURL = "jdbc:postgresql://localhost:5432/root"
-    conn = DriverManager.getConnection(connectionURL, username, password)
-    statement = conn.createStatement()
-    databaseInit(statement)*/
-
     routing {
 
         login()
+        
         get("/") {
             call.respondHtml {
                 head {
@@ -94,7 +79,6 @@ fun Application.main() {
                 }
             }
         }
-
         static("/") {
             files("build/bundle")
         }

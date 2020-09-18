@@ -7,8 +7,7 @@ import react.RBuilder
 fun RBuilder.renderAppBar() {
     mAppBar(position = MAppBarPosition.static) {
         mToolbar(variant = ToolbarVariant.dense, disableGutters = true) {
-            mIconButton("menu", color = MColor.inherit)
-            mToolbarTitle("Toolbar dense and no gutters")
+            mToolbarTitle("BUTILKA")
             mIconButton ("account_circle", color = MColor.inherit )
         }
     }

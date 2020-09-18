@@ -13,7 +13,7 @@ private class Application: CoroutineScope {
     fun start() {
 
         //TODO styles don't working
-        requireAll(require.context("BUTILKA", true, js("/\\.css$/")))
+        requireAll(require.context("/", true, js("/\\.css$/")))
 
         document.getElementById("react-app")?.let {
             render(buildElement {
