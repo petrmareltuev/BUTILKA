@@ -11,10 +11,6 @@ private class Application: CoroutineScope {
     override val coroutineContext: CoroutineContext = Job()
 
     fun start() {
-
-        //TODO styles don't working
-        requireAll(require.context("/", true, js("/\\.css$/")))
-
         document.getElementById("react-app")?.let {
             render(buildElement {
                 child(ApplicationComponent::class) {
@@ -26,7 +22,6 @@ private class Application: CoroutineScope {
 }
 
 fun main() {
-    //TODO delete globalStyles
-    //GlobalStyles.inject()
+    GlobalStyles.inject()
     Application().start()
 }

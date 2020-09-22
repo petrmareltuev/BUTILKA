@@ -13,6 +13,9 @@ import kotlinx.html.*
 import org.jetbrains.exposed.sql.SchemaUtils
 import database.Users
 import database.database
+import org.jetbrains.exposed.sql.insert
+import org.jetbrains.exposed.sql.selectAll
+import routing.appcss
 import routing.login
 
 fun Application.main() {
@@ -58,15 +61,32 @@ fun Application.main() {
     routing {
 
         login()
-        
+
+        appcss()
+
         get("/") {
             call.respondHtml {
                 head {
                     meta {
                         charset = "utf-8"
                     }
+
                     title {
                         +"BUTILKA"
+                    }
+                    link {
+                        href = "https://fonts.googleapis.com/css2?family=Aclonica&display=swap"
+                        rel = "stylesheet"
+                    }
+                    link {
+                        rel = "icon"
+                        type = "image/png"
+                        sizes = "16x16"
+                        href = "favicon.png"
+                    }
+                    link{
+                        href = "App.css"
+                        rel="stylesheet"
                     }
                 }
                 body {

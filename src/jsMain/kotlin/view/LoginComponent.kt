@@ -110,6 +110,8 @@ class LoginComponent : RComponent<LoginProps, LoginPageState>() {
                 val user = loginService.login(loginData)
                 setState {
                     errorMessage = user.toString()
+                    logInUser(user)
+                    props.goUser()
                 }
             } catch (e: StatusCodeException) {
                 setState {
