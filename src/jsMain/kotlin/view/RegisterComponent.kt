@@ -1,5 +1,7 @@
 package view
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import model.inputValue
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
@@ -7,15 +9,18 @@ import kotlinx.html.js.onClickFunction
 import model.User
 import react.*
 import react.dom.*
+import services.RegisterService
 
-fun RBuilder.registerComponent(goHome: () -> Unit, goUser: () -> Unit) = child(RegisterComponent::class) {
+fun RBuilder.registerComponent(goHome: () -> Unit, goUser: () -> Unit, scope: CoroutineScope) = child(RegisterComponent::class) {
     attrs.goHome = goHome
     attrs.goUser = goUser
+    attrs.coroutineScope = scope
 }
 
 external interface RegisterProps: RProps {
     var goHome: () -> Unit
     var goUser: () -> Unit
+    var coroutineScope: CoroutineScope
 }
 
 interface RegisterPageState: RState{
@@ -48,6 +53,9 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
         email = ""
         errorMessage = ""
     }
+
+    private val coroutineContext
+        get() = props.coroutineScope.coroutineContext
 
     override fun RBuilder.render() {
         div {
@@ -206,22 +214,19 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
     }
 
     private fun doRegister() {
-        val user = User( state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email)
+        val user = User(state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email)
         console.log(user)
-        //props.goHome()
-        //httpPOST("/register", user.toString(),::registerResponse)
-    }
-
-    private fun registerResponse(response: String){
-
-        if (response == "Successfully registered"){
-            val user = User( state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email)
-            logInUser(user)
-            props.goUser()
-        }
-        else {
-            setState {
-                errorMessage = response
+        var registerService = RegisterService(coroutineContext)
+        props.coroutineScope.launch {
+            var response = registerService.register(user)
+            if (response){
+                logInUser(user)
+                props.goUser()
+            }
+            else{
+                setState{
+                    errorMessage = "Пользователь с таким именем уже существует"
+                }
             }
         }
     }

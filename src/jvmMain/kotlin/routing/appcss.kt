@@ -12,7 +12,7 @@ import java.nio.file.Paths
 fun Route.appcss() {
     get("/App.css") {
         val path = Paths.get("").toAbsolutePath().toString()
-        val f = File("${path}/src/jvmMain/kotlin/routing")
+        val f = File("${path}/src/jvmMain/resources")
         call.respondFile(f, "App.css",{})
     }
 }

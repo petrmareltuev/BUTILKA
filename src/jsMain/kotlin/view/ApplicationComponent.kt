@@ -35,7 +35,7 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
                     Views.Loading -> h1 { +"Loading..." }
                     Views.Home -> homeComponent(::goLogin, ::goRegister)
                     Views.Login -> loginComponent(::goUser, props.coroutineScope)
-                    Views.Register -> registerComponent(::goHome, ::goUser)
+                    Views.Register -> registerComponent(::goHome, ::goUser, props.coroutineScope)
                     Views.User -> userComponent(::goInputCaseInfo, ::goHome)
                     Views.InputCaseInfo -> inputCaseInfoComponent(::goHome)
                     Views.NotFound -> notFoundComponent()

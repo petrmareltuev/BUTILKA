@@ -9,6 +9,6 @@ expect class LoginService {
     //TODO suspend fun logout(id:String)
 }
 
-//expect class RegisterService{
-    //suspend fun register(user:User):
-//}
+expect class RegisterService{
+    suspend fun register(user:User):Boolean
+}

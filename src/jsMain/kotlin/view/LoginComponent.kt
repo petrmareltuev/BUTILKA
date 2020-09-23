@@ -115,7 +115,7 @@ class LoginComponent : RComponent<LoginProps, LoginPageState>() {
                 }
             } catch (e: StatusCodeException) {
                 setState {
-                    errorMessage = "Пошел нахуй"
+                    errorMessage = "Неверное имя пользователя или пароль"
                 }
             }
         }
