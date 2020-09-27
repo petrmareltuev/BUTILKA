@@ -59,148 +59,152 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
 
     override fun RBuilder.render() {
         div {
-            div {
-                h1 { +"Register" }
-            }
-            p{
-                input(type = InputType.text, name = "fio") {
-                    attrs {
-                        placeholder = "Фамилия Имя Отчество"
-                        onChangeFunction = {
-                            state.fullName = it.inputValue
-                            setState {
+            h1 { +"Register" }
+        }
+        div (classes="reg-box"){
+            div(classes = "reg-input-box") {
+                p {
+                    input(type = InputType.text, name = "fio") {
+                        attrs {
+                            placeholder = "Фамилия Имя Отчество"
+                            onChangeFunction = {
+                                state.fullName = it.inputValue
+                                setState {
 
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    input(type = InputType.text, name = "Наименование организации") {
+                        attrs {
+                            placeholder = "Наименование организации"
+                            onChangeFunction = {
+                                state.organization = it.inputValue
+                                setState {
+
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    input(type = InputType.text, name = "Номер удостоверения") {
+                        attrs {
+                            placeholder = "Номер удостоверения"
+                            onChangeFunction = {
+                                state.certificateId = it.inputValue
+                                setState {
+
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    input(type = InputType.text, name = "Личный номер") {
+                        attrs {
+                            placeholder = "Личный номер"
+                            onChangeFunction = {
+                                state.personalId = it.inputValue
+                                setState {
+
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    input(type = InputType.text, name = "Должность") {
+                        attrs {
+                            placeholder = "Должность"
+                            onChangeFunction = {
+                                state.duty = it.inputValue
+                                setState {
+
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
+                    input(type = InputType.text, name = "Выдано") {
+                        attrs {
+                            placeholder = "Выдано"
+                            onChangeFunction = {
+                                state.issued = it.inputValue
+                                setState {
+
+                                }
                             }
                         }
                     }
                 }
             }
-            p{
-                input(type = InputType.text, name = "Наименование организации") {
-                    attrs {
-                        placeholder = "Наименование организации"
-                        onChangeFunction = {
-                            state.organization = it.inputValue
-                            setState {
+            div(classes = "reg-input-box"){
+                p{
+                    input(type = InputType.text, name = "Логин") {
+                        attrs {
+                            placeholder = "Логин"
+                            onChangeFunction = {
+                                state.username = it.inputValue
+                                setState {
 
+                                }
                             }
                         }
                     }
                 }
-            }
-            p{
-                input(type = InputType.text, name = "Номер удостоверения") {
-                    attrs {
-                        placeholder = "Номер удостоверения"
-                        onChangeFunction = {
-                            state.certificateId = it.inputValue
-                            setState {
+                p{
+                    input(type = InputType.password, name = "Пароль") {
+                        attrs {
+                            placeholder = "Пароль"
+                            onChangeFunction = {
+                                state.password = it.inputValue
+                                setState {
 
+                                }
                             }
                         }
                     }
                 }
-            }
-            p{
-                input(type = InputType.text, name = "Личный номер") {
-                    attrs {
-                        placeholder = "Личный номер"
-                        onChangeFunction = {
-                            state.personalId = it.inputValue
-                            setState {
+                p{
+                    input(type = InputType.tel, name = "Телефон") {
+                        attrs {
+                            placeholder = "Телефон"
+                            onChangeFunction = {
+                                state.phone = it.inputValue
+                                setState {
 
+                                }
                             }
                         }
                     }
                 }
-            }
-            p{
-                input(type = InputType.text, name = "Должность") {
-                    attrs {
-                        placeholder = "Должность"
-                        onChangeFunction = {
-                            state.duty = it.inputValue
-                            setState {
+                p{
+                    input(type = InputType.email, name = "E-mail") {
+                        attrs {
+                            placeholder = "E-mail"
+                            onChangeFunction = {
+                                state.email = it.inputValue
+                                setState {
 
+                                }
                             }
                         }
                     }
                 }
-            }
-            p{
-                input(type = InputType.text, name = "Выдано") {
-                    attrs {
-                        placeholder = "Выдано"
-                        onChangeFunction = {
-                            state.issued = it.inputValue
-                            setState {
-
-                            }
+                p{
+                    button(classes = "App-buttons") {
+                        span {
+                            +"Зарегистрироваться"
                         }
-                    }
-                }
-            }
-            p{
-                input(type = InputType.text, name = "Логин") {
-                    attrs {
-                        placeholder = "Логин"
-                        onChangeFunction = {
-                            state.username = it.inputValue
-                            setState {
-
+                        attrs {
+                            onClickFunction = {
+                                it.preventDefault()
+                                doRegister()
                             }
-                        }
-                    }
-                }
-            }
-            p{
-                input(type = InputType.password, name = "Пароль") {
-                    attrs {
-                        placeholder = "Пароль"
-                        onChangeFunction = {
-                            state.password = it.inputValue
-                            setState {
-
-                            }
-                        }
-                    }
-                }
-            }
-            p{
-                input(type = InputType.tel, name = "Телефон") {
-                    attrs {
-                        placeholder = "Телефон"
-                        onChangeFunction = {
-                            state.phone = it.inputValue
-                            setState {
-
-                            }
-                        }
-                    }
-                }
-            }
-            p{
-                input(type = InputType.email, name = "E-mail") {
-                    attrs {
-                        placeholder = "E-mail"
-                        onChangeFunction = {
-                            state.email = it.inputValue
-                            setState {
-
-                            }
-                        }
-                    }
-                }
-            }
-            p{
-                button(classes = "App-buttons") {
-                    span {
-                        +"Зарегистрироваться"
-                    }
-                    attrs {
-                        onClickFunction = {
-                            it.preventDefault()
-                            doRegister()
                         }
                     }
                 }

@@ -84,3 +84,14 @@ body {
 .App-buttons:active {
     background-color: rgb(95,67,236);
 }
+
+.reg-box{
+  display: flex;
+  flex-direction: row;
+  Justify-content: center;
+}
+
+.reg-input-box{
+  display: flex;
+  flex-direction: column
+}
