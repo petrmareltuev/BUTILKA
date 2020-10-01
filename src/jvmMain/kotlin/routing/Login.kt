@@ -16,6 +16,7 @@ fun Route.login() {
     post("/login") {
         val receivedText = call.receiveText()
         println("login request: $receivedText")
+        //TODo valiation
         val loginData = Json.parse(LoginData.serializer(), receivedText)
 
         val loginService = LoginService()

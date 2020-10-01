@@ -1,37 +1,50 @@
 package view
 
 
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.launch
 import model.inputValue
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
 import kotlinx.html.js.onClickFunction
-import model.CaseInfo
+import model.Report
 import react.*
 import react.dom.*
+import rpc.StatusCodeException
+import services.ReportService
 
-fun RBuilder.inputCaseInfoComponent(goHome:() -> Unit) = child(InputCaseInfoComponent::class){
+fun RBuilder.inputCaseInfoComponent(goHome:() -> Unit, scope: CoroutineScope) = child(InputCaseInfoComponent::class){
     attrs.goHome = goHome
+    attrs.coroutineScope = scope
 }
 
 external interface InputCaseInfoProps: RProps {
     var goHome: () -> Unit
+    var coroutineScope: CoroutineScope
 }
 
 interface InputCaseInfoPageState : RState {
+    var case_number:String
     var participant:String
     var victim:String
     var witness:String
     var comment:String
+    var errorMessage:String
 }
 
 class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageState>()
 {
     override fun InputCaseInfoPageState.init() {
+        case_number = ""
         participant = ""
         victim = ""
         witness = ""
         comment = ""
+        errorMessage = ""
     }
+
+    private val coroutineContext
+        get() = props.coroutineScope.coroutineContext
 
     override fun RBuilder.render() {
 
@@ -39,12 +52,27 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
             form {
                 legend { +"Внесение информации о задержании" }
                 p {
+                    input(type = InputType.text, name = "case_number") {
+                        attrs {
+                            placeholder = "Номер дела"
+                            onChangeFunction = {
+                                state.case_number = it.inputValue
+                                setState{
+                                    errorMessage = ""
+                                }
+                            }
+                        }
+                    }
+                }
+                p {
                     input(type = InputType.text, name = "Сотрудники") {
                         attrs {
                             placeholder = "Учавствующие в задержании"
                             onChangeFunction = {
                                 state.participant = it.inputValue
-                                setState{}
+                                setState{
+                                    errorMessage = ""
+                                }
                             }
                         }
                     }
@@ -55,6 +83,9 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                             placeholder = "ЛОХ"
                             onChangeFunction = {
                                 state.victim = it.inputValue
+                                setState{
+                                    errorMessage = ""
+                                }
                             }
                         }
                     }
@@ -65,6 +96,9 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                             placeholder = "Свидетель"
                             onChangeFunction = {
                                 state.witness = it.inputValue
+                                setState{
+                                    errorMessage = ""
+                                }
                             }
                         }
                     }
@@ -75,6 +109,9 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                             placeholder = "Обстоятельства задержания"
                             onChangeFunction = {
                                 state.comment = it.inputValue
+                                setState{
+                                    errorMessage = ""
+                                }
                             }
                         }
                     }
@@ -92,16 +129,28 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                         }
                     }
                 }
+
+                h1{
+                    +state.errorMessage
+                }
             }
         }
     }
 
-    private fun sendReport(){
-        val report = CaseInfo(currentUser?.username!!, currentUser?.password!!, state.participant, state.victim, state.witness, state.comment)
-        //httpPOST("/report",report.toString(),::reportSended)
-        //props.goHome()
-    }
-    private fun reportSended(response: String){
-
+    private fun sendReport() {
+        val report = Report(currentUser?.username!!, currentUser?.password!!, state.case_number, state.participant, state.victim, state.witness, state.comment)
+        val reportService = ReportService(coroutineContext)
+        props.coroutineScope.launch {
+            try {
+                val response = reportService.sendReport(report)
+                setState {
+                    errorMessage = response
+                }
+            } catch (e: StatusCodeException) {
+                setState {
+                    errorMessage = "Неверное имя пользователя или пароль"
+                }
+            }
+        }
     }
 }

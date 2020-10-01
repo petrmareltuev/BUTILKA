@@ -6,6 +6,7 @@ import io.ktor.jackson.jackson
 import io.ktor.routing.routing
 import org.jetbrains.exposed.sql.SchemaUtils
 import database.Users
+import database.Reports
 import database.database
 import routing.*
 
@@ -21,6 +22,7 @@ fun Application.main() {
 
     database {
         SchemaUtils.create(Users)
+        SchemaUtils.create(Reports)
     }
 
     routing {
@@ -28,6 +30,7 @@ fun Application.main() {
         appcss()
         login()
         register()
+        report()
     }
 }
 

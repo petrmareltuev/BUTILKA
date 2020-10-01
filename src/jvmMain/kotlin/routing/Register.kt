@@ -2,10 +2,11 @@ package routing
 
 import io.ktor.application.call
 import io.ktor.http.*
-import io.ktor.request.receiveText
+import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.Route
 import io.ktor.routing.post
+import io.ktor.util.Identity.decode
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import model.User
@@ -14,8 +15,10 @@ import services.RegisterService
 
 fun Route.register() {
     post("/register") {
+
         val receivedText = call.receiveText()
         println("register request: $receivedText")
+
         val user = Json.parse(User.serializer(), receivedText)
 
         val registerService = RegisterService()

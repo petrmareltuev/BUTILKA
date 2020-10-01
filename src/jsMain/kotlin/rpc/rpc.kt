@@ -23,7 +23,7 @@ class Transport(private val coroutineContext: CoroutineContext) {
     }
 
     internal suspend fun <T> post(url: String, deserializationStrategy: KSerializer<T>, body: String): T {
-        return Json.parse(deserializationStrategy, fetch(url, "POST", body))
+        return Json.parse(deserializationStrategy,fetch(url, "POST", body))
     }
 
     //, vararg args: Pair<String, Any>
@@ -38,7 +38,7 @@ class Transport(private val coroutineContext: CoroutineContext) {
             val response = window.fetch(url, RequestInit(method,
                 headers = json(
                     "Accept" to "application/json",
-                    "Content-Type" to "application/json"),
+                    "Content-Type" to "application/json; charset=utf-8"),
                 credentials = "same-origin".asDynamic(),
                 body = body)).await()
 

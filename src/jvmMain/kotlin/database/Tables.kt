@@ -24,8 +24,7 @@ object Requests: IntIdTable(){
 }
 object Reports: IntIdTable(){
     val reportId = integer("reportId").uniqueIndex().autoIncrement()
-    val requestId = integer("requestId")
-    val userId = integer("userId")
+    val caseNumber = varchar("caseNumber", 20)
     val participants = varchar("participants", 300)
     val victim = varchar("victim", 70)
     val witness = varchar("witness", 150)
