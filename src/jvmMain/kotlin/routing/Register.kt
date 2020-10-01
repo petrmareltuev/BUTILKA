@@ -6,7 +6,6 @@ import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.Route
 import io.ktor.routing.post
-import io.ktor.util.Identity.decode
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import model.User

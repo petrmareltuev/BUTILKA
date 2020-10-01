@@ -1,5 +1,9 @@
 package view
 
+import io.konform.validation.Valid
+import io.konform.validation.Validation
+import io.konform.validation.jsonschema.maxLength
+import io.konform.validation.jsonschema.minLength
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import model.inputValue
@@ -70,7 +74,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.fullName = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -83,7 +87,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.organization = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -96,7 +100,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.certificateId = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -109,7 +113,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.personalId = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -122,7 +126,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.duty = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -135,7 +139,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.issued = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -150,7 +154,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.username = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -163,7 +167,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.password = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -176,7 +180,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.phone = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -189,7 +193,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             onChangeFunction = {
                                 state.email = it.inputValue
                                 setState {
-
+                                    errorMessage = ""
                                 }
                             }
                         }
@@ -209,29 +213,54 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                     }
                 }
             }
-            div{
-                h1{
-                    + state.errorMessage
-                }
+        }
+        div{
+            h1{
+                + state.errorMessage
             }
         }
     }
 
     private fun doRegister() {
         val user = User(state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email)
-        console.log(user)
-        var registerService = RegisterService(coroutineContext)
-        props.coroutineScope.launch {
-            var response = registerService.register(user)
-            if (response){
-                logInUser(user)
-                props.goUser()
+
+        val validateUser = Validation<User> {
+            User::username {
+                minLength(8)
+                maxLength(70)
             }
-            else{
-                setState{
-                    errorMessage = "Пользователь с таким именем уже существует"
+
+            User::password {
+                minLength(8)
+                maxLength(70)
+            }
+        }
+        val validationResult = validateUser(user)
+        console.log(Valid(user)==validationResult)
+
+
+        if(Valid(user)==validationResult){
+            var registerService = RegisterService(coroutineContext)
+            props.coroutineScope.launch {
+                var response = registerService.register(user)
+                if (response){
+                    logInUser(user)
+                    props.goUser()
+                }
+                else{
+                    setState{
+                        errorMessage = "Пользователь с таким именем уже существует"
+                    }
                 }
             }
         }
+        else
+        {
+            setState{
+                errorMessage=validationResult.errors.first().message
+            }
+        }
+
+
     }
 }
