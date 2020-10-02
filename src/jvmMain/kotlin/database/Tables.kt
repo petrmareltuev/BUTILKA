@@ -20,8 +20,10 @@ object Users: IntIdTable() {
 
 object Requests: IntIdTable(){
     val requestId = integer("requestId").uniqueIndex().autoIncrement()
-    val userId = integer("userId")
+    val caseNumber = varchar("caseNumber", 20)
+    val userId = integer("UserId")
 }
+
 object Reports: IntIdTable(){
     val reportId = integer("reportId").uniqueIndex().autoIncrement()
     val caseNumber = varchar("caseNumber", 20)
@@ -31,6 +33,7 @@ object Reports: IntIdTable(){
     val comment = varchar("comment", 200)
 
 }
+
 object Lohs: IntIdTable(){
     val lohId = integer("lohId").uniqueIndex().autoIncrement()
     val fullname = varchar("fullname", 50)

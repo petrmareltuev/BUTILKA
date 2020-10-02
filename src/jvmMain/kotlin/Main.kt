@@ -1,3 +1,4 @@
+import database.*
 import io.ktor.application.Application
 import io.ktor.application.install
 import io.ktor.features.CORS
@@ -5,10 +6,6 @@ import io.ktor.features.ContentNegotiation
 import io.ktor.jackson.jackson
 import io.ktor.routing.routing
 import org.jetbrains.exposed.sql.SchemaUtils
-import database.Users
-import database.Reports
-import database.Lohs
-import database.database
 import routing.*
 
 fun Application.main() {
@@ -25,6 +22,7 @@ fun Application.main() {
         SchemaUtils.create(Users)
         SchemaUtils.create(Reports)
         SchemaUtils.create(Lohs)
+        SchemaUtils.create(Requests)
     }
 
     routing {
@@ -33,6 +31,7 @@ fun Application.main() {
         login()
         register()
         report()
+        request()
     }
 }
 
