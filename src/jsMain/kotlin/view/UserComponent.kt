@@ -22,7 +22,7 @@ external interface UserProps: RProps {
 class UserComponent : RComponent<UserProps, RState>() {
     override fun RBuilder.render() {
         div {
-            form() {
+            div(classes = "user") {
                 h1 {
                     +"Добро пожаловать "
                 }
