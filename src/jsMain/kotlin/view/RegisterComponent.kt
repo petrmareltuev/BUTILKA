@@ -260,7 +260,5 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                 errorMessage=validationResult.errors.first().message
             }
         }
-
-
     }
 }

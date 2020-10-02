@@ -51,4 +51,37 @@ fun Route.request() {
             call.response.status(HttpStatusCode.fromValue(520))
         }
     }
+    post("/request/check") {
+
+        val receivedText = call.receiveText()
+        println("request request: $receivedText")
+
+        val logindata = Json.parse(LoginData.serializer(), receivedText)
+
+        suspend fun checkReq(loginData:LoginData): Boolean {
+            return database{
+                Users.select{Users.username eq loginData.username}.first().let{
+                    val userId = it[Users.userId]
+                    Requests.select{
+                        Requests.userId eq userId
+                    }.firstOrNull()?.let{
+                        true
+                    }?: false
+                }
+            }
+        }
+
+        try{
+            if(checkReq(logindata)){
+                call.respondText(Json.stringify(Boolean.serializer(), true), contentType = ContentType.Application.Json)
+            }
+            else {
+                call.respondText(Json.stringify(Boolean.serializer(), false), contentType = ContentType.Application.Json)
+            }
+        }
+        catch (e: Exception){
+            println("Unknown request error: ${e.message}\nCause: ${e.cause}, ")
+            call.response.status(HttpStatusCode.fromValue(520))
+        }
+    }
 }
