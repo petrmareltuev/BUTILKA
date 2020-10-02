@@ -72,7 +72,7 @@ class RequestComponent : RComponent<RequestProps, RequestPageState>() {
                         }
                     }
                 }
-                isRequest.thereIsRequest ->h1 { +"У вас уже имеется открытая заявка" }
+                isRequest.thereIsRequest ->h1 { +"Ваша заявка обрабатывается" }
             }
             p() {
                 button(classes = "App-buttons") {
@@ -103,7 +103,7 @@ class RequestComponent : RComponent<RequestProps, RequestPageState>() {
             val response = request(loginData)
             if (response){
                 setState{
-                    Message = "Ваша заявка находится в обработке"
+                    selected = isRequest.thereIsRequest
                 }
             }
             else{
