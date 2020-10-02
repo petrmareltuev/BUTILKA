@@ -4,6 +4,7 @@ import io.konform.validation.Valid
 import io.konform.validation.Validation
 import io.konform.validation.jsonschema.maxLength
 import io.konform.validation.jsonschema.minLength
+import io.konform.validation.jsonschema.pattern
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import model.inputValue
@@ -234,9 +235,18 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                 minLength(8)
                 maxLength(70)
             }
+
+            User::email required  {
+                pattern("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}") hint "Вы ввели неправильный e-mail"
+            }
+
+            User::phone required  {
+                pattern("\\+79[0-9]{9}") hint "Телефон должен быть в формате +7xxxxxxxxxx"
+            }
         }
         val validationResult = validateUser(user)
         console.log(Valid(user)==validationResult)
+        console.log(validationResult)
 
 
         if(Valid(user)==validationResult){
