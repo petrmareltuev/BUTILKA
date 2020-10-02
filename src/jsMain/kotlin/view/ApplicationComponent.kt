@@ -34,7 +34,7 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
                 when (state.selected) {
                     Views.Loading -> h1 { +"Loading..." }
                     Views.Home -> homeComponent(::goLogin, ::goRegister)
-                    Views.Login -> loginComponent(::goUser, props.coroutineScope)
+                    Views.Login -> loginComponent(::goHome, ::goUser, props.coroutineScope)
                     Views.Register -> registerComponent(::goHome, ::goUser, props.coroutineScope)
                     Views.User -> userComponent(::goInputCaseInfo, ::goHome, ::goRequest)
                     Views.InputCaseInfo -> inputCaseInfoComponent(::goHome, ::goUser,  props.coroutineScope)

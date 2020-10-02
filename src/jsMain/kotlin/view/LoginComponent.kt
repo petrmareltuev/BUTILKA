@@ -13,13 +13,15 @@ import model.User
 import rpc.StatusCodeException
 import services.LoginService
 
-fun RBuilder.loginComponent(goUser: () -> Unit, scope:CoroutineScope) = child(LoginComponent::class) {
+fun RBuilder.loginComponent(goHome: () -> Unit, goUser: () -> Unit, scope:CoroutineScope) = child(LoginComponent::class) {
     attrs.goUser = goUser
+    attrs.goHome = goHome
     attrs.coroutineScope = scope
 }
 
 external interface LoginProps: RProps {
     var goUser: () -> Unit
+    var goHome: () -> Unit
     var coroutineScope: CoroutineScope
 }
 
@@ -88,6 +90,18 @@ class LoginComponent : RComponent<LoginProps, LoginPageState>() {
                             onClickFunction = {
                                 it.preventDefault()
                                 doLogin()
+                            }
+                        }
+                    }
+                }
+                p{
+                    button(classes = "App-buttons") {
+                        span {
+                            +"Назад"
+                        }
+                        attrs {
+                            onClickFunction = {
+                                props.goHome()
                             }
                         }
                     }
