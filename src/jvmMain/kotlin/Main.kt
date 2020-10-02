@@ -6,6 +6,7 @@ import io.ktor.features.ContentNegotiation
 import io.ktor.jackson.jackson
 import io.ktor.routing.routing
 import org.jetbrains.exposed.sql.SchemaUtils
+import org.jetbrains.exposed.sql.insertIgnore
 import routing.*
 
 fun Application.main() {
@@ -32,6 +33,16 @@ fun Application.main() {
         register()
         report()
         request()
+    }
+    database{
+    Lohs.insertIgnore {
+        it[fullname] = "Иван Голунов"
+        it[passportSerialNumber] = "1337420360"
+        it[registrationAddress] = "г. Москва, ул. Пушкина. д. Колотушкина"
+        it[issuedBy] = "ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ"
+        it[dateOfIssue] = "12.09.2020"
+        it[subdivisionCode] = "870-912"
+    }
     }
 }
 
