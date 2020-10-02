@@ -298,7 +298,5 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                 errorMessage="${validationResult.errors.first().dataPath} ${validationResult.errors.first().message}"
             }
         }
-
-
     }
 }
