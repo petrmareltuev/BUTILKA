@@ -7,6 +7,7 @@ import io.ktor.routing.routing
 import org.jetbrains.exposed.sql.SchemaUtils
 import database.Users
 import database.Reports
+import database.Lohs
 import database.database
 import routing.*
 
@@ -23,6 +24,7 @@ fun Application.main() {
     database {
         SchemaUtils.create(Users)
         SchemaUtils.create(Reports)
+        SchemaUtils.create(Lohs)
     }
 
     routing {

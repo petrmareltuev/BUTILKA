@@ -31,3 +31,12 @@ object Reports: IntIdTable(){
     val comment = varchar("comment", 200)
 
 }
+object Lohs: IntIdTable(){
+    val lohId = integer("lohId").uniqueIndex().autoIncrement()
+    val fullname = varchar("fullname", 50)
+    val passportSerialNumber = varchar("passportSerialNumber", 10)
+    val registrationAddress = varchar("registrationAddress", 50)
+    val issuedBy = varchar("issuedBy", 50)
+    val dateOfIssue = varchar("dateOfIssue", 20)
+    val subdivisionCode = varchar("subdivisionCode", 20)
+}

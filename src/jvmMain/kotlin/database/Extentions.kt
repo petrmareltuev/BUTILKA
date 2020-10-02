@@ -8,7 +8,7 @@ import org.jetbrains.exposed.sql.transactions.transaction
 
 fun <T> database(statement: Transaction.() -> T): T {
     Database.connect("jdbc:postgresql://localhost:5432/postgres", driver = "org.postgresql.Driver",
-        user = "postgres", password = "butilka")
+        user = "postgres", password = "leet1337")
 
     return transaction {
         addLogger(StdOutSqlLogger)
