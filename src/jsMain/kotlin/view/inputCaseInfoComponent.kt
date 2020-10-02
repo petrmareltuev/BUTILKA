@@ -1,6 +1,11 @@
 package view
 
 
+import io.konform.validation.Valid
+import io.konform.validation.Validation
+import io.konform.validation.jsonschema.maxLength
+import io.konform.validation.jsonschema.minLength
+import io.konform.validation.jsonschema.pattern
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import model.inputValue
@@ -8,18 +13,21 @@ import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
 import kotlinx.html.js.onClickFunction
 import model.Report
+import model.User
 import react.*
 import react.dom.*
 import rpc.StatusCodeException
 import services.ReportService
 
-fun RBuilder.inputCaseInfoComponent(goHome:() -> Unit, scope: CoroutineScope) = child(InputCaseInfoComponent::class){
+fun RBuilder.inputCaseInfoComponent(goHome:() -> Unit, goUser: () -> Unit, scope: CoroutineScope) = child(InputCaseInfoComponent::class){
     attrs.goHome = goHome
+    attrs.goUser = goUser
     attrs.coroutineScope = scope
 }
 
 external interface InputCaseInfoProps: RProps {
     var goHome: () -> Unit
+    var goUser: () -> Unit
     var coroutineScope: CoroutineScope
 }
 
@@ -78,9 +86,9 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                     }
                 }
                 p {
-                    input(type = InputType.text, name = "ЛОХ") {
+                    input(type = InputType.text, name = "Номер паспорта ЛОХа") {
                         attrs {
-                            placeholder = "ЛОХ"
+                            placeholder = "Номер паспорта ЛОХа"
                             onChangeFunction = {
                                 state.victim = it.inputValue
                                 setState{
@@ -129,6 +137,20 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                         }
                     }
                 }
+                p() {
+                    button(classes = "App-buttons") {
+                        span {
+                            +"Назад"
+                        }
+                        attrs {
+                            onClickFunction = {
+                                it.preventDefault()
+                                props.goUser()
+                            }
+                        }
+
+                    }
+                }
 
                 h1{
                     +state.errorMessage
@@ -139,17 +161,43 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
 
     private fun sendReport() {
         val report = Report(currentUser?.username!!, currentUser?.password!!, state.case_number, state.participant, state.victim, state.witness, state.comment)
+        val validateReport = Validation<Report> {
+
+            Report::case_number {
+                minLength(1)
+            }
+
+            Report::participants {
+                minLength(1)
+            }
+            Report::victim required {
+                pattern("\\d{10}")
+            }
+
+        }
+        val validationResult = validateReport(report)
         val reportService = ReportService(coroutineContext)
-        props.coroutineScope.launch {
-            try {
-                val response = reportService.sendReport(report)
-                setState {
-                    errorMessage = response
+        console.log(Valid(report) ==validationResult)
+        console.log(validationResult)
+
+        if(Valid(report) ==validationResult) {
+            props.coroutineScope.launch {
+                try {
+                    val response = reportService.sendReport(report)
+                    setState {
+                        errorMessage = response
+                    }
+                } catch (e: StatusCodeException) {
+                    setState {
+                        errorMessage = "Неверное имя пользователя или пароль"
+                    }
                 }
-            } catch (e: StatusCodeException) {
-                setState {
-                    errorMessage = "Неверное имя пользователя или пароль"
-                }
+            }
+        }
+        else
+        {
+            setState{
+                errorMessage="${validationResult.errors.first().dataPath} ${validationResult.errors.first().message}"
             }
         }
     }

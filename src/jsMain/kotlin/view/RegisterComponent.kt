@@ -2,9 +2,7 @@ package view
 
 import io.konform.validation.Valid
 import io.konform.validation.Validation
-import io.konform.validation.jsonschema.maxLength
-import io.konform.validation.jsonschema.minLength
-import io.konform.validation.jsonschema.pattern
+import io.konform.validation.jsonschema.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import model.inputValue
@@ -203,12 +201,24 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                 p{
                     button(classes = "App-buttons") {
                         span {
-                            +"Зарегистрироваться"
+                            +"Регистрация"
                         }
                         attrs {
                             onClickFunction = {
                                 it.preventDefault()
                                 doRegister()
+                            }
+                        }
+                    }
+                }
+                p{
+                    button(classes = "App-buttons") {
+                        span {
+                            +"Назад"
+                        }
+                        attrs {
+                            onClickFunction = {
+                                props.goHome()
                             }
                         }
                     }
@@ -226,6 +236,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
         val user = User(state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email)
 
         val validateUser = Validation<User> {
+
             User::username {
                 minLength(8)
                 maxLength(70)
@@ -235,7 +246,24 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                 minLength(8)
                 maxLength(70)
             }
-
+            User::full_name {
+                minLength(1)
+            }
+            User::organization {
+                minLength(1)
+            }
+            User::certificate_id {
+                minLength(1)
+            }
+            User::personal_id {
+                minLength(1)
+            }
+            User::issued {
+                minLength(1)
+            }
+            User::duty {
+                minLength(1)
+            }
             User::email required  {
                 pattern("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}") hint "Вы ввели неправильный e-mail"
             }
@@ -267,7 +295,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
         else
         {
             setState{
-                errorMessage=validationResult.errors.first().message
+                errorMessage="${validationResult.errors.first().dataPath} ${validationResult.errors.first().message}"
             }
         }
 

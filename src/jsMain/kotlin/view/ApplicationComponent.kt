@@ -37,7 +37,7 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
                     Views.Login -> loginComponent(::goUser, props.coroutineScope)
                     Views.Register -> registerComponent(::goHome, ::goUser, props.coroutineScope)
                     Views.User -> userComponent(::goInputCaseInfo, ::goHome, ::goRequest)
-                    Views.InputCaseInfo -> inputCaseInfoComponent(::goHome, props.coroutineScope)
+                    Views.InputCaseInfo -> inputCaseInfoComponent(::goHome, ::goUser,  props.coroutineScope)
                     Views.NotFound -> notFoundComponent()
                     Views.Request -> requestComponent(::goUser, props.coroutineScope)
                 }
