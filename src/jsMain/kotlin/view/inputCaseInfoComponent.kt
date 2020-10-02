@@ -185,8 +185,14 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                 try {
                     val response = reportService.sendReport(report)
                     setState {
-                        errorMessage = response
+                        if (response == "OK") {
+                            errorMessage = "Информацио о деле успешно внесена"
+                        }
+                        else{
+                            errorMessage = "Лоха с таким номером паспорта не существует"
+                        }
                     }
+
                 } catch (e: StatusCodeException) {
                     setState {
                         errorMessage = "Неверное имя пользователя или пароль"
