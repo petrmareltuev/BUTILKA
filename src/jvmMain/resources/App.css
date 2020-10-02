@@ -27,6 +27,8 @@ body {
 
 .App-font{
   font-family: 'Aclonica', sans-serif;
+  text-shadow: black;
+  font-size: 24pt;
 }
 
 .App-header {

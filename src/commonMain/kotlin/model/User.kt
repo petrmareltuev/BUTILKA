@@ -14,3 +14,4 @@ data class User(
         var duty:String,
         var phone:String,
         var email:String)
+
