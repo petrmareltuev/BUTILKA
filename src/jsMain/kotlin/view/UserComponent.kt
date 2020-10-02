@@ -7,14 +7,16 @@ import react.RProps
 import react.RState
 import react.dom.*
 
-fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit) = child(UserComponent::class) {
+fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit, goRequest: () -> Unit) = child(UserComponent::class) {
     attrs.goInputCaseInfo = goInputCaseInfo
     attrs.goHome = goHome
+    attrs.goRequest = goRequest
 }
 
 external interface UserProps: RProps {
     var goInputCaseInfo: () -> Unit
     var goHome: () -> Unit
+    var goRequest: () -> Unit
 }
 
 class UserComponent : RComponent<UserProps, RState>() {
@@ -30,8 +32,14 @@ class UserComponent : RComponent<UserProps, RState>() {
                 p() {
                     button(classes = "App-buttons") {
                         span {
-                            +"Просмотр уведомлений о подбросах"
+                            +"Заявка на повышениие звания"
                         }
+                        attrs {
+                            onClickFunction = {
+                                props.goRequest()
+                            }
+                        }
+
                     }
                 }
                 p() {
@@ -47,6 +55,7 @@ class UserComponent : RComponent<UserProps, RState>() {
 
                     }
                 }
+
                 p() {
                     button(classes = "App-buttons") {
                         span {

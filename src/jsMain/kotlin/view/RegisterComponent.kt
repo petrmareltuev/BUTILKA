@@ -240,9 +240,9 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
 
 
         if(Valid(user)==validationResult){
-            var registerService = RegisterService(coroutineContext)
+            val registerService = RegisterService(coroutineContext)
             props.coroutineScope.launch {
-                var response = registerService.register(user)
+                val response = registerService.register(user)
                 if (response){
                     logInUser(user)
                     props.goUser()

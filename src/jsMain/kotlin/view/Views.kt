@@ -7,5 +7,6 @@ enum class Views {
     Login,
     User,
     InputCaseInfo,
-    NotFound
+    NotFound,
+    Request
 }

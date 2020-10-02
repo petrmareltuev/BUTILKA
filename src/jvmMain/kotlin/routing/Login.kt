@@ -1,5 +1,6 @@
 package routing
 
+import database.database
 import io.ktor.application.call
 import io.ktor.http.*
 import io.ktor.request.receiveText
@@ -21,6 +22,7 @@ fun Route.login() {
 
         val loginService = LoginService()
         try{
+
             val user = loginService.login(loginData)
             call.respondText(Json.stringify(User.serializer(),user), contentType = ContentType.Application.Json)
         }
