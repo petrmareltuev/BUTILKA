@@ -164,14 +164,14 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
         val validateReport = Validation<Report> {
 
             Report::case_number {
-                minLength(1)
+                minLength(1) hint "Поле \"Номер дела\" является обязательным для заполнения"
             }
 
             Report::participants {
-                minLength(1)
+                minLength(1) hint "Поле \"Учавствующие в задержании\" является обязательным для заполнения"
             }
             Report::victim required {
-                pattern("\\d{10}")
+                pattern("\\d{10}") hint "Номер паспорта должен состоять ровно из 10 чисел"
             }
 
         }
@@ -197,7 +197,7 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
         else
         {
             setState{
-                errorMessage="${validationResult.errors.first().dataPath} ${validationResult.errors.first().message}"
+                errorMessage= validationResult.errors.first().message
             }
         }
     }

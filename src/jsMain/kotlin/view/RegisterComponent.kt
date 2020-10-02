@@ -238,31 +238,31 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
         val validateUser = Validation<User> {
 
             User::username {
-                minLength(8)
-                maxLength(70)
+                minLength(8) hint "Логин должен состоять как минимум из 8 символов"
+                maxLength(50) hint "Логин не должен превышать 70 символов"
             }
 
             User::password {
-                minLength(8)
-                maxLength(70)
+                minLength(8) hint "Пароль должен состоять как минимум из 8 символов"
+                maxLength(50) hint "Пароль не должен превышать 70 символов"
             }
             User::full_name {
-                minLength(1)
+                minLength(1) hint "Поле \"ФИО\" является обязательным для заполнения"
             }
             User::organization {
-                minLength(1)
+                minLength(1) hint "Поле \"Наименование организации\" является обязательным для заполнения"
             }
             User::certificate_id {
-                minLength(1)
+                minLength(1) hint "Поле \"Номер удостоверения\" является обязательным для заполнения"
             }
             User::personal_id {
-                minLength(1)
+                minLength(1) hint "Поле \"Личный номер\" является обязательным для заполнения"
             }
             User::issued {
-                minLength(1)
+                minLength(1) hint "Поле \"Выдано\" является обязательным для заполнения"
             }
             User::duty {
-                minLength(1)
+                minLength(1) hint "Поле \"Должность\" является обязательным для заполнения"
             }
             User::email required  {
                 pattern("[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}") hint "Вы ввели неправильный e-mail"
@@ -295,7 +295,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
         else
         {
             setState{
-                errorMessage="${validationResult.errors.first().dataPath} ${validationResult.errors.first().message}"
+                errorMessage=validationResult.errors.first().message
             }
         }
     }
