@@ -26,9 +26,7 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
         div {
             renderAppBar()
             div("App-header") {
-                h2("App-font") {
-                    +"BUTILKA"
-                }
+                h2("App-font") { +"BUTILKA" }
             }
             div {
                 when (state.selected) {

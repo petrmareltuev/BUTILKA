@@ -15,3 +15,8 @@ expect class RegisterService{
 expect class ReportService{
     suspend fun sendReport(report: Report):String
 }
+
+expect class RankRequestService{
+    suspend fun checkRankRequest(loginData: LoginData):String
+    suspend fun sendRankRequest(loginData: LoginData):String
+}

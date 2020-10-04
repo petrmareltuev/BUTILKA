@@ -6,12 +6,13 @@ import io.ktor.request.receiveText
 import io.ktor.response.*
 import io.ktor.routing.Route
 import io.ktor.routing.post
+import kotlinx.serialization.UnstableDefault
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import model.Report
 import services.ReportService
 
-
+@OptIn(UnstableDefault::class)
 fun Route.report() {
     post("/report") {
         val receivedText = call.receiveText()

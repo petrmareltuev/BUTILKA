@@ -1,15 +1,12 @@
 package database
 
-import database.Requests.autoIncrement
-import org.jetbrains.exposed.dao.id.IntIdTable
 import org.jetbrains.exposed.sql.Table
-
 
 object Users: Table() {
     val userId = integer("userId").uniqueIndex().autoIncrement()
     val username = varchar("username", 50)
     val password = varchar("password", 50)
-    val fullname = varchar("fullname", 50)
+    val fullName = varchar("fullname", 50)
     val organization = varchar("organization", 50)
     val certificateId = varchar("certificateId", 10)
     val personId = varchar("personId", 10)

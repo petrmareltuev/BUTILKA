@@ -3,8 +3,6 @@ package services
 import database.Users
 import database.database
 import model.User
-import model.LoginData
-import org.jetbrains.exposed.sql.and
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
 
@@ -17,7 +15,7 @@ actual class RegisterService{
             Users.insert {
                 it[username] = user.username
                 it[password] = user.password
-                it[fullname] = user.full_name
+                it[fullName] = user.full_name
                 it[organization] = user.organization
                 it[certificateId] = user.certificate_id
                 it[personId] = user.personal_id

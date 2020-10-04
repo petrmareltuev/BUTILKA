@@ -1,18 +1,18 @@
 package routing
 
-import database.database
 import io.ktor.application.call
 import io.ktor.http.*
 import io.ktor.request.receiveText
 import io.ktor.response.respondText
 import io.ktor.routing.Route
 import io.ktor.routing.post
+import kotlinx.serialization.UnstableDefault
 import kotlinx.serialization.json.Json
 import model.LoginData
 import model.User
 import services.LoginService
 
-
+@OptIn(UnstableDefault::class)
 fun Route.login() {
     post("/login") {
         val receivedText = call.receiveText()

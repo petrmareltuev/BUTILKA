@@ -1,24 +1,17 @@
 package view
 
-import io.konform.validation.Valid
-import io.konform.validation.Validation
-import io.konform.validation.jsonschema.maxLength
-import io.konform.validation.jsonschema.minLength
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import kotlinx.html.js.onClickFunction
-import kotlinx.serialization.builtins.serializer
 import model.LoginData
-import model.User
 import react.*
 import react.dom.*
-import rpc.Transport
-import services.RegisterService
+import services.RankRequestService
 
-enum class isRequest {
-    thereIsRequest,
-    thereIsNotRequest,
-    loading
+enum class IsRequest {
+    ThereIsRequest,
+    ThereIsNotRequest,
+    Loading
 }
 
 fun RBuilder.requestComponent(goUser: () -> Unit, scope: CoroutineScope) = child(RequestComponent::class) {
@@ -32,33 +25,29 @@ external interface RequestProps: RProps {
 }
 
 interface RequestPageState: RState{
-    var Message: String
-    var selected: isRequest
+    var message: String
+    var selected: IsRequest
 }
 
 class RequestComponent : RComponent<RequestProps, RequestPageState>() {
 
     override fun RequestPageState.init() {
-        Message= ""
-        selected = isRequest.loading
+        message= ""
+        selected = IsRequest.Loading
     }
 
+/*
     private val coroutineContext
-        get() = props.coroutineScope.coroutineContext
-
+        get() = props.coroutineScope.coroutineContext*/
     override fun RBuilder.render() {
         div {
-            h1 {
-                +"Заявка"
-            }
 
             when (state.selected) {
-                isRequest.loading -> h1 {
-                    +"Loading..."
+                IsRequest.Loading -> h1 (classes ="pageTitle"){ +"Загрузка..."
                     checkRequest()
                 }
-                isRequest.thereIsNotRequest -> {
-                    p() {
+                IsRequest.ThereIsNotRequest -> {
+                    p {
                         button(classes = "App-buttons") {
                             span {
                                 +"Отправить заявку"
@@ -72,9 +61,9 @@ class RequestComponent : RComponent<RequestProps, RequestPageState>() {
                         }
                     }
                 }
-                isRequest.thereIsRequest ->h1 { +"Ваша заявка обрабатывается" }
+                IsRequest.ThereIsRequest ->h1 (classes ="pageTitle"){ +"Ваша заявка обрабатывается" }
             }
-            p() {
+            p{
                 button(classes = "App-buttons") {
                     span {
                         +"Назад"
@@ -91,47 +80,36 @@ class RequestComponent : RComponent<RequestProps, RequestPageState>() {
     }
 
     private fun doRequest() {
-        val loginData = LoginData(currentUser?.username!!, currentUser?.password!!)
-
-        console.log("im here")
-        val transport = Transport(coroutineContext)
-        suspend fun request(loginData: LoginData): Boolean {
-            return transport.post("request", Boolean.serializer(), JSON.stringify(loginData))
-        }
-
         props.coroutineScope.launch {
-            val response = request(loginData)
-            if (response){
+            val loginData = LoginData(currentUser?.username!!, currentUser?.password!!)
+            val rankRequestService = RankRequestService(coroutineContext)
+            val response = rankRequestService.sendRankRequest(loginData)
+            if (response=="YES"){
                 setState{
-                    selected = isRequest.thereIsRequest
+                    selected = IsRequest.ThereIsRequest
                 }
             }
             else{
                 setState{
-                    Message = "ХЗ почему не работает"
+                    message = "ХЗ почему не работает"
                 }
             }
         }
     }
 
     private fun checkRequest() {
-        val loginData = LoginData(currentUser?.username!!, currentUser?.password!!)
-
-        val transport = Transport(coroutineContext)
-        suspend fun request(loginData: LoginData): Boolean {
-            return transport.post("request/check", Boolean.serializer(), JSON.stringify(loginData))
-        }
-
         props.coroutineScope.launch {
-            val response = request(loginData)
-            if (response){
+            val rankRequestService = RankRequestService(coroutineContext)
+            val loginData = LoginData(currentUser?.username!!, currentUser?.password!!)
+            val response = rankRequestService.checkRankRequest(loginData)
+            if (response=="YES"){
                 setState{
-                    selected = isRequest.thereIsRequest
+                    selected = IsRequest.ThereIsRequest
                 }
             }
             else{
                 setState{
-                    selected = isRequest.thereIsNotRequest
+                    selected = IsRequest.ThereIsNotRequest
                 }
             }
         }

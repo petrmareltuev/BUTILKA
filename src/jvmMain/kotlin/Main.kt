@@ -28,30 +28,20 @@ fun Application.main() {
 
     routing {
         initGet()
-        appcss()
+        appCss()
         login()
         register()
         report()
         request()
     }
     database{
-    Lohs.insertIgnore {
-        it[fullname] = "Иван Голунов"
-        it[passportSerialNumber] = "1337420360"
-        it[registrationAddress] = "г. Москва, ул. Пушкина. д. Колотушкина"
-        it[issuedBy] = "ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ"
-        it[dateOfIssue] = "12.09.2020"
-        it[subdivisionCode] = "870-912"
-    }
+        Lohs.insertIgnore {
+            it[fullname] = "Иван Голунов"
+            it[passportSerialNumber] = "1337420360"
+            it[registrationAddress] = "г. Москва, ул. Пушкина. д. Колотушкина"
+            it[issuedBy] = "ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ"
+            it[dateOfIssue] = "12.09.2020"
+            it[subdivisionCode] = "870-912"
+        }
     }
 }
-
-//TODO go to apache httpclient
-//TODO add routing of all requests
-//TODO refactor react views
-//TODO launch database queries with coroutines
-//TODO main.bundle.js is too big
-//TODO add data validation
-//TODO strings more than 20 symbols dont accepted by database
-//TODO password encrypting
-//TODO russian language support

@@ -6,12 +6,13 @@ import io.ktor.request.*
 import io.ktor.response.*
 import io.ktor.routing.Route
 import io.ktor.routing.post
+import kotlinx.serialization.UnstableDefault
 import kotlinx.serialization.builtins.serializer
 import kotlinx.serialization.json.Json
 import model.User
 import services.RegisterService
 
-
+@OptIn(UnstableDefault::class)
 fun Route.register() {
     post("/register") {
 

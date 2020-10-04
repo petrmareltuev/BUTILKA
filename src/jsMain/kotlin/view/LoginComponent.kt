@@ -45,7 +45,7 @@ class LoginComponent : RComponent<LoginProps, LoginPageState>() {
     override fun RBuilder.render() {
         div("") {
             div {
-                h1 { +"Login" }
+                h1 (classes= "pageTitle"){ +"Войти" }
             }
 
             div {

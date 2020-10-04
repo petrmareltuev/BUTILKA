@@ -11,7 +11,7 @@ class NotFoundComponent : RComponent<RProps, RState>() {
     override fun RBuilder.render() {
         div("") {
             div {
-                h1 { +"Not Found" }
+                h1 (classes= "pageTitle"){ +"Not Found" }
             }
         }
     }

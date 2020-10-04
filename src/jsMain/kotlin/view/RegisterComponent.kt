@@ -62,7 +62,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
 
     override fun RBuilder.render() {
         div {
-            h1 { +"Register" }
+            h1 (classes= "pageTitle"){ +"Регистрация" }
         }
         div (classes="reg-box"){
             div(classes = "reg-input-box") {
@@ -269,7 +269,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
             }
 
             User::phone required  {
-                pattern("\\+79[0-9]{9}") hint "Телефон должен быть в формате +7xxxxxxxxxx"
+                pattern("\\+79[0-9]{9}") hint "Телефон должен быть в формате +79xxxxxxxxx"
             }
         }
         val validationResult = validateUser(user)

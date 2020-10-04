@@ -2,10 +2,8 @@ package services
 
 import kotlinx.serialization.builtins.serializer
 import model.User
-import model.LoginData
 import rpc.Transport
 import kotlin.coroutines.CoroutineContext
-import kotlin.js.Json
 
 actual class RegisterService(coroutineContext: CoroutineContext) {
     private val transport = Transport(coroutineContext)

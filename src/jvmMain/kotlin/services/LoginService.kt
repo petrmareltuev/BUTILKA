@@ -15,7 +15,7 @@ actual class LoginService{
                     User(
                         it[Users.username],
                         it[Users.password],
-                        it[Users.fullname],
+                        it[Users.fullName],
                         it[Users.organization],
                         it[Users.certificateId],
                         it[Users.personId],

@@ -1,4 +1,3 @@
-import kotlinext.js.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import react.buildElement

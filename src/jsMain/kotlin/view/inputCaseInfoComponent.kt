@@ -3,17 +3,15 @@ package view
 
 import io.konform.validation.Valid
 import io.konform.validation.Validation
-import io.konform.validation.jsonschema.maxLength
 import io.konform.validation.jsonschema.minLength
 import io.konform.validation.jsonschema.pattern
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
-import model.inputValue
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
 import kotlinx.html.js.onClickFunction
 import model.Report
-import model.User
+import model.inputValue
 import react.*
 import react.dom.*
 import rpc.StatusCodeException
@@ -32,7 +30,7 @@ external interface InputCaseInfoProps: RProps {
 }
 
 interface InputCaseInfoPageState : RState {
-    var case_number:String
+    var caseNumber:String
     var participant:String
     var victim:String
     var witness:String
@@ -43,7 +41,7 @@ interface InputCaseInfoPageState : RState {
 class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageState>()
 {
     override fun InputCaseInfoPageState.init() {
-        case_number = ""
+        caseNumber = ""
         participant = ""
         victim = ""
         witness = ""
@@ -57,14 +55,14 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
     override fun RBuilder.render() {
 
         div {
-            form {
-                legend { +"Внесение информации о задержании" }
+            div {
+                h1(classes= "pageTitle") { +"Внесение информации о задержании" }
                 p {
                     input(type = InputType.text, name = "case_number") {
                         attrs {
                             placeholder = "Номер дела"
                             onChangeFunction = {
-                                state.case_number = it.inputValue
+                                state.caseNumber = it.inputValue
                                 setState{
                                     errorMessage = ""
                                 }
@@ -137,7 +135,7 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                         }
                     }
                 }
-                p() {
+                p{
                     button(classes = "App-buttons") {
                         span {
                             +"Назад"
@@ -160,7 +158,7 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
     }
 
     private fun sendReport() {
-        val report = Report(currentUser?.username!!, currentUser?.password!!, state.case_number, state.participant, state.victim, state.witness, state.comment)
+        val report = Report(currentUser?.username!!, currentUser?.password!!, state.caseNumber, state.participant, state.victim, state.witness, state.comment)
         val validateReport = Validation<Report> {
 
             Report::case_number {
@@ -185,11 +183,10 @@ class InputCaseInfoComponent: RComponent<InputCaseInfoProps, InputCaseInfoPageSt
                 try {
                     val response = reportService.sendReport(report)
                     setState {
-                        if (response == "OK") {
-                            errorMessage = "Информацио о деле успешно внесена"
-                        }
-                        else{
-                            errorMessage = "Лоха с таким номером паспорта не существует"
+                        errorMessage = if (response == "OK") {
+                            "Информацио о деле успешно внесена"
+                        } else{
+                            "Лоха с таким номером паспорта не существует"
                         }
                     }
 

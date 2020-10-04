@@ -19,11 +19,9 @@ external interface HomeProps: RProps {
 
 class HomeComponent : RComponent<HomeProps, ApplicationPageState>() {
     override fun RBuilder.render() {
-        div() {
+        div{
             button(classes = "App-buttons") {
-                span() {
-                    +"Вход"
-                }
+                span{ +"Вход" }
                 attrs {
                     onClickFunction = {
                         props.goLogin()
