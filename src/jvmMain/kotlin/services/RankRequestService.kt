@@ -6,6 +6,7 @@ import database.database
 import model.LoginData
 import org.jetbrains.exposed.sql.insert
 import org.jetbrains.exposed.sql.select
+import kotlin.random.Random.Default.nextInt
 
 actual class RankRequestService{
     actual suspend fun checkRankRequest(loginData:LoginData):String{
@@ -25,10 +26,21 @@ actual class RankRequestService{
             Users.select{Users.username eq loginData.username}.first().let{ resultRow ->
                 val userId = resultRow[Users.userId]
                 Requests.insert{
+                    var cN: String
+                    do{ cN = nextInt(99999).toString() }
+                    while(checkCaseNumber(cN))
                     it[Requests.userId] = userId
-                    it[caseNumber] = "123GH"
+                    it[caseNumber] =  cN
                 }.let{"YES"}
             }
+        }
+    }
+
+    private fun checkCaseNumber (cN: String):Boolean{
+        return database {
+            Requests.select{
+                Requests.caseNumber eq cN
+            }.firstOrNull()?.let{true}?: false
         }
     }
 }
