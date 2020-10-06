@@ -23,7 +23,8 @@ actual class RegisterService{
                 it[duty] = user.duty
                 it[phone] = user.phone
                 it[email] = user.email
-                it[isMajor] = true
+                it[isMajor] = user.isMajor
+                it[busy] = false
             }
         }.let { return true }
     }

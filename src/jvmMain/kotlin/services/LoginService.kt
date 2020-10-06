@@ -22,7 +22,8 @@ actual class LoginService{
                         it[Users.issued],
                         it[Users.duty],
                         it[Users.phone],
-                        it[Users.email]
+                        it[Users.email],
+                        it[Users.isMajor]
                     )
                 } ?: throw IllegalArgumentException("There is not such user")
         }

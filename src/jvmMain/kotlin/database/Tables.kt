@@ -15,6 +15,7 @@ object Users: Table() {
     val phone = varchar("phone", 15)
     val email = varchar("email", 30)
     val isMajor = bool("isMajor")
+    val busy = bool("busy")
     override val primaryKey = PrimaryKey(userId, name = "PK_UserId")
 }
 
@@ -22,8 +23,8 @@ object Requests: Table(){
     val requestId = integer("requestId").uniqueIndex().autoIncrement()
     val caseNumber = varchar("caseNumber", 20)
     val userId = integer("UserId")
+    val shockhaId = integer("ShockhaId")
     override val primaryKey = PrimaryKey(requestId, name = "PK_RequestId")
-
 }
 
 object Reports: Table(){

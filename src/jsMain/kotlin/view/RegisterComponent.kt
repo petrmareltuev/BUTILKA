@@ -233,7 +233,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
     }
 
     private fun doRegister() {
-        val user = User(state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email)
+        val user = User(state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email, true)
 
         val validateUser = Validation<User> {
 

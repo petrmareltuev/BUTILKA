@@ -8,5 +8,6 @@ enum class Views {
     User,
     InputCaseInfo,
     NotFound,
-    Request
+    Request,
+    MyNotifications
 }

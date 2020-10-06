@@ -4,9 +4,11 @@ import database.Requests
 import database.Users
 import database.database
 import model.LoginData
-import org.jetbrains.exposed.sql.insert
-import org.jetbrains.exposed.sql.select
+import model.User
+import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import kotlin.random.Random.Default.nextInt
+import kotlin.random.Random.Default.nextLong
 
 actual class RankRequestService{
     actual suspend fun checkRankRequest(loginData:LoginData):String{
@@ -31,6 +33,20 @@ actual class RankRequestService{
                     while(checkCaseNumber(cN))
                     it[Requests.userId] = userId
                     it[caseNumber] =  cN
+
+                    var chosenUser:Int?
+                    do{
+                        val numberUsers = Users.selectAll().last().let{ it[Users.userId] }
+                        val randomUser = nextInt(numberUsers)
+                        chosenUser = Users.select{Users.isMajor eq false and (Users.busy eq false) and (Users.userId eq randomUser)
+                        }.firstOrNull()?.let{it[Users.userId]}
+                    } while(chosenUser == null)
+
+                    it[shockhaId] =  chosenUser
+                    Users.update({ Users.userId eq chosenUser }){
+                        it[busy] = true
+                    }
+
                 }.let{"YES"}
             }
         }

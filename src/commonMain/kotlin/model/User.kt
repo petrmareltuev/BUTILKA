@@ -13,5 +13,6 @@ data class User(
         var issued:String,
         var duty:String,
         var phone:String,
-        var email:String)
+        var email:String,
+        var isMajor: Boolean)
 

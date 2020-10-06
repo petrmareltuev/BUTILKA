@@ -3,8 +3,7 @@ package model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Lohs(
-        var lohId:String,
+data class Loh(
         var fullname:String,
         var passportSerialNumber:String,
         var registrationAddress:String,

@@ -1,6 +1,7 @@
 package services
 
 import model.LoginData
+import model.Notification
 import model.Report
 import model.User
 
@@ -19,4 +20,8 @@ expect class ReportService{
 expect class RankRequestService{
     suspend fun checkRankRequest(loginData: LoginData):String
     suspend fun sendRankRequest(loginData: LoginData):String
+}
+
+expect class NotificationService{
+    suspend fun checkNotifications(loginData: LoginData):Notification
 }

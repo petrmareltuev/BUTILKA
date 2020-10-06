@@ -7,48 +7,66 @@ import react.RProps
 import react.RState
 import react.dom.*
 
-fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit, goRequest: () -> Unit) = child(UserComponent::class) {
+fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit, goRequest: () -> Unit, goMyNotifications: () -> Unit) = child(UserComponent::class) {
     attrs.goInputCaseInfo = goInputCaseInfo
     attrs.goHome = goHome
     attrs.goRequest = goRequest
+    attrs.goMyNotifications = goMyNotifications
 }
 
 external interface UserProps: RProps {
     var goInputCaseInfo: () -> Unit
     var goHome: () -> Unit
     var goRequest: () -> Unit
+    var goMyNotifications: () -> Unit
 }
 
 class UserComponent : RComponent<UserProps, RState>() {
     override fun RBuilder.render() {
         div {
             div(classes = "user") {
-                h1(classes= "pageTitle") { +"Добро пожаловать " }
-                h1(classes= "pageTitle") { +currentUser?.full_name!! }
-                p{
-                    button(classes = "App-buttons") {
-                        span {
-                            +"Заявка на повышениие звания"
-                        }
-                        attrs {
-                            onClickFunction = {
-                                props.goRequest()
+                h1(classes = "pageTitle") { +"Добро пожаловать " }
+                h1(classes = "pageTitle") { +currentUser?.full_name!! }
+                if (currentUser?.isMajor!!)
+                    p {
+                        button(classes = "App-buttons") {
+                            span {
+                                +"Подать заявку"
                             }
-                        }
+                            attrs {
+                                onClickFunction = {
+                                    props.goRequest()
+                                }
+                            }
 
+                        }
                     }
-                }
-                p{
-                    button(classes = "App-buttons") {
-                        span {
-                            +"Внесение информации о задержании"
-                        }
-                        attrs {
-                            onClickFunction = {
-                                props.goInputCaseInfo()
+                else{
+                    p {
+                        button(classes = "App-buttons") {
+                            span {
+                                +"Мои уведомления"
                             }
-                        }
+                            attrs {
+                                onClickFunction = {
+                                    props.goMyNotifications()
+                                }
+                            }
 
+                        }
+                    }
+                    p {
+                        button(classes = "App-buttons") {
+                            span {
+                                +"Внесение информации о задержании"
+                            }
+                            attrs {
+                                onClickFunction = {
+                                    props.goInputCaseInfo()
+                                }
+                            }
+
+                        }
                     }
                 }
 

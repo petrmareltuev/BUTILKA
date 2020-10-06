@@ -33,6 +33,7 @@ fun Application.main() {
         register()
         report()
         request()
+        notification()
     }
     database{
         Lohs.insertIgnore {
