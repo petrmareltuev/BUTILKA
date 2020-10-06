@@ -24,6 +24,7 @@ object Requests: Table(){
     val caseNumber = varchar("caseNumber", 20)
     val userId = integer("UserId")
     val shockhaId = integer("ShockhaId")
+    val lohId = integer("LohId")
     override val primaryKey = PrimaryKey(requestId, name = "PK_RequestId")
 }
 
