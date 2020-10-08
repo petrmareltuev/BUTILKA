@@ -43,6 +43,7 @@ fun Application.main() {
             it[issuedBy] = "ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ"
             it[dateOfIssue] = "12.09.2020"
             it[subdivisionCode] = "870-912"
+            it[jailed]= false
         }
     }
 }
