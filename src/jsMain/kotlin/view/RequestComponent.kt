@@ -91,7 +91,7 @@ class RequestComponent : RComponent<RequestProps, RequestPageState>() {
             }
             else{
                 setState{
-                    message = "ХЗ почему не работает"
+                    message = response
                 }
             }
         }

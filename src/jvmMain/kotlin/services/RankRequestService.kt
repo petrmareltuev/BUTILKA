@@ -4,11 +4,8 @@ import database.Requests
 import database.Users
 import database.database
 import model.LoginData
-import model.User
 import org.jetbrains.exposed.sql.*
-import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import kotlin.random.Random.Default.nextInt
-import kotlin.random.Random.Default.nextLong
 
 actual class RankRequestService{
     actual suspend fun checkRankRequest(loginData:LoginData):String{
@@ -16,7 +13,7 @@ actual class RankRequestService{
             Users.select{ Users.username eq loginData.username}.first().let{
                 val userId = it[Users.userId]
                 Requests.select{
-                    Requests.userId eq userId
+                    Requests.majorId eq userId
                 }.firstOrNull()?.let{
                     "YES"
                 }?: "NOT"
@@ -24,33 +21,36 @@ actual class RankRequestService{
         }
     }
     actual suspend fun sendRankRequest(loginData: LoginData):String{
-        return database{
-            Users.select{Users.username eq loginData.username}.first().let{ resultRow ->
-                val userId = resultRow[Users.userId]
-                Requests.insert{
-                    var cN: String
-                    do{ cN = nextInt(99999).toString() }
-                    while(checkCaseNumber(cN))
-                    it[Requests.userId] = userId
-                    it[caseNumber] =  cN
 
-                    var chosenUser:Int?
-                    do{
-                        val numberUsers = Users.selectAll().last().let{ it[Users.userId] }
-                        val randomUser = nextInt(numberUsers)
-                        chosenUser = Users.select{Users.isMajor eq false and (Users.busy eq false) and (Users.userId eq randomUser)
-                        }.firstOrNull()?.let{it[Users.userId]}
-                    } while(chosenUser == null)
+        var cN:String; do{ cN = nextInt(99999).toString() } while(checkCaseNumber(cN))
 
-                    it[shockhaId] =  chosenUser
-                    Users.update({ Users.userId eq chosenUser }){
-                        it[busy] = true
-                    }
-
-                }.let{"YES"}
-            }
+        val chosenShoha = database {
+            Users.select { Users.isMajor eq false and (Users.busy eq false) }.firstOrNull()?.let { it[Users.userId] }
         }
+
+        val majorId = database {
+            Users.select { Users.username eq loginData.username }.first().let{it[Users.userId]}
+        }
+
+        if(chosenShoha==null){return "Нет доступного шохи"}
+        else{
+            database{
+                Requests.insert {
+                    it[Requests.majorId] = majorId
+                    it[Requests.caseNumber] = cN
+                    it[Requests.shockhaId] = chosenShoha
+                    it[Requests.lohId] = 1
+                }
+
+                Users.update({ Users.userId eq chosenShoha}) {
+                    it[busy] = true
+                }
+            }
+            return "YES"
+        }
+
     }
+
 
     private fun checkCaseNumber (cN: String):Boolean{
         return database {
