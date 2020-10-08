@@ -17,21 +17,26 @@ actual class NotificationService{
                 val shockha = user[userId]
                 Requests.select { Requests.shockhaId eq shockha and (Requests.resolved eq false)
                 }.firstOrNull()?.let{ req ->
-                    Notification(
-                        req[caseNumber],
-                        Lohs.select{lohId eq 1}.first().let{
-                            Loh(
-                                    it[Lohs.fullname],
-                                    it[Lohs.passportSerialNumber],
-                                    it[Lohs.registrationAddress],
-                                    it[Lohs.issuedBy],
-                                    it[Lohs.dateOfIssue],
-                                    it[Lohs.subdivisionCode]
-                            )
-                        }
-                )
-                }
-            }?: throw NoNotificationException("There no notification with such userId")
+                    if(req[Requests.lohId] != null)
+                    {
+                        Notification(
+                            req[caseNumber],
+                            Lohs.select{Lohs.lohId eq req[Requests.lohId]!!}.first().let{
+                                Loh(
+                                        it[Lohs.fullname],
+                                        it[Lohs.passportSerialNumber],
+                                        it[Lohs.registrationAddress],
+                                        it[Lohs.issuedBy],
+                                        it[Lohs.dateOfIssue],
+                                        it[Lohs.subdivisionCode]
+                                )
+                            }
+                        )
+                    }
+                    else
+                        throw NoNotificationException("There is notification, but all lohs is jailed")
+                }?: throw NoNotificationException("There is no notification with such userId")
+            }?: throw NoNotificationException("There is no such user")
 
         }
     }

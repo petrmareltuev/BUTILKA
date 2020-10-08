@@ -1,10 +1,12 @@
 package services
 
+import database.Lohs
 import database.Requests
 import database.Users
 import database.database
 import model.LoginData
 import org.jetbrains.exposed.sql.*
+import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import javax.management.Query.and
 import kotlin.random.Random.Default.nextInt
 
@@ -13,13 +15,13 @@ actual class RankRequestService{
         return database{
             Users.select{ Users.username eq loginData.username}.first().let{
                 val userId = it[Users.userId]
-                Requests.select{ Requests.resolved eq false  and (Requests.majorId eq userId) // TODO another answer for resolved request
+                Requests.select{ Requests.majorId eq userId and (Requests.resolved eq false)} // TODO another answer for resolved request
                 }.firstOrNull()?.let{
                     "YES"
-                }?: "NOT"
-            }
+            }?: "NOT"
         }
     }
+
 
     actual suspend fun sendRankRequest(loginData: LoginData):String{
 
@@ -33,17 +35,26 @@ actual class RankRequestService{
             Users.select { Users.username eq loginData.username }.first().let{it[Users.userId]}
         }
 
+        val chosenLoh = database {
+            Lohs.select { Lohs.jailed eq false }.firstOrNull()?.let { it[Lohs.lohId] }
+        }
+
         database{
             Requests.insert {
                 it[Requests.majorId] = majorId
                 it[Requests.caseNumber] = cN
                 it[Requests.shockhaId] = chosenShoha
-                it[Requests.lohId] = 1
+                it[Requests.lohId] = chosenLoh
                 it[resolved] = false
             }
 
-            if (chosenShoha!= null)
-            Users.update({ Users.userId eq chosenShoha}) { it[busy] = true }
+            if (chosenShoha!= null) {
+                Users.update({ Users.userId eq chosenShoha }) { it[busy] = true }
+            }
+
+            if (chosenLoh!=null){
+                Lohs.update({ Lohs.lohId eq chosenLoh}){it[jailed]= true}
+            }
         }
 
         return "YES"

@@ -45,5 +45,23 @@ fun Application.main() {
             it[subdivisionCode] = "870-912"
             it[jailed]= false
         }
+        Lohs.insertIgnore {
+            it[fullname] = "Вася Тракторист"
+            it[passportSerialNumber] = "9306592847"
+            it[registrationAddress] = "г. Челябинск, ул. Сталелитейная. д.23 "
+            it[issuedBy] = "ГУ МВД ПО Г. ЧЕЛЯБИНСК"
+            it[dateOfIssue] = "11.11.2010"
+            it[subdivisionCode] = "810-812"
+            it[jailed]= false
+        }
+        Lohs.insertIgnore {
+            it[fullname] = "Твой батя"
+            it[passportSerialNumber] = "9838471048"
+            it[registrationAddress] = "г. Чита, ул. Ленина. д. 6"
+            it[issuedBy] = "ГУ МВД ПО ЧИТИНСКОЙ ОБЛАСТИ"
+            it[dateOfIssue] = "02.06.1998"
+            it[subdivisionCode] = "100-641"
+            it[jailed]= false
+        }
     }
 }
