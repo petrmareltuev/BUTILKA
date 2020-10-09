@@ -63,5 +63,38 @@ fun Application.main() {
             it[subdivisionCode] = "100-641"
             it[jailed]= false
         }
+        Drugs.insertIgnore {
+            it[drugType] = "Марихуана"
+            it[drugMass] = 20
+        }
+        Drugs.insertIgnore {
+            it[drugType] = "Гашиш"
+            it[drugMass] = 15
+        }
+        Drugs.insertIgnore {
+            it[drugType] = "Кокаин"
+            it[drugMass] = 5
+        }
+        Drugs.insertIgnore {
+            it[drugType] = "Лсд"
+            it[drugMass] = 1
+        }
+        Drugs.insertIgnore {
+            it[drugType] = "Героин"
+            it[drugMass] = 5
+        }
+        Drugs.insertIgnore {
+            it[drugType] = "Метамфетамин"
+            it[drugMass] = 9
+        }
+        Drugs.insertIgnore {
+            it[drugType] = "Амфетамин"
+            it[drugMass] = 10
+        }
+        Drugs.insertIgnore {
+            it[drugType] = "Курительные смеси"
+            it[drugMass] = 30
+        }
+
     }
 }

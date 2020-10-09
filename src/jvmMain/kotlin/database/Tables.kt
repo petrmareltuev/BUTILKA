@@ -23,10 +23,12 @@ object Requests: Table(){
     val requestId = integer("requestId").uniqueIndex().autoIncrement()
     val caseNumber = varchar("caseNumber", 20)
     val majorId = integer("majorId")
+    val drugId = integer("drugId")
     val shockhaId = integer("ShockhaId").nullable()
     val lohId = integer("LohId").nullable()
     var resolved = bool("resolved")
     override val primaryKey = PrimaryKey(requestId, name = "PK_RequestId")
+
 }
 
 object Reports: Table(){
@@ -50,4 +52,9 @@ object Lohs: Table(){
     val subdivisionCode = varchar("subdivisionCode", 20)
     override val primaryKey = PrimaryKey(fullname, name = "PK_Loh")
     var jailed = bool("jailed")
+}
+object Drugs: Table(){
+    val drugId = integer("drugId").uniqueIndex().autoIncrement()
+    val drugType = varchar("drugType", 50).uniqueIndex()
+    val drugMass = integer("drugMass")
 }
