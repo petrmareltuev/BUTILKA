@@ -38,7 +38,14 @@ actual class RankRequestService{
         val chosenLoh = database {
             Lohs.select { Lohs.jailed eq false }.firstOrNull()?.let { it[Lohs.lohId] }
         }
-
+        
+        val count = database{
+            Drugs.selectAll().count()
+        }
+        
+        val drugId = nextLong(count)
+        
+        
         database{
             Requests.insert {
                 it[Requests.majorId] = majorId
@@ -46,6 +53,7 @@ actual class RankRequestService{
                 it[Requests.shockhaId] = chosenShoha
                 it[Requests.lohId] = chosenLoh
                 it[resolved] = false
+                it[drugId] = drugId
             }
 
             if (chosenShoha!= null) {
