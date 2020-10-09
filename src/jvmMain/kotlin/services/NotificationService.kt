@@ -30,7 +30,9 @@ actual class NotificationService{
                                         it[Lohs.dateOfIssue],
                                         it[Lohs.subdivisionCode]
                                 )
-                            }
+                            },
+                            Drugs.select{Drugs.drugId eq req[Requests.drugId]}.first().let{it[Drugs.drugType]},
+                            Drugs.select{Drugs.drugId eq req[Requests.drugId]}.first().let{it[Drugs.drugMass]}
                         )
                     }
                     else

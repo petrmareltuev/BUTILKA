@@ -24,6 +24,7 @@ fun Application.main() {
         SchemaUtils.create(Reports)
         SchemaUtils.create(Lohs)
         SchemaUtils.create(Requests)
+        SchemaUtils.create(Drugs)
     }
 
     routing {

@@ -58,6 +58,12 @@ class MyNotificationComponent : RComponent<MyNotificationProps, MyNotificationPa
                     h1 (classes ="pageTitle"){+"Адрес: ${state.notification.loh.registrationAddress}" }
                     h1 (classes ="pageTitle"){+"Паспорт: ${state.notification.loh.passportSerialNumber}, Выдан ${state.notification.loh.issuedBy} ${state.notification.loh.dateOfIssue}" }
                     h1 (classes ="pageTitle"){+"Код подразделения: ${state.notification.loh.subdivisionCode}" }
+                    h1 (classes ="pageTitle"){+"Необходим подброс: ${state.notification.drugName}, ${state.notification.drugMass} грамм" }
+                    img {
+                        attrs {
+                            src = "https://people.kth.se/~hhofer/parade/images/team/person.png"
+                        }
+                    }
                 }
             }
             p{

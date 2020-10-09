@@ -1,14 +1,12 @@
 package services
 
-import database.Lohs
-import database.Requests
-import database.Users
-import database.database
+import database.*
 import model.LoginData
 import org.jetbrains.exposed.sql.*
 import org.jetbrains.exposed.sql.SqlExpressionBuilder.eq
 import javax.management.Query.and
 import kotlin.random.Random.Default.nextInt
+import kotlin.random.Random.Default.nextLong
 
 actual class RankRequestService{
     actual suspend fun checkRankRequest(loginData:LoginData):String{
@@ -53,7 +51,7 @@ actual class RankRequestService{
                 it[Requests.shockhaId] = chosenShoha
                 it[Requests.lohId] = chosenLoh
                 it[resolved] = false
-                it[drugId] = drugId
+                it[Requests.drugId] = drugId.toInt()
             }
 
             if (chosenShoha!= null) {
