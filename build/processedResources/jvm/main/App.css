@@ -1,0 +1,104 @@
+html {
+  position:relative;
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height:100%;
+  text-align: center;
+}
+
+
+.App{
+  margin: 0;
+  padding: 0;
+  height:100%;
+  text-align: center;
+  background: rgb(95,67,236);
+  background: linear-gradient(180deg, rgba(95,67,236,1) 0%, rgba(243,252,255,1) 150%);
+  font-family: 'Aclonica', sans-serif;
+}
+
+.App-font{
+  font-family: 'Aclonica', sans-serif;
+  text-shadow: 2px 2px 25px black;
+  font-size: 44pt;
+}
+
+.pageTitle{
+  color: rgb(235, 235, 235);
+  font-size: 24pt;
+  font-weight: inherit;
+}
+
+.App-header {
+  height:  100%;
+  padding: 20px;
+  color: rgb(235, 235, 235);
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.App-ticker {
+  font-size: medium;
+}
+
+.App-buttons{
+  display: inline-block;
+  border-radius: 14px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 15px 25px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  width: inherit;
+}
+
+.App-buttons span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.App-buttons span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.App-buttons:hover span {
+  padding-right: 25px;
+}
+
+.App-buttons:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.App-buttons:active {
+    background-color: rgb(95,67,236);
+}
+
+.reg-box{
+  display: flex;
+  flex-direction: row;
+  Justify-content: center;
+}
+
+.reg-input-box{
+  display: flex;
+  flex-direction: column
+}

@@ -1,0 +1,316 @@
+14:37:22.804 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+14:37:22.878 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+14:37:22.879 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 8
+14:37:22.881 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+14:37:22.883 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+14:37:22.884 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+14:37:22.885 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
+14:37:22.886 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+14:37:22.887 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+14:37:22.887 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+14:37:22.887 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+14:37:22.887 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+14:37:22.887 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+14:37:22.906 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 1361051648 bytes
+14:37:22.906 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+14:37:22.907 [main] DEBUG io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+14:37:22.907 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+14:37:22.931 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.workdir: /tmp (io.netty.tmpdir)
+14:37:22.931 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.deleteLibAfterLoading: true
+14:37:22.931 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.tryPatchShadedId: true
+14:37:22.936 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - Unable to load the library 'netty_transport_native_epoll_x86_64', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:186)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:57)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:38)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create(NettyApplicationEngine.kt:186)
+	at io.ktor.server.netty.NettyApplicationEngine.<init>(NettyApplicationEngine.kt:74)
+	at io.ktor.server.netty.EngineMain.main(EngineMain.kt:22)
+14:37:22.938 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - netty_transport_native_epoll_x86_64 cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
+java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:349)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:186)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:57)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:38)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create(NettyApplicationEngine.kt:186)
+	at io.ktor.server.netty.NettyApplicationEngine.<init>(NettyApplicationEngine.kt:74)
+	at io.ktor.server.netty.EngineMain.main(EngineMain.kt:22)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+		at java.lang.Runtime.loadLibrary0(Runtime.java:871)
+		at java.lang.System.loadLibrary(System.java:1124)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+		at java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+		... 7 common frames omitted
+14:37:22.939 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - Unable to load the library 'netty_transport_native_epoll', trying other loading mechanism.
+java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:189)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:57)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:38)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create(NettyApplicationEngine.kt:186)
+	at io.ktor.server.netty.NettyApplicationEngine.<init>(NettyApplicationEngine.kt:74)
+	at io.ktor.server.netty.EngineMain.main(EngineMain.kt:22)
+14:37:22.939 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - netty_transport_native_epoll cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
+java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path
+	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
+	at java.lang.System.loadLibrary(System.java:1124)
+	at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+	at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:349)
+	at io.netty.util.internal.NativeLibraryLoader.load(NativeLibraryLoader.java:136)
+	at io.netty.channel.epoll.Native.loadNativeLibrary(Native.java:189)
+	at io.netty.channel.epoll.Native.<clinit>(Native.java:57)
+	at io.netty.channel.epoll.Epoll.<clinit>(Epoll.java:38)
+	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create(NettyApplicationEngine.kt:186)
+	at io.ktor.server.netty.NettyApplicationEngine.<init>(NettyApplicationEngine.kt:74)
+	at io.ktor.server.netty.EngineMain.main(EngineMain.kt:22)
+	Suppressed: java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path
+		at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
+		at java.lang.Runtime.loadLibrary0(Runtime.java:871)
+		at java.lang.System.loadLibrary(System.java:1124)
+		at io.netty.util.internal.NativeLibraryUtil.loadLibrary(NativeLibraryUtil.java:38)
+		at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+		at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+		at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+		at java.lang.reflect.Method.invoke(Method.java:498)
+		at io.netty.util.internal.NativeLibraryLoader$1.run(NativeLibraryLoader.java:369)
+		at java.security.AccessController.doPrivileged(Native Method)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
+		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
+		... 7 common frames omitted
+14:37:23.005 [main] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 8
+14:37:23.078 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+14:37:23.078 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+14:37:23.114 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+14:37:23.115 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+14:37:23.124 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+14:37:23.266 [main] INFO Application - No ktor.deployment.watch patterns specified, automatic reload is not active
+14:37:27.439 [main] DEBUG Exposed - CREATE TABLE IF NOT EXISTS reports ("reportId" SERIAL, "caseNumber" VARCHAR(20) NOT NULL, participants VARCHAR(300) NOT NULL, victim VARCHAR(70) NOT NULL, witness VARCHAR(150) NOT NULL, "comment" VARCHAR(200) NOT NULL, "lohName" VARCHAR(200) NOT NULL, CONSTRAINT PK_ReportId PRIMARY KEY ("reportId"))
+SQL: CREATE TABLE IF NOT EXISTS reports ("reportId" SERIAL, "caseNumber" VARCHAR(20) NOT NULL, participants VARCHAR(300) NOT NULL, victim VARCHAR(70) NOT NULL, witness VARCHAR(150) NOT NULL, "comment" VARCHAR(200) NOT NULL, "lohName" VARCHAR(200) NOT NULL, CONSTRAINT PK_ReportId PRIMARY KEY ("reportId"))
+14:37:27.510 [main] DEBUG Exposed - ALTER TABLE reports ADD CONSTRAINT reports_reportid_unique UNIQUE ("reportId")
+SQL: ALTER TABLE reports ADD CONSTRAINT reports_reportid_unique UNIQUE ("reportId")
+14:37:27.616 [main] DEBUG Exposed - CREATE TABLE IF NOT EXISTS lohs ("lohId" SERIAL NOT NULL, fullname VARCHAR(50), "passportSerialNumber" VARCHAR(10) NOT NULL, "registrationAddress" VARCHAR(50) NOT NULL, "issuedBy" VARCHAR(50) NOT NULL, "dateOfIssue" VARCHAR(20) NOT NULL, "subdivisionCode" VARCHAR(20) NOT NULL, jailed BOOLEAN NOT NULL, CONSTRAINT PK_Loh PRIMARY KEY (fullname))
+SQL: CREATE TABLE IF NOT EXISTS lohs ("lohId" SERIAL NOT NULL, fullname VARCHAR(50), "passportSerialNumber" VARCHAR(10) NOT NULL, "registrationAddress" VARCHAR(50) NOT NULL, "issuedBy" VARCHAR(50) NOT NULL, "dateOfIssue" VARCHAR(20) NOT NULL, "subdivisionCode" VARCHAR(20) NOT NULL, jailed BOOLEAN NOT NULL, CONSTRAINT PK_Loh PRIMARY KEY (fullname))
+14:37:27.660 [main] DEBUG Exposed - ALTER TABLE lohs ADD CONSTRAINT lohs_lohid_unique UNIQUE ("lohId")
+SQL: ALTER TABLE lohs ADD CONSTRAINT lohs_lohid_unique UNIQUE ("lohId")
+14:37:27.749 [main] DEBUG Exposed - CREATE TABLE IF NOT EXISTS requests ("requestId" SERIAL, "caseNumber" VARCHAR(20) NOT NULL, "majorId" INT NOT NULL, "drugId" INT NOT NULL, "ShockhaId" INT NULL, "LohId" INT NULL, resolved BOOLEAN NOT NULL, CONSTRAINT PK_RequestId PRIMARY KEY ("requestId"))
+SQL: CREATE TABLE IF NOT EXISTS requests ("requestId" SERIAL, "caseNumber" VARCHAR(20) NOT NULL, "majorId" INT NOT NULL, "drugId" INT NOT NULL, "ShockhaId" INT NULL, "LohId" INT NULL, resolved BOOLEAN NOT NULL, CONSTRAINT PK_RequestId PRIMARY KEY ("requestId"))
+14:37:27.794 [main] DEBUG Exposed - ALTER TABLE requests ADD CONSTRAINT requests_requestid_unique UNIQUE ("requestId")
+SQL: ALTER TABLE requests ADD CONSTRAINT requests_requestid_unique UNIQUE ("requestId")
+14:37:27.818 [main] DEBUG Exposed - CREATE TABLE IF NOT EXISTS drugs ("drugId" SERIAL NOT NULL, "drugType" VARCHAR(50) NOT NULL, "drugMass" INT NOT NULL)
+SQL: CREATE TABLE IF NOT EXISTS drugs ("drugId" SERIAL NOT NULL, "drugType" VARCHAR(50) NOT NULL, "drugMass" INT NOT NULL)
+14:37:27.862 [main] DEBUG Exposed - ALTER TABLE drugs ADD CONSTRAINT drugs_drugid_unique UNIQUE ("drugId")
+SQL: ALTER TABLE drugs ADD CONSTRAINT drugs_drugid_unique UNIQUE ("drugId")
+14:37:27.907 [main] DEBUG Exposed - ALTER TABLE drugs ADD CONSTRAINT drugs_drugtype_unique UNIQUE ("drugType")
+SQL: ALTER TABLE drugs ADD CONSTRAINT drugs_drugtype_unique UNIQUE ("drugType")
+14:37:28.187 [main] DEBUG Exposed - INSERT INTO lohs ("dateOfIssue", fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('12.09.2020', 'Иван Голунов', 'ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ', false, '1337420360', 'г. Москва, ул. Пушкина. д. Колотушкина', '870-912') ON CONFLICT DO NOTHING
+SQL: INSERT INTO lohs ("dateOfIssue", fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('12.09.2020', 'Иван Голунов', 'ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ', false, '1337420360', 'г. Москва, ул. Пушкина. д. Колотушкина', '870-912') ON CONFLICT DO NOTHING
+14:37:28.195 [main] DEBUG Exposed - INSERT INTO lohs ("dateOfIssue", fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('11.11.2010', 'Вася Тракторист', 'ГУ МВД ПО Г. ЧЕЛЯБИНСК', false, '9306592847', 'г. Челябинск, ул. Сталелитейная. д.23 ', '810-812') ON CONFLICT DO NOTHING
+SQL: INSERT INTO lohs ("dateOfIssue", fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('11.11.2010', 'Вася Тракторист', 'ГУ МВД ПО Г. ЧЕЛЯБИНСК', false, '9306592847', 'г. Челябинск, ул. Сталелитейная. д.23 ', '810-812') ON CONFLICT DO NOTHING
+14:37:28.199 [main] DEBUG Exposed - INSERT INTO lohs ("dateOfIssue", fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('02.06.1998', 'Твой батя', 'ГУ МВД ПО ЧИТИНСКОЙ ОБЛАСТИ', false, '9838471048', 'г. Чита, ул. Ленина. д. 6', '100-641') ON CONFLICT DO NOTHING
+SQL: INSERT INTO lohs ("dateOfIssue", fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('02.06.1998', 'Твой батя', 'ГУ МВД ПО ЧИТИНСКОЙ ОБЛАСТИ', false, '9838471048', 'г. Чита, ул. Ленина. д. 6', '100-641') ON CONFLICT DO NOTHING
+14:37:28.210 [main] DEBUG Exposed - INSERT INTO drugs ("drugMass", "drugType") VALUES (20, 'Марихуана') ON CONFLICT DO NOTHING
+SQL: INSERT INTO drugs ("drugMass", "drugType") VALUES (20, 'Марихуана') ON CONFLICT DO NOTHING
+14:37:28.213 [main] DEBUG Exposed - INSERT INTO drugs ("drugMass", "drugType") VALUES (15, 'Гашиш') ON CONFLICT DO NOTHING
+SQL: INSERT INTO drugs ("drugMass", "drugType") VALUES (15, 'Гашиш') ON CONFLICT DO NOTHING
+14:37:28.215 [main] DEBUG Exposed - INSERT INTO drugs ("drugMass", "drugType") VALUES (5, 'Кокаин') ON CONFLICT DO NOTHING
+SQL: INSERT INTO drugs ("drugMass", "drugType") VALUES (5, 'Кокаин') ON CONFLICT DO NOTHING
+14:37:28.218 [main] DEBUG Exposed - INSERT INTO drugs ("drugMass", "drugType") VALUES (1, 'Лсд') ON CONFLICT DO NOTHING
+SQL: INSERT INTO drugs ("drugMass", "drugType") VALUES (1, 'Лсд') ON CONFLICT DO NOTHING
+14:37:28.221 [main] DEBUG Exposed - INSERT INTO drugs ("drugMass", "drugType") VALUES (5, 'Героин') ON CONFLICT DO NOTHING
+SQL: INSERT INTO drugs ("drugMass", "drugType") VALUES (5, 'Героин') ON CONFLICT DO NOTHING
+14:37:28.223 [main] DEBUG Exposed - INSERT INTO drugs ("drugMass", "drugType") VALUES (9, 'Метамфетамин') ON CONFLICT DO NOTHING
+SQL: INSERT INTO drugs ("drugMass", "drugType") VALUES (9, 'Метамфетамин') ON CONFLICT DO NOTHING
+14:37:28.226 [main] DEBUG Exposed - INSERT INTO drugs ("drugMass", "drugType") VALUES (10, 'Амфетамин') ON CONFLICT DO NOTHING
+SQL: INSERT INTO drugs ("drugMass", "drugType") VALUES (10, 'Амфетамин') ON CONFLICT DO NOTHING
+14:37:28.229 [main] DEBUG Exposed - INSERT INTO drugs ("drugMass", "drugType") VALUES (30, 'Курительные смеси') ON CONFLICT DO NOTHING
+SQL: INSERT INTO drugs ("drugMass", "drugType") VALUES (30, 'Курительные смеси') ON CONFLICT DO NOTHING
+14:37:28.248 [main] INFO Application - Responding at http://0.0.0.0:8081
+14:37:28.320 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 10701 (auto-detected)
+14:37:28.322 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+14:37:28.322 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+14:37:28.324 [main] DEBUG io.netty.util.NetUtil - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+14:37:28.325 [main] DEBUG io.netty.util.NetUtil - /proc/sys/net/core/somaxconn: 128
+14:37:28.328 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 3c:a0:67:ff:fe:f5:24:ad (auto-detected)
+14:37:28.347 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+14:37:28.348 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 8
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 8
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+14:37:28.402 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+14:37:28.403 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+14:37:28.437 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+14:37:28.437 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+14:37:28.437 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+14:37:28.667 [nioEventLoopGroup-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+14:37:28.667 [nioEventLoopGroup-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+14:37:28.669 [nioEventLoopGroup-3-2] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@15d20fb0
+14:37:28.774 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+14:37:28.774 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+14:37:28.774 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
+14:37:28.774 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
+login request: {"username":"kuznecov","password":"igor1234"}
+14:38:19.079 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'kuznecov' AND users."password" = 'igor1234'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'kuznecov' AND users."password" = 'igor1234'
+request request: {"username":"kuznecov","password":"igor1234"}
+14:38:20.403 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'kuznecov'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'kuznecov'
+14:38:20.407 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."majorId" = 3 AND requests.resolved = false
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."majorId" = 3 AND requests.resolved = false
+request request: {"username":"kuznecov","password":"igor1234"}
+14:38:21.296 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."caseNumber" = '68438'
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."caseNumber" = '68438'
+14:38:21.338 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users."isMajor" = false AND users.busy = false
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users."isMajor" = false AND users.busy = false
+14:38:21.395 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'kuznecov'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'kuznecov'
+14:38:21.448 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs.jailed = false
+SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs.jailed = false
+14:38:21.494 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT COUNT(*) FROM drugs
+SQL: SELECT COUNT(*) FROM drugs
+14:38:21.540 [nioEventLoopGroup-4-3] DEBUG Exposed - INSERT INTO requests ("LohId", "ShockhaId", "caseNumber", "drugId", "majorId", resolved) VALUES (1, 1, '68438', 4, 3, false)
+SQL: INSERT INTO requests ("LohId", "ShockhaId", "caseNumber", "drugId", "majorId", resolved) VALUES (1, 1, '68438', 4, 3, false)
+14:38:21.553 [nioEventLoopGroup-4-3] DEBUG Exposed - UPDATE users SET busy=true WHERE users."userId" = 1
+SQL: UPDATE users SET busy=true WHERE users."userId" = 1
+14:38:21.556 [nioEventLoopGroup-4-3] DEBUG Exposed - UPDATE lohs SET jailed=true WHERE lohs."lohId" = 1
+SQL: UPDATE lohs SET jailed=true WHERE lohs."lohId" = 1
+login request: {"username":"admin123","password":"admin123"}
+14:38:29.509 [nioEventLoopGroup-4-4] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
+notifications request: {"username":"admin123","password":"admin123"}
+14:38:30.692 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123'
+14:38:30.701 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."ShockhaId" = 1 AND requests.resolved = false
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."ShockhaId" = 1 AND requests.resolved = false
+14:38:30.704 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."lohId" = 1
+SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."lohId" = 1
+14:38:30.782 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 4
+SQL: SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 4
+14:38:30.788 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 4
+SQL: SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 4
+login request: {"username":"admin123","password":"admin123"}
+14:40:55.591 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
+login request: {"username":"admin123","password":"admin12"}
+14:55:54.198 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin12'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin12'
+login request: {"username":"admin123","password":"admin123"}
+14:55:55.302 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
+register request: {"username":"grigory1","password":"grigory1","full_name":"Никифоров Сергей Григорьевич","organization":"МВд","certificate_id":"492039","personal_id":"аыа578","issued":"1.21.2010","duty":"майор","phone":"+79237481294","email":"grigory@mail.com","isMajor":true}
+15:02:46.169 [nioEventLoopGroup-4-4] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'grigory1'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'grigory1'
+15:02:46.268 [nioEventLoopGroup-4-4] DEBUG Exposed - INSERT INTO users (busy, "certificateId", duty, email, fullname, "isMajor", issued, organization, "password", "personId", phone, username) VALUES (false, '492039', 'майор', 'grigory@mail.com', 'Никифоров Сергей Григорьевич', true, '1.21.2010', 'МВд', 'grigory1', 'аыа578', '+79237481294', 'grigory1')
+SQL: INSERT INTO users (busy, "certificateId", duty, email, fullname, "isMajor", issued, organization, "password", "personId", phone, username) VALUES (false, '492039', 'майор', 'grigory@mail.com', 'Никифоров Сергей Григорьевич', true, '1.21.2010', 'МВд', 'grigory1', 'аыа578', '+79237481294', 'grigory1')
+request request: {"username":"grigory1","password":"grigory1"}
+15:02:57.337 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'grigory1'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'grigory1'
+15:02:57.339 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."majorId" = 4 AND requests.resolved = false
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."majorId" = 4 AND requests.resolved = false
+request request: {"username":"grigory1","password":"grigory1"}
+15:03:00.165 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."caseNumber" = '95571'
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."caseNumber" = '95571'
+15:03:00.206 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users."isMajor" = false AND users.busy = false
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users."isMajor" = false AND users.busy = false
+15:03:00.245 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'grigory1'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'grigory1'
+15:03:00.284 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs.jailed = false
+SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs.jailed = false
+15:03:00.342 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT COUNT(*) FROM drugs
+SQL: SELECT COUNT(*) FROM drugs
+15:03:00.381 [nioEventLoopGroup-4-1] DEBUG Exposed - INSERT INTO requests ("LohId", "ShockhaId", "caseNumber", "drugId", "majorId", resolved) VALUES (2, 1, '95571', 3, 4, false)
+SQL: INSERT INTO requests ("LohId", "ShockhaId", "caseNumber", "drugId", "majorId", resolved) VALUES (2, 1, '95571', 3, 4, false)
+15:03:00.383 [nioEventLoopGroup-4-1] DEBUG Exposed - UPDATE users SET busy=true WHERE users."userId" = 1
+SQL: UPDATE users SET busy=true WHERE users."userId" = 1
+15:03:00.385 [nioEventLoopGroup-4-1] DEBUG Exposed - UPDATE lohs SET jailed=true WHERE lohs."lohId" = 2
+SQL: UPDATE lohs SET jailed=true WHERE lohs."lohId" = 2
+request request: {"username":"grigory1","password":"grigory1"}
+15:03:02.623 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'grigory1'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'grigory1'
+15:03:02.625 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."majorId" = 4 AND requests.resolved = false
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."majorId" = 4 AND requests.resolved = false
+login request: {"username":"admin123","password":"admin123"}
+15:03:33.870 [nioEventLoopGroup-4-4] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
+notifications request: {"username":"admin123","password":"admin123"}
+15:03:38.466 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123'
+15:03:38.471 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."ShockhaId" = 1 AND requests.resolved = false
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."ShockhaId" = 1 AND requests.resolved = false
+15:03:38.473 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."lohId" = 2
+SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."lohId" = 2
+15:03:38.476 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+SQL: SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+15:03:38.477 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+SQL: SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+notifications request: {"username":"admin123","password":"admin123"}
+15:04:02.927 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123'
+15:04:02.929 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."ShockhaId" = 1 AND requests.resolved = false
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."ShockhaId" = 1 AND requests.resolved = false
+15:04:02.931 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."lohId" = 2
+SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."lohId" = 2
+15:04:02.933 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+SQL: SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+15:04:02.935 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+SQL: SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+notifications request: {"username":"admin123","password":"admin123"}
+15:04:11.848 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123'
+SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123'
+15:04:11.850 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."ShockhaId" = 1 AND requests.resolved = false
+SQL: SELECT requests."requestId", requests."caseNumber", requests."majorId", requests."drugId", requests."ShockhaId", requests."LohId", requests.resolved FROM requests WHERE requests."ShockhaId" = 1 AND requests.resolved = false
+15:04:11.852 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."lohId" = 2
+SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."dateOfIssue", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."lohId" = 2
+15:04:11.854 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+SQL: SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+15:04:11.855 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+SQL: SELECT drugs."drugId", drugs."drugType", drugs."drugMass" FROM drugs WHERE drugs."drugId" = 3
+16:28:11.235 [nioEventLoopGroup-3-1] DEBUG io.netty.buffer.PoolThreadCache - Freed 5 thread-local buffer(s) from thread: nioEventLoopGroup-3-1
+16:28:11.235 [nioEventLoopGroup-3-3] DEBUG io.netty.buffer.PoolThreadCache - Freed 7 thread-local buffer(s) from thread: nioEventLoopGroup-3-3
+16:28:11.235 [nioEventLoopGroup-3-2] DEBUG io.netty.buffer.PoolThreadCache - Freed 7 thread-local buffer(s) from thread: nioEventLoopGroup-3-2

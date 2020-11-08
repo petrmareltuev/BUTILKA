@@ -1,0 +1,16 @@
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlinx-coroutines-core
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlinx-serialization-kotlinx-serialization-runtime
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-css-js/build/classes/main
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-css-js/build/classes/kotlin/test
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-css/build/classes/kotlin/main
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-css/build/classes/kotlin/test
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/@jetbrains/kotlin-extensions/build/classes/main
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlinx-html
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-react-dom
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-css-js
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-styled
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-test
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlinx-html-js
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-extensions
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin-react
+/home/petr/IdeaProjects/BUTILKA/build/node_modules/kotlin
