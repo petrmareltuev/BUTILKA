@@ -63,6 +63,7 @@ class RequestComponent : RComponent<RequestProps, RequestPageState>() {
                 }
                 IsRequest.ThereIsRequest ->h1 (classes ="pageTitle"){ +"Ваша заявка обрабатывается" }
             }
+
             p{
                 button(classes = "App-buttons") {
                     span {
@@ -76,6 +77,7 @@ class RequestComponent : RComponent<RequestProps, RequestPageState>() {
 
                 }
             }
+
         }
     }
 

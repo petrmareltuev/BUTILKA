@@ -10,9 +10,7 @@
           <sourceSet>BUTILKA.commonMain</sourceSet>
         </sourceSets>
         <newMppModelJpsModuleKind>COMPILATION_AND_SOURCE_SET_HOLDER</newMppModelJpsModuleKind>
-        <externalSystemTestTasks>
-          <externalSystemTestTask>jvmTest|BUTILKA:jvmTest|jvm</externalSystemTestTask>
-        </externalSystemTestTasks>
+        <externalSystemTestTasks>jvmTest|BUTILKA:jvmTest|jvm</externalSystemTestTasks>
         <compilerSettings>
           <option name="additionalArguments" value="-Xallow-no-source-files -Xopt-in=kotlin.RequiresOptIn" />
         </compilerSettings>

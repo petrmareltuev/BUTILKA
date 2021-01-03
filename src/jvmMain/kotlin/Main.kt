@@ -35,6 +35,7 @@ fun Application.main() {
         report()
         request()
         notification()
+        stats()
     }
     database{
         Lohs.insertIgnore {

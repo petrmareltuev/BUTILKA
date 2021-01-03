@@ -1,9 +1,6 @@
 package services
 
-import model.LoginData
-import model.Notification
-import model.Report
-import model.User
+import model.*
 
 expect class LoginService {
     suspend fun login(loginData: LoginData): User
@@ -24,4 +21,8 @@ expect class RankRequestService{
 
 expect class NotificationService{
     suspend fun checkNotifications(loginData: LoginData):Notification
+}
+
+expect class StatsService{
+    suspend fun getStats(loginData: LoginData): Stat
 }
