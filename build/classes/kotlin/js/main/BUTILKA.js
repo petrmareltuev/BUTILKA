@@ -45,42 +45,46 @@
   var await_0 = $module$kotlinx_coroutines_core.kotlinx.coroutines.await_t11jrl$;
   var equals = Kotlin.equals;
   var withContext = $module$kotlinx_coroutines_core.kotlinx.coroutines.withContext_i5cbzn$;
-  var kotlin_js_internal_StringCompanionObject = Kotlin.kotlin.js.internal.StringCompanionObject;
-  var serializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.builtins.serializer_6eet4j$;
   var kotlin_js_internal_BooleanCompanionObject = Kotlin.kotlin.js.internal.BooleanCompanionObject;
-  var serializer_0 = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.builtins.serializer_jtjczu$;
+  var serializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.builtins.serializer_jtjczu$;
+  var kotlin_js_internal_StringCompanionObject = Kotlin.kotlin.js.internal.StringCompanionObject;
+  var serializer_0 = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.builtins.serializer_6eet4j$;
   var Kind_INTERFACE = Kotlin.Kind.INTERFACE;
-  var getCallableRef = Kotlin.getCallableRef;
+  var InputType = $module$kotlinx_html_js.kotlinx.html.InputType;
   var setState = $module$kotlin_react.react.setState_kpl3tw$;
+  var set_onChangeFunction = $module$kotlinx_html_js.kotlinx.html.js.set_onChangeFunction_pszlq2$;
+  var set_onClickFunction = $module$kotlinx_html_js.kotlinx.html.js.set_onClickFunction_pszlq2$;
+  var Validation = $module$konform.io.konform.validation.Validation;
+  var getPropertyCallableRef = Kotlin.getPropertyCallableRef;
+  var minLength = $module$konform.io.konform.validation.jsonschema.minLength_uxc67q$;
+  var pattern = $module$konform.io.konform.validation.jsonschema.pattern_shkzh2$;
+  var Valid = $module$konform.io.konform.validation.Valid;
+  var launch = $module$kotlinx_coroutines_core.kotlinx.coroutines.launch_s496o7$;
   var RComponent_init = $module$kotlin_react.react.RComponent_init_lqgejo$;
   var RComponent = $module$kotlin_react.react.RComponent;
   var attributesMapOf = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.attributesMapOf_jyasbz$;
-  var H2_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.H2;
-  var RDOMBuilder_init = $module$kotlin_react_dom.react.dom.RDOMBuilder;
   var H1_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.H1;
-  var DIV_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.DIV;
-  var set_onClickFunction = $module$kotlinx_html_js.kotlinx.html.js.set_onClickFunction_pszlq2$;
-  var SPAN_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.SPAN;
+  var RDOMBuilder_init = $module$kotlin_react_dom.react.dom.RDOMBuilder;
   var enumEncode = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.attributes.enumEncode_m4whry$;
   var attributesMapOf_0 = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.attributesMapOf_alerag$;
-  var BUTTON_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.BUTTON;
-  var InputType = $module$kotlinx_html_js.kotlinx.html.InputType;
-  var set_onChangeFunction = $module$kotlinx_html_js.kotlinx.html.js.set_onChangeFunction_pszlq2$;
-  var launch = $module$kotlinx_coroutines_core.kotlinx.coroutines.launch_s496o7$;
   var INPUT_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.INPUT;
+  var SPAN_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.SPAN;
+  var BUTTON_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.BUTTON;
   var P_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.P;
+  var DIV_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.DIV;
+  var maxLength = $module$konform.io.konform.validation.jsonschema.maxLength_uxc67q$;
+  var getCallableRef = Kotlin.getCallableRef;
+  var H2_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.H2;
   var Enum = Kotlin.kotlin.Enum;
   var throwISE = Kotlin.throwISE;
   var ensureNotNull = Kotlin.ensureNotNull;
   var IMG_init = $module$kotlin_react_dom.$$importsForInline$$['kotlinx-html-js'].kotlinx.html.IMG;
-  var Validation = $module$konform.io.konform.validation.Validation;
-  var getPropertyCallableRef = Kotlin.getPropertyCallableRef;
-  var minLength = $module$konform.io.konform.validation.jsonschema.minLength_uxc67q$;
-  var maxLength = $module$konform.io.konform.validation.jsonschema.maxLength_uxc67q$;
-  var pattern = $module$konform.io.konform.validation.jsonschema.pattern_shkzh2$;
-  var Valid = $module$konform.io.konform.validation.Valid;
   StatusCodeException.prototype = Object.create(Throwable.prototype);
   StatusCodeException.prototype.constructor = StatusCodeException;
+  AddDrugsComponent.prototype = Object.create(RComponent.prototype);
+  AddDrugsComponent.prototype.constructor = AddDrugsComponent;
+  AddLohComponent.prototype = Object.create(RComponent.prototype);
+  AddLohComponent.prototype.constructor = AddLohComponent;
   ApplicationComponent.prototype = Object.create(RComponent.prototype);
   ApplicationComponent.prototype.constructor = ApplicationComponent;
   HomeComponent.prototype = Object.create(RComponent.prototype);
@@ -109,6 +113,122 @@
   Views.prototype.constructor = Views;
   InputCaseInfoComponent.prototype = Object.create(RComponent.prototype);
   InputCaseInfoComponent.prototype.constructor = InputCaseInfoComponent;
+  function Drug(drugType, drugMass) {
+    Drug$Companion_getInstance();
+    this.drugType = drugType;
+    this.drugMass = drugMass;
+  }
+  function Drug$Companion() {
+    Drug$Companion_instance = this;
+  }
+  Drug$Companion.prototype.serializer = function () {
+    return Drug$$serializer_getInstance();
+  };
+  Drug$Companion.$metadata$ = {
+    kind: Kind_OBJECT,
+    simpleName: 'Companion',
+    interfaces: []
+  };
+  var Drug$Companion_instance = null;
+  function Drug$Companion_getInstance() {
+    if (Drug$Companion_instance === null) {
+      new Drug$Companion();
+    }return Drug$Companion_instance;
+  }
+  function Drug$$serializer() {
+    this.descriptor_34lwx6$_0 = new SerialClassDescImpl('model.Drug', this, 2);
+    this.descriptor.addElement_ivxn3r$('drugType', false);
+    this.descriptor.addElement_ivxn3r$('drugMass', false);
+    Drug$$serializer_instance = this;
+  }
+  Object.defineProperty(Drug$$serializer.prototype, 'descriptor', {
+    get: function () {
+      return this.descriptor_34lwx6$_0;
+    }
+  });
+  Drug$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
+    var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
+    output.encodeStringElement_bgm7zs$(this.descriptor, 0, value.drugType);
+    output.encodeStringElement_bgm7zs$(this.descriptor, 1, value.drugMass);
+    output.endStructure_qatsm0$(this.descriptor);
+  };
+  Drug$$serializer.prototype.deserialize_nts5qn$ = function (decoder) {
+    var index;
+    var bitMask0 = 0;
+    var local0
+    , local1;
+    var input = decoder.beginStructure_r0sa6z$(this.descriptor, []);
+    loopLabel: while (true) {
+      index = input.decodeElementIndex_qatsm0$(this.descriptor);
+      switch (index) {
+        case 0:
+          local0 = input.decodeStringElement_3zr2iy$(this.descriptor, 0);
+          bitMask0 |= 1;
+          break;
+        case 1:
+          local1 = input.decodeStringElement_3zr2iy$(this.descriptor, 1);
+          bitMask0 |= 2;
+          break;
+        case -1:
+          break loopLabel;
+        default:throw new UnknownFieldException(index);
+      }
+    }
+    input.endStructure_qatsm0$(this.descriptor);
+    return Drug_init(bitMask0, local0, local1, null);
+  };
+  Drug$$serializer.prototype.childSerializers = function () {
+    return [internal.StringSerializer, internal.StringSerializer];
+  };
+  Drug$$serializer.$metadata$ = {
+    kind: Kind_OBJECT,
+    simpleName: '$serializer',
+    interfaces: [GeneratedSerializer]
+  };
+  var Drug$$serializer_instance = null;
+  function Drug$$serializer_getInstance() {
+    if (Drug$$serializer_instance === null) {
+      new Drug$$serializer();
+    }return Drug$$serializer_instance;
+  }
+  function Drug_init(seen1, drugType, drugMass, serializationConstructorMarker) {
+    var $this = serializationConstructorMarker || Object.create(Drug.prototype);
+    if ((seen1 & 1) === 0)
+      throw new MissingFieldException('drugType');
+    else
+      $this.drugType = drugType;
+    if ((seen1 & 2) === 0)
+      throw new MissingFieldException('drugMass');
+    else
+      $this.drugMass = drugMass;
+    return $this;
+  }
+  Drug.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'Drug',
+    interfaces: []
+  };
+  Drug.prototype.component1 = function () {
+    return this.drugType;
+  };
+  Drug.prototype.component2 = function () {
+    return this.drugMass;
+  };
+  Drug.prototype.copy_puj7f4$ = function (drugType, drugMass) {
+    return new Drug(drugType === void 0 ? this.drugType : drugType, drugMass === void 0 ? this.drugMass : drugMass);
+  };
+  Drug.prototype.toString = function () {
+    return 'Drug(drugType=' + Kotlin.toString(this.drugType) + (', drugMass=' + Kotlin.toString(this.drugMass)) + ')';
+  };
+  Drug.prototype.hashCode = function () {
+    var result = 0;
+    result = result * 31 + Kotlin.hashCode(this.drugType) | 0;
+    result = result * 31 + Kotlin.hashCode(this.drugMass) | 0;
+    return result;
+  };
+  Drug.prototype.equals = function (other) {
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.drugType, other.drugType) && Kotlin.equals(this.drugMass, other.drugMass)))));
+  };
   function LoginData(username, password) {
     LoginData$Companion_getInstance();
     this.username = username;
@@ -225,13 +345,12 @@
   LoginData.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.username, other.username) && Kotlin.equals(this.password, other.password)))));
   };
-  function Loh(fullname, passportSerialNumber, registrationAddress, issuedBy, dateOfIssue, subdivisionCode) {
+  function Loh(fullname, passportSerialNumber, registrationAddress, issued, subdivisionCode) {
     Loh$Companion_getInstance();
     this.fullname = fullname;
     this.passportSerialNumber = passportSerialNumber;
     this.registrationAddress = registrationAddress;
-    this.issuedBy = issuedBy;
-    this.dateOfIssue = dateOfIssue;
+    this.issued = issued;
     this.subdivisionCode = subdivisionCode;
   }
   function Loh$Companion() {
@@ -252,12 +371,11 @@
     }return Loh$Companion_instance;
   }
   function Loh$$serializer() {
-    this.descriptor_4fcin9$_0 = new SerialClassDescImpl('model.Loh', this, 6);
+    this.descriptor_4fcin9$_0 = new SerialClassDescImpl('model.Loh', this, 5);
     this.descriptor.addElement_ivxn3r$('fullname', false);
     this.descriptor.addElement_ivxn3r$('passportSerialNumber', false);
     this.descriptor.addElement_ivxn3r$('registrationAddress', false);
-    this.descriptor.addElement_ivxn3r$('issuedBy', false);
-    this.descriptor.addElement_ivxn3r$('dateOfIssue', false);
+    this.descriptor.addElement_ivxn3r$('issued', false);
     this.descriptor.addElement_ivxn3r$('subdivisionCode', false);
     Loh$$serializer_instance = this;
   }
@@ -271,9 +389,8 @@
     output.encodeStringElement_bgm7zs$(this.descriptor, 0, value.fullname);
     output.encodeStringElement_bgm7zs$(this.descriptor, 1, value.passportSerialNumber);
     output.encodeStringElement_bgm7zs$(this.descriptor, 2, value.registrationAddress);
-    output.encodeStringElement_bgm7zs$(this.descriptor, 3, value.issuedBy);
-    output.encodeStringElement_bgm7zs$(this.descriptor, 4, value.dateOfIssue);
-    output.encodeStringElement_bgm7zs$(this.descriptor, 5, value.subdivisionCode);
+    output.encodeStringElement_bgm7zs$(this.descriptor, 3, value.issued);
+    output.encodeStringElement_bgm7zs$(this.descriptor, 4, value.subdivisionCode);
     output.endStructure_qatsm0$(this.descriptor);
   };
   Loh$$serializer.prototype.deserialize_nts5qn$ = function (decoder) {
@@ -283,8 +400,7 @@
     , local1
     , local2
     , local3
-    , local4
-    , local5;
+    , local4;
     var input = decoder.beginStructure_r0sa6z$(this.descriptor, []);
     loopLabel: while (true) {
       index = input.decodeElementIndex_qatsm0$(this.descriptor);
@@ -309,20 +425,16 @@
           local4 = input.decodeStringElement_3zr2iy$(this.descriptor, 4);
           bitMask0 |= 16;
           break;
-        case 5:
-          local5 = input.decodeStringElement_3zr2iy$(this.descriptor, 5);
-          bitMask0 |= 32;
-          break;
         case -1:
           break loopLabel;
         default:throw new UnknownFieldException(index);
       }
     }
     input.endStructure_qatsm0$(this.descriptor);
-    return Loh_init(bitMask0, local0, local1, local2, local3, local4, local5, null);
+    return Loh_init(bitMask0, local0, local1, local2, local3, local4, null);
   };
   Loh$$serializer.prototype.childSerializers = function () {
-    return [internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer];
+    return [internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer, internal.StringSerializer];
   };
   Loh$$serializer.$metadata$ = {
     kind: Kind_OBJECT,
@@ -335,7 +447,7 @@
       new Loh$$serializer();
     }return Loh$$serializer_instance;
   }
-  function Loh_init(seen1, fullname, passportSerialNumber, registrationAddress, issuedBy, dateOfIssue, subdivisionCode, serializationConstructorMarker) {
+  function Loh_init(seen1, fullname, passportSerialNumber, registrationAddress, issued, subdivisionCode, serializationConstructorMarker) {
     var $this = serializationConstructorMarker || Object.create(Loh.prototype);
     if ((seen1 & 1) === 0)
       throw new MissingFieldException('fullname');
@@ -350,14 +462,10 @@
     else
       $this.registrationAddress = registrationAddress;
     if ((seen1 & 8) === 0)
-      throw new MissingFieldException('issuedBy');
+      throw new MissingFieldException('issued');
     else
-      $this.issuedBy = issuedBy;
+      $this.issued = issued;
     if ((seen1 & 16) === 0)
-      throw new MissingFieldException('dateOfIssue');
-    else
-      $this.dateOfIssue = dateOfIssue;
-    if ((seen1 & 32) === 0)
       throw new MissingFieldException('subdivisionCode');
     else
       $this.subdivisionCode = subdivisionCode;
@@ -378,32 +486,28 @@
     return this.registrationAddress;
   };
   Loh.prototype.component4 = function () {
-    return this.issuedBy;
+    return this.issued;
   };
   Loh.prototype.component5 = function () {
-    return this.dateOfIssue;
-  };
-  Loh.prototype.component6 = function () {
     return this.subdivisionCode;
   };
-  Loh.prototype.copy_r3y0ew$ = function (fullname, passportSerialNumber, registrationAddress, issuedBy, dateOfIssue, subdivisionCode) {
-    return new Loh(fullname === void 0 ? this.fullname : fullname, passportSerialNumber === void 0 ? this.passportSerialNumber : passportSerialNumber, registrationAddress === void 0 ? this.registrationAddress : registrationAddress, issuedBy === void 0 ? this.issuedBy : issuedBy, dateOfIssue === void 0 ? this.dateOfIssue : dateOfIssue, subdivisionCode === void 0 ? this.subdivisionCode : subdivisionCode);
+  Loh.prototype.copy_x0a6t6$ = function (fullname, passportSerialNumber, registrationAddress, issued, subdivisionCode) {
+    return new Loh(fullname === void 0 ? this.fullname : fullname, passportSerialNumber === void 0 ? this.passportSerialNumber : passportSerialNumber, registrationAddress === void 0 ? this.registrationAddress : registrationAddress, issued === void 0 ? this.issued : issued, subdivisionCode === void 0 ? this.subdivisionCode : subdivisionCode);
   };
   Loh.prototype.toString = function () {
-    return 'Loh(fullname=' + Kotlin.toString(this.fullname) + (', passportSerialNumber=' + Kotlin.toString(this.passportSerialNumber)) + (', registrationAddress=' + Kotlin.toString(this.registrationAddress)) + (', issuedBy=' + Kotlin.toString(this.issuedBy)) + (', dateOfIssue=' + Kotlin.toString(this.dateOfIssue)) + (', subdivisionCode=' + Kotlin.toString(this.subdivisionCode)) + ')';
+    return 'Loh(fullname=' + Kotlin.toString(this.fullname) + (', passportSerialNumber=' + Kotlin.toString(this.passportSerialNumber)) + (', registrationAddress=' + Kotlin.toString(this.registrationAddress)) + (', issued=' + Kotlin.toString(this.issued)) + (', subdivisionCode=' + Kotlin.toString(this.subdivisionCode)) + ')';
   };
   Loh.prototype.hashCode = function () {
     var result = 0;
     result = result * 31 + Kotlin.hashCode(this.fullname) | 0;
     result = result * 31 + Kotlin.hashCode(this.passportSerialNumber) | 0;
     result = result * 31 + Kotlin.hashCode(this.registrationAddress) | 0;
-    result = result * 31 + Kotlin.hashCode(this.issuedBy) | 0;
-    result = result * 31 + Kotlin.hashCode(this.dateOfIssue) | 0;
+    result = result * 31 + Kotlin.hashCode(this.issued) | 0;
     result = result * 31 + Kotlin.hashCode(this.subdivisionCode) | 0;
     return result;
   };
   Loh.prototype.equals = function (other) {
-    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.fullname, other.fullname) && Kotlin.equals(this.passportSerialNumber, other.passportSerialNumber) && Kotlin.equals(this.registrationAddress, other.registrationAddress) && Kotlin.equals(this.issuedBy, other.issuedBy) && Kotlin.equals(this.dateOfIssue, other.dateOfIssue) && Kotlin.equals(this.subdivisionCode, other.subdivisionCode)))));
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.fullname, other.fullname) && Kotlin.equals(this.passportSerialNumber, other.passportSerialNumber) && Kotlin.equals(this.registrationAddress, other.registrationAddress) && Kotlin.equals(this.issued, other.issued) && Kotlin.equals(this.subdivisionCode, other.subdivisionCode)))));
   };
   function Notification(case_number, loh, drugName, drugMass) {
     Notification$Companion_getInstance();
@@ -1481,6 +1585,28 @@
     simpleName: 'Transport',
     interfaces: []
   };
+  function AddDrugsService(coroutineContext) {
+    this.transport_0 = new Transport(coroutineContext);
+  }
+  AddDrugsService.prototype.addDrugs_y1ibfp$ = function (drug, continuation) {
+    return this.transport_0.post_dsoh59$('addDrugs', serializer(kotlin_js_internal_BooleanCompanionObject), JSON.stringify(drug), continuation);
+  };
+  AddDrugsService.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'AddDrugsService',
+    interfaces: []
+  };
+  function AddLohService(coroutineContext) {
+    this.transport_0 = new Transport(coroutineContext);
+  }
+  AddLohService.prototype.addLoh_x9rx28$ = function (loh, continuation) {
+    return this.transport_0.post_dsoh59$('addLoh', serializer_0(kotlin_js_internal_StringCompanionObject), JSON.stringify(loh), continuation);
+  };
+  AddLohService.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'AddLohService',
+    interfaces: []
+  };
   function LoginService(coroutineContext) {
     this.transport_0 = new Transport(coroutineContext);
   }
@@ -1507,10 +1633,10 @@
     this.transport = new Transport(coroutineContext);
   }
   RankRequestService.prototype.sendRankRequest_cc96oe$ = function (loginData, continuation) {
-    return this.transport.post_dsoh59$('request', serializer(kotlin_js_internal_StringCompanionObject), JSON.stringify(loginData), continuation);
+    return this.transport.post_dsoh59$('request', serializer_0(kotlin_js_internal_StringCompanionObject), JSON.stringify(loginData), continuation);
   };
   RankRequestService.prototype.checkRankRequest_cc96oe$ = function (loginData, continuation) {
-    return this.transport.post_dsoh59$('request/check', serializer(kotlin_js_internal_StringCompanionObject), JSON.stringify(loginData), continuation);
+    return this.transport.post_dsoh59$('request/check', serializer_0(kotlin_js_internal_StringCompanionObject), JSON.stringify(loginData), continuation);
   };
   RankRequestService.$metadata$ = {
     kind: Kind_CLASS,
@@ -1521,7 +1647,7 @@
     this.transport_0 = new Transport(coroutineContext);
   }
   RegisterService.prototype.register_y1t6kw$ = function (user, continuation) {
-    return this.transport_0.post_dsoh59$('register', serializer_0(kotlin_js_internal_BooleanCompanionObject), JSON.stringify(user), continuation);
+    return this.transport_0.post_dsoh59$('register', serializer(kotlin_js_internal_BooleanCompanionObject), JSON.stringify(user), continuation);
   };
   RegisterService.$metadata$ = {
     kind: Kind_CLASS,
@@ -1532,7 +1658,7 @@
     this.transport_0 = new Transport(coroutineContext);
   }
   ReportService.prototype.sendReport_ojjl1j$ = function (report, continuation) {
-    return this.transport_0.post_dsoh59$('report', serializer(kotlin_js_internal_StringCompanionObject), JSON.stringify(report), continuation);
+    return this.transport_0.post_dsoh59$('report', serializer_0(kotlin_js_internal_StringCompanionObject), JSON.stringify(report), continuation);
   };
   ReportService.$metadata$ = {
     kind: Kind_CLASS,
@@ -1550,17 +1676,606 @@
     simpleName: 'StatsService',
     interfaces: []
   };
-  function h2$lambda(closure$classes) {
-    return function (it) {
-      return new H2_init(attributesMapOf('class', closure$classes), it);
-    };
-  }
   function h1$lambda(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
   }
+  function input$lambda(closure$type, closure$formEncType, closure$formMethod, closure$name, closure$classes) {
+    return function (it) {
+      return new INPUT_init(attributesMapOf_0(['type', closure$type != null ? enumEncode(closure$type) : null, 'formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'name', closure$name, 'class', closure$classes]), it);
+    };
+  }
+  function span$lambda(closure$classes) {
+    return function (it) {
+      return new SPAN_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
+  function button$lambda(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+    return function (it) {
+      return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
+    };
+  }
+  function p$lambda(closure$classes) {
+    return function (it) {
+      return new P_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
   function div$lambda(closure$classes) {
+    return function (it) {
+      return new DIV_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
+  function addDrugsComponent$lambda(closure$goUser, closure$scope) {
+    return function ($receiver) {
+      $receiver.attrs.goUser = closure$goUser;
+      $receiver.attrs.coroutineScope = closure$scope;
+      return Unit;
+    };
+  }
+  function addDrugsComponent($receiver, goUser, scope) {
+    return $receiver.child_bzgiuu$(getKClass(AddDrugsComponent), addDrugsComponent$lambda(goUser, scope));
+  }
+  function AddDrugsPageState() {
+  }
+  AddDrugsPageState.$metadata$ = {
+    kind: Kind_INTERFACE,
+    simpleName: 'AddDrugsPageState',
+    interfaces: []
+  };
+  function AddDrugsComponent() {
+    RComponent_init(this);
+  }
+  AddDrugsComponent.prototype.init_bc6fkx$ = function ($receiver) {
+    $receiver.drugType = '';
+    $receiver.drugMass = '';
+    $receiver.errorMessage = '';
+  };
+  Object.defineProperty(AddDrugsComponent.prototype, 'coroutineContext_0', {
+    get: function () {
+      return this.props.coroutineScope.coroutineContext;
+    }
+  });
+  function AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda$lambda($receiver) {
+    $receiver.errorMessage = '';
+    return Unit;
+  }
+  function AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda(this$AddDrugsComponent) {
+    return function (it) {
+      this$AddDrugsComponent.state.drugType = get_inputValue(it);
+      setState(this$AddDrugsComponent, AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda$lambda);
+      return Unit;
+    };
+  }
+  function AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_0($receiver) {
+    $receiver.errorMessage = '';
+    return Unit;
+  }
+  function AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda_0(this$AddDrugsComponent) {
+    return function (it) {
+      this$AddDrugsComponent.state.drugMass = get_inputValue(it);
+      setState(this$AddDrugsComponent, AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_0);
+      return Unit;
+    };
+  }
+  function AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda_1(this$AddDrugsComponent) {
+    return function (it) {
+      this$AddDrugsComponent.addLoh_0();
+      return Unit;
+    };
+  }
+  function AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda_2(this$AddDrugsComponent) {
+    return function (it) {
+      this$AddDrugsComponent.props.goUser();
+      return Unit;
+    };
+  }
+  AddDrugsComponent.prototype.render_ss14n$ = function ($receiver) {
+    var $receiver_0 = new RDOMBuilder_init(div$lambda(null));
+    var $receiver_0_0 = new RDOMBuilder_init(h1$lambda('pageTitle'));
+    $receiver_0_0.unaryPlus_pdl1vz$('\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043D\u0430\u0440\u043A\u043E\u0442\u0443');
+    $receiver_0.child_2usv9w$($receiver_0_0.create());
+    $receiver.child_2usv9w$($receiver_0.create());
+    var $receiver_0_1 = new RDOMBuilder_init(div$lambda('reg-input-box'));
+    var $receiver_0_2 = new RDOMBuilder_init(p$lambda(null));
+    var $receiver_0_3 = new RDOMBuilder_init(input$lambda(InputType.text, null, null, 'fio', null));
+    var $receiver_1 = $receiver_0_3.attrs;
+    $receiver_1.placeholder = '\u0422\u0438\u043F \u0432\u0435\u0449\u0435\u0441\u0442\u0432\u0430';
+    set_onChangeFunction($receiver_1, AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda(this));
+    $receiver_0_2.child_2usv9w$($receiver_0_3.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_2.create());
+    var $receiver_0_4 = new RDOMBuilder_init(p$lambda(null));
+    var $receiver_0_5 = new RDOMBuilder_init(input$lambda(InputType.text, null, null, '\u0421\u0435\u0440\u0438\u044F \u0438 \u043D\u043E\u043C\u0435\u0440 \u043F\u0430\u0441\u043F\u043E\u0440\u0442\u0430', null));
+    var $receiver_2 = $receiver_0_5.attrs;
+    $receiver_2.placeholder = '\u0412\u0435\u0441';
+    set_onChangeFunction($receiver_2, AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda_0(this));
+    $receiver_0_4.child_2usv9w$($receiver_0_5.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_4.create());
+    var $receiver_0_6 = new RDOMBuilder_init(p$lambda(null));
+    var $receiver_0_7 = new RDOMBuilder_init(button$lambda(null, null, null, 'App-buttons'));
+    var $receiver_0_8 = new RDOMBuilder_init(span$lambda(null));
+    $receiver_0_8.unaryPlus_pdl1vz$('\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u0432\u0435\u0449\u0435\u0441\u0442\u0432\u043E');
+    $receiver_0_7.child_2usv9w$($receiver_0_8.create());
+    set_onClickFunction($receiver_0_7.attrs, AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda_1(this));
+    $receiver_0_6.child_2usv9w$($receiver_0_7.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_6.create());
+    var $receiver_0_9 = new RDOMBuilder_init(p$lambda(null));
+    var $receiver_0_10 = new RDOMBuilder_init(button$lambda(null, null, null, 'App-buttons'));
+    var $receiver_0_11 = new RDOMBuilder_init(span$lambda(null));
+    $receiver_0_11.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
+    $receiver_0_10.child_2usv9w$($receiver_0_11.create());
+    set_onClickFunction($receiver_0_10.attrs, AddDrugsComponent$render$lambda$lambda$lambda$lambda$lambda_2(this));
+    $receiver_0_9.child_2usv9w$($receiver_0_10.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_9.create());
+    $receiver.child_2usv9w$($receiver_0_1.create());
+    var $receiver_0_12 = new RDOMBuilder_init(div$lambda(null));
+    var $receiver_0_13 = new RDOMBuilder_init(h1$lambda(null));
+    $receiver_0_13.unaryPlus_pdl1vz$(this.state.errorMessage);
+    $receiver_0_12.child_2usv9w$($receiver_0_13.create());
+    $receiver.child_2usv9w$($receiver_0_12.create());
+  };
+  function AddDrugsComponent$addLoh$lambda$lambda($receiver) {
+    $receiver.hint_kaetmg$(minLength($receiver, 1), '\u041F\u043E\u043B\u0435 "\u0422\u0438\u043F \u0432\u0435\u0449\u0435\u0441\u0442\u0432\u0430" \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u043C \u0434\u043B\u044F \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F');
+    return Unit;
+  }
+  function AddDrugsComponent$addLoh$lambda$lambda_0($receiver) {
+    $receiver.hint_kaetmg$(pattern($receiver, '\\d+'), '\u0412\u0435\u0441 \u0434\u043E\u043B\u0436\u0435\u043D \u0441\u043E\u0441\u0442\u043E\u044F\u0442\u044C \u0442\u043E\u043B\u044C\u043A\u043E \u0438\u0437 \u0447\u0438\u0441\u0435\u043B \u0447\u0438\u0441\u0435\u043B');
+    return Unit;
+  }
+  function AddDrugsComponent$addLoh$lambda($receiver) {
+    $receiver.invoke_wiumk0$(getPropertyCallableRef('drugType', 1, function ($receiver) {
+      return $receiver.drugType;
+    }), AddDrugsComponent$addLoh$lambda$lambda);
+    $receiver.invoke_wiumk0$(getPropertyCallableRef('drugMass', 1, function ($receiver) {
+      return $receiver.drugMass;
+    }), AddDrugsComponent$addLoh$lambda$lambda_0);
+    return Unit;
+  }
+  function AddDrugsComponent$addLoh$lambda$lambda_1($receiver) {
+    $receiver.errorMessage = '\u0412\u0435\u0449\u0435\u0441\u0442\u0432\u043E \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u043E';
+    return Unit;
+  }
+  function AddDrugsComponent$addLoh$lambda$lambda_2($receiver) {
+    $receiver.errorMessage = '\u041E\u0448\u0438\u0431\u043A\u0430 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D\u0438\u044F';
+    return Unit;
+  }
+  function Coroutine$AddDrugsComponent$addLoh$lambda(closure$addDrugsService_0, closure$drug_0, this$AddDrugsComponent_0, $receiver_0, controller, continuation_0) {
+    CoroutineImpl.call(this, continuation_0);
+    this.$controller = controller;
+    this.exceptionState_0 = 1;
+    this.local$closure$addDrugsService = closure$addDrugsService_0;
+    this.local$closure$drug = closure$drug_0;
+    this.local$this$AddDrugsComponent = this$AddDrugsComponent_0;
+  }
+  Coroutine$AddDrugsComponent$addLoh$lambda.$metadata$ = {
+    kind: Kotlin.Kind.CLASS,
+    simpleName: null,
+    interfaces: [CoroutineImpl]
+  };
+  Coroutine$AddDrugsComponent$addLoh$lambda.prototype = Object.create(CoroutineImpl.prototype);
+  Coroutine$AddDrugsComponent$addLoh$lambda.prototype.constructor = Coroutine$AddDrugsComponent$addLoh$lambda;
+  Coroutine$AddDrugsComponent$addLoh$lambda.prototype.doResume = function () {
+    do
+      try {
+        switch (this.state_0) {
+          case 0:
+            this.state_0 = 2;
+            this.result_0 = this.local$closure$addDrugsService.addDrugs_y1ibfp$(this.local$closure$drug, this);
+            if (this.result_0 === COROUTINE_SUSPENDED)
+              return COROUTINE_SUSPENDED;
+            continue;
+          case 1:
+            throw this.exception_0;
+          case 2:
+            var response = this.result_0;
+            if (response) {
+              return setState(this.local$this$AddDrugsComponent, AddDrugsComponent$addLoh$lambda$lambda_1), Unit;
+            } else {
+              return setState(this.local$this$AddDrugsComponent, AddDrugsComponent$addLoh$lambda$lambda_2), Unit;
+            }
+
+          case 3:
+            return;
+          default:this.state_0 = 1;
+            throw new Error('State Machine Unreachable execution');
+        }
+      } catch (e) {
+        if (this.state_0 === 1) {
+          this.exceptionState_0 = this.state_0;
+          throw e;
+        } else {
+          this.state_0 = this.exceptionState_0;
+          this.exception_0 = e;
+        }
+      }
+     while (true);
+  };
+  function AddDrugsComponent$addLoh$lambda_0(closure$addDrugsService_0, closure$drug_0, this$AddDrugsComponent_0) {
+    return function ($receiver_0, continuation_0, suspended) {
+      var instance = new Coroutine$AddDrugsComponent$addLoh$lambda(closure$addDrugsService_0, closure$drug_0, this$AddDrugsComponent_0, $receiver_0, this, continuation_0);
+      if (suspended)
+        return instance;
+      else
+        return instance.doResume(null);
+    };
+  }
+  function AddDrugsComponent$addLoh$lambda_1(closure$validationResult) {
+    return function ($receiver) {
+      $receiver.errorMessage = first(closure$validationResult.errors).message;
+      return Unit;
+    };
+  }
+  AddDrugsComponent.prototype.addLoh_0 = function () {
+    var tmp$;
+    var drug = new Drug(this.state.drugType, this.state.drugMass);
+    var validateDrug = Validation.Companion.invoke_wvx9gu$(AddDrugsComponent$addLoh$lambda);
+    var validationResult = validateDrug.invoke_11rb$(drug);
+    if ((tmp$ = new Valid(drug)) != null ? tmp$.equals(validationResult) : null) {
+      var addDrugsService = new AddDrugsService(this.coroutineContext_0);
+      launch(this.props.coroutineScope, void 0, void 0, AddDrugsComponent$addLoh$lambda_0(addDrugsService, drug, this));
+    } else {
+      setState(this, AddDrugsComponent$addLoh$lambda_1(validationResult));
+    }
+  };
+  AddDrugsComponent.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'AddDrugsComponent',
+    interfaces: [RComponent]
+  };
+  function h1$lambda_0(closure$classes) {
+    return function (it) {
+      return new H1_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
+  function input$lambda_0(closure$type, closure$formEncType, closure$formMethod, closure$name, closure$classes) {
+    return function (it) {
+      return new INPUT_init(attributesMapOf_0(['type', closure$type != null ? enumEncode(closure$type) : null, 'formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'name', closure$name, 'class', closure$classes]), it);
+    };
+  }
+  function span$lambda_0(closure$classes) {
+    return function (it) {
+      return new SPAN_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
+  function button$lambda_0(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+    return function (it) {
+      return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
+    };
+  }
+  function p$lambda_0(closure$classes) {
+    return function (it) {
+      return new P_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
+  function div$lambda_0(closure$classes) {
+    return function (it) {
+      return new DIV_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
+  function addLohComponent$lambda(closure$goUser, closure$scope) {
+    return function ($receiver) {
+      $receiver.attrs.goUser = closure$goUser;
+      $receiver.attrs.coroutineScope = closure$scope;
+      return Unit;
+    };
+  }
+  function addLohComponent($receiver, goUser, scope) {
+    return $receiver.child_bzgiuu$(getKClass(AddLohComponent), addLohComponent$lambda(goUser, scope));
+  }
+  function AddLohPageState() {
+  }
+  AddLohPageState.$metadata$ = {
+    kind: Kind_INTERFACE,
+    simpleName: 'AddLohPageState',
+    interfaces: []
+  };
+  function AddLohComponent() {
+    RComponent_init(this);
+  }
+  AddLohComponent.prototype.init_bc6fkx$ = function ($receiver) {
+    $receiver.fullName = '';
+    $receiver.passportSerialNumber = '';
+    $receiver.registrationAddress = '';
+    $receiver.issued = '';
+    $receiver.subdivisionCode = '';
+    $receiver.errorMessage = '';
+  };
+  Object.defineProperty(AddLohComponent.prototype, 'coroutineContext_0', {
+    get: function () {
+      return this.props.coroutineScope.coroutineContext;
+    }
+  });
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda($receiver) {
+    $receiver.errorMessage = '';
+    return Unit;
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda(this$AddLohComponent) {
+    return function (it) {
+      this$AddLohComponent.state.fullName = get_inputValue(it);
+      setState(this$AddLohComponent, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda);
+      return Unit;
+    };
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_0($receiver) {
+    $receiver.errorMessage = '';
+    return Unit;
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_0(this$AddLohComponent) {
+    return function (it) {
+      this$AddLohComponent.state.passportSerialNumber = get_inputValue(it);
+      setState(this$AddLohComponent, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_0);
+      return Unit;
+    };
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_1($receiver) {
+    $receiver.errorMessage = '';
+    return Unit;
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_1(this$AddLohComponent) {
+    return function (it) {
+      this$AddLohComponent.state.registrationAddress = get_inputValue(it);
+      setState(this$AddLohComponent, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_1);
+      return Unit;
+    };
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_2($receiver) {
+    $receiver.errorMessage = '';
+    return Unit;
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_2(this$AddLohComponent) {
+    return function (it) {
+      this$AddLohComponent.state.issued = get_inputValue(it);
+      setState(this$AddLohComponent, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_2);
+      return Unit;
+    };
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_3($receiver) {
+    $receiver.errorMessage = '';
+    return Unit;
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_3(this$AddLohComponent) {
+    return function (it) {
+      this$AddLohComponent.state.subdivisionCode = get_inputValue(it);
+      setState(this$AddLohComponent, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_3);
+      return Unit;
+    };
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_4(this$AddLohComponent) {
+    return function (it) {
+      this$AddLohComponent.addLoh_0();
+      return Unit;
+    };
+  }
+  function AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_5(this$AddLohComponent) {
+    return function (it) {
+      this$AddLohComponent.props.goUser();
+      return Unit;
+    };
+  }
+  AddLohComponent.prototype.render_ss14n$ = function ($receiver) {
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_0(null));
+    var $receiver_0_0 = new RDOMBuilder_init(h1$lambda_0('pageTitle'));
+    $receiver_0_0.unaryPlus_pdl1vz$('\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043B\u043E\u0445\u0430');
+    $receiver_0.child_2usv9w$($receiver_0_0.create());
+    $receiver.child_2usv9w$($receiver_0.create());
+    var $receiver_0_1 = new RDOMBuilder_init(div$lambda_0('reg-input-box'));
+    var $receiver_0_2 = new RDOMBuilder_init(p$lambda_0(null));
+    var $receiver_0_3 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, 'fio', null));
+    var $receiver_1 = $receiver_0_3.attrs;
+    $receiver_1.placeholder = '\u0424\u0430\u043C\u0438\u043B\u0438\u044F \u0418\u043C\u044F \u041E\u0442\u0447\u0435\u0441\u0442\u0432\u043E';
+    set_onChangeFunction($receiver_1, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda(this));
+    $receiver_0_2.child_2usv9w$($receiver_0_3.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_2.create());
+    var $receiver_0_4 = new RDOMBuilder_init(p$lambda_0(null));
+    var $receiver_0_5 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u0421\u0435\u0440\u0438\u044F \u0438 \u043D\u043E\u043C\u0435\u0440 \u043F\u0430\u0441\u043F\u043E\u0440\u0442\u0430', null));
+    var $receiver_2 = $receiver_0_5.attrs;
+    $receiver_2.placeholder = '\u0421\u0435\u0440\u0438\u044F \u0438 \u043D\u043E\u043C\u0435\u0440 \u043F\u0430\u0441\u043F\u043E\u0440\u0442\u0430';
+    set_onChangeFunction($receiver_2, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_0(this));
+    $receiver_0_4.child_2usv9w$($receiver_0_5.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_4.create());
+    var $receiver_0_6 = new RDOMBuilder_init(p$lambda_0(null));
+    var $receiver_0_7 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u0410\u0434\u0440\u0435\u0441', null));
+    var $receiver_3 = $receiver_0_7.attrs;
+    $receiver_3.placeholder = '\u0410\u0434\u0440\u0435\u0441';
+    set_onChangeFunction($receiver_3, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_1(this));
+    $receiver_0_6.child_2usv9w$($receiver_0_7.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_6.create());
+    var $receiver_0_8 = new RDOMBuilder_init(p$lambda_0(null));
+    var $receiver_0_9 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u0412\u044B\u0434\u0430\u043D\u043E', null));
+    var $receiver_4 = $receiver_0_9.attrs;
+    $receiver_4.placeholder = '\u0412\u044B\u0434\u0430\u043D\u043E';
+    set_onChangeFunction($receiver_4, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_2(this));
+    $receiver_0_8.child_2usv9w$($receiver_0_9.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_8.create());
+    var $receiver_0_10 = new RDOMBuilder_init(p$lambda_0(null));
+    var $receiver_0_11 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u041A\u043E\u0434 \u043F\u043E\u0434\u0440\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u044F', null));
+    var $receiver_5 = $receiver_0_11.attrs;
+    $receiver_5.placeholder = '\u041A\u043E\u0434 \u043F\u043E\u0434\u0440\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u044F';
+    set_onChangeFunction($receiver_5, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_3(this));
+    $receiver_0_10.child_2usv9w$($receiver_0_11.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_10.create());
+    var $receiver_0_12 = new RDOMBuilder_init(p$lambda_0(null));
+    var $receiver_0_13 = new RDOMBuilder_init(button$lambda_0(null, null, null, 'App-buttons'));
+    var $receiver_0_14 = new RDOMBuilder_init(span$lambda_0(null));
+    $receiver_0_14.unaryPlus_pdl1vz$('\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043B\u043E\u0445\u0430');
+    $receiver_0_13.child_2usv9w$($receiver_0_14.create());
+    set_onClickFunction($receiver_0_13.attrs, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_4(this));
+    $receiver_0_12.child_2usv9w$($receiver_0_13.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_12.create());
+    var $receiver_0_15 = new RDOMBuilder_init(p$lambda_0(null));
+    var $receiver_0_16 = new RDOMBuilder_init(button$lambda_0(null, null, null, 'App-buttons'));
+    var $receiver_0_17 = new RDOMBuilder_init(span$lambda_0(null));
+    $receiver_0_17.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
+    $receiver_0_16.child_2usv9w$($receiver_0_17.create());
+    set_onClickFunction($receiver_0_16.attrs, AddLohComponent$render$lambda$lambda$lambda$lambda$lambda_5(this));
+    $receiver_0_15.child_2usv9w$($receiver_0_16.create());
+    $receiver_0_1.child_2usv9w$($receiver_0_15.create());
+    $receiver.child_2usv9w$($receiver_0_1.create());
+    var $receiver_0_18 = new RDOMBuilder_init(div$lambda_0(null));
+    var $receiver_0_19 = new RDOMBuilder_init(h1$lambda_0(null));
+    $receiver_0_19.unaryPlus_pdl1vz$(this.state.errorMessage);
+    $receiver_0_18.child_2usv9w$($receiver_0_19.create());
+    $receiver.child_2usv9w$($receiver_0_18.create());
+  };
+  function AddLohComponent$addLoh$lambda$lambda($receiver) {
+    $receiver.hint_kaetmg$(minLength($receiver, 8), '\u0424\u0418\u041E \u0434\u043E\u043B\u0436\u0435\u043D \u0441\u043E\u0441\u0442\u043E\u044F\u0442\u044C \u043A\u0430\u043A \u043C\u0438\u043D\u0438\u043C\u0443\u043C \u0438\u0437 8 \u0441\u0438\u043C\u0432\u043E\u043B\u043E\u0432');
+    $receiver.hint_kaetmg$(maxLength($receiver, 50), '\u0424\u0418\u041E \u043D\u0435 \u0434\u043E\u043B\u0436\u0435\u043D \u043F\u0440\u0435\u0432\u044B\u0448\u0430\u0442\u044C 50 \u0441\u0438\u043C\u0432\u043E\u043B\u043E\u0432');
+    return Unit;
+  }
+  function AddLohComponent$addLoh$lambda$lambda_0($receiver) {
+    $receiver.hint_kaetmg$(pattern($receiver, '\\d{10}'), '\u041D\u043E\u043C\u0435\u0440 \u043F\u0430\u0441\u043F\u043E\u0440\u0442\u0430 \u0434\u043E\u043B\u0436\u0435\u043D \u0441\u043E\u0441\u0442\u043E\u044F\u0442\u044C \u0440\u043E\u0432\u043D\u043E \u0438\u0437 10 \u0447\u0438\u0441\u0435\u043B');
+    return Unit;
+  }
+  function AddLohComponent$addLoh$lambda$lambda_1($receiver) {
+    $receiver.hint_kaetmg$(minLength($receiver, 1), '\u041F\u043E\u043B\u0435 "\u0410\u0434\u0440\u0435\u0441" \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u043C \u0434\u043B\u044F \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F');
+    return Unit;
+  }
+  function AddLohComponent$addLoh$lambda$lambda_2($receiver) {
+    $receiver.hint_kaetmg$(minLength($receiver, 1), '\u041F\u043E\u043B\u0435 "\u0412\u044B\u0434\u0430\u043D\u043E" \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u043C \u0434\u043B\u044F \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F');
+    return Unit;
+  }
+  function AddLohComponent$addLoh$lambda$lambda_3($receiver) {
+    $receiver.hint_kaetmg$(minLength($receiver, 1), '\u041F\u043E\u043B\u0435 "\u041A\u043E\u0434 \u043F\u043E\u0434\u0440\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u044F" \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043E\u0431\u044F\u0437\u0430\u0442\u0435\u043B\u044C\u043D\u044B\u043C \u0434\u043B\u044F \u0437\u0430\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F');
+    return Unit;
+  }
+  function AddLohComponent$addLoh$lambda($receiver) {
+    $receiver.invoke_wiumk0$(getPropertyCallableRef('fullname', 1, function ($receiver) {
+      return $receiver.fullname;
+    }, function ($receiver, value) {
+      $receiver.fullname = value;
+    }), AddLohComponent$addLoh$lambda$lambda);
+    $receiver.invoke_wiumk0$(getPropertyCallableRef('passportSerialNumber', 1, function ($receiver) {
+      return $receiver.passportSerialNumber;
+    }, function ($receiver, value) {
+      $receiver.passportSerialNumber = value;
+    }), AddLohComponent$addLoh$lambda$lambda_0);
+    $receiver.invoke_wiumk0$(getPropertyCallableRef('registrationAddress', 1, function ($receiver) {
+      return $receiver.registrationAddress;
+    }, function ($receiver, value) {
+      $receiver.registrationAddress = value;
+    }), AddLohComponent$addLoh$lambda$lambda_1);
+    $receiver.invoke_wiumk0$(getPropertyCallableRef('issued', 1, function ($receiver) {
+      return $receiver.issued;
+    }, function ($receiver, value) {
+      $receiver.issued = value;
+    }), AddLohComponent$addLoh$lambda$lambda_2);
+    $receiver.invoke_wiumk0$(getPropertyCallableRef('subdivisionCode', 1, function ($receiver) {
+      return $receiver.subdivisionCode;
+    }, function ($receiver, value) {
+      $receiver.subdivisionCode = value;
+    }), AddLohComponent$addLoh$lambda$lambda_3);
+    return Unit;
+  }
+  function AddLohComponent$addLoh$lambda$lambda_4($receiver) {
+    $receiver.errorMessage = '\u041B\u043E\u0445 \u0434\u043E\u0431\u0430\u0432\u043B\u0435\u043D';
+    return Unit;
+  }
+  function AddLohComponent$addLoh$lambda$lambda_5($receiver) {
+    $receiver.errorMessage = '\u041B\u043E\u0445 \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442';
+    return Unit;
+  }
+  function Coroutine$AddLohComponent$addLoh$lambda(closure$addLohService_0, closure$loh_0, this$AddLohComponent_0, $receiver_0, controller, continuation_0) {
+    CoroutineImpl.call(this, continuation_0);
+    this.$controller = controller;
+    this.exceptionState_0 = 1;
+    this.local$closure$addLohService = closure$addLohService_0;
+    this.local$closure$loh = closure$loh_0;
+    this.local$this$AddLohComponent = this$AddLohComponent_0;
+  }
+  Coroutine$AddLohComponent$addLoh$lambda.$metadata$ = {
+    kind: Kotlin.Kind.CLASS,
+    simpleName: null,
+    interfaces: [CoroutineImpl]
+  };
+  Coroutine$AddLohComponent$addLoh$lambda.prototype = Object.create(CoroutineImpl.prototype);
+  Coroutine$AddLohComponent$addLoh$lambda.prototype.constructor = Coroutine$AddLohComponent$addLoh$lambda;
+  Coroutine$AddLohComponent$addLoh$lambda.prototype.doResume = function () {
+    do
+      try {
+        switch (this.state_0) {
+          case 0:
+            this.state_0 = 2;
+            this.result_0 = this.local$closure$addLohService.addLoh_x9rx28$(this.local$closure$loh, this);
+            if (this.result_0 === COROUTINE_SUSPENDED)
+              return COROUTINE_SUSPENDED;
+            continue;
+          case 1:
+            throw this.exception_0;
+          case 2:
+            var response = this.result_0;
+            if (equals(response, 'OK')) {
+              return setState(this.local$this$AddLohComponent, AddLohComponent$addLoh$lambda$lambda_4), Unit;
+            } else {
+              if (equals(response, 'Exists')) {
+                return setState(this.local$this$AddLohComponent, AddLohComponent$addLoh$lambda$lambda_5), Unit;
+              } else {
+                this.state_0 = 3;
+                continue;
+              }
+            }
+
+          case 3:
+            this.state_0 = 4;
+            continue;
+          case 4:
+            return Unit;
+          default:this.state_0 = 1;
+            throw new Error('State Machine Unreachable execution');
+        }
+      } catch (e) {
+        if (this.state_0 === 1) {
+          this.exceptionState_0 = this.state_0;
+          throw e;
+        } else {
+          this.state_0 = this.exceptionState_0;
+          this.exception_0 = e;
+        }
+      }
+     while (true);
+  };
+  function AddLohComponent$addLoh$lambda_0(closure$addLohService_0, closure$loh_0, this$AddLohComponent_0) {
+    return function ($receiver_0, continuation_0, suspended) {
+      var instance = new Coroutine$AddLohComponent$addLoh$lambda(closure$addLohService_0, closure$loh_0, this$AddLohComponent_0, $receiver_0, this, continuation_0);
+      if (suspended)
+        return instance;
+      else
+        return instance.doResume(null);
+    };
+  }
+  function AddLohComponent$addLoh$lambda_1(closure$validationResult) {
+    return function ($receiver) {
+      $receiver.errorMessage = first(closure$validationResult.errors).message;
+      return Unit;
+    };
+  }
+  AddLohComponent.prototype.addLoh_0 = function () {
+    var tmp$;
+    var loh = new Loh(this.state.fullName, this.state.passportSerialNumber, this.state.registrationAddress, this.state.issued, this.state.subdivisionCode);
+    var validateLoh = Validation.Companion.invoke_wvx9gu$(AddLohComponent$addLoh$lambda);
+    var validationResult = validateLoh.invoke_11rb$(loh);
+    if ((tmp$ = new Valid(loh)) != null ? tmp$.equals(validationResult) : null) {
+      var addLohService = new AddLohService(this.coroutineContext_0);
+      launch(this.props.coroutineScope, void 0, void 0, AddLohComponent$addLoh$lambda_0(addLohService, loh, this));
+    } else {
+      setState(this, AddLohComponent$addLoh$lambda_1(validationResult));
+    }
+  };
+  AddLohComponent.$metadata$ = {
+    kind: Kind_CLASS,
+    simpleName: 'AddLohComponent',
+    interfaces: [RComponent]
+  };
+  function h2$lambda(closure$classes) {
+    return function (it) {
+      return new H2_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
+  function h1$lambda_1(closure$classes) {
+    return function (it) {
+      return new H1_init(attributesMapOf('class', closure$classes), it);
+    };
+  }
+  function div$lambda_1(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -1586,17 +2301,17 @@
     $receiver.selected = Views$Home_getInstance();
   };
   ApplicationComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda(null));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_1(null));
     renderAppBar($receiver_0);
-    var $receiver_0_0 = new RDOMBuilder_init(div$lambda('App-header'));
+    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_1('App-header'));
     var $receiver_0_1 = new RDOMBuilder_init(h2$lambda('App-font'));
     $receiver_0_1.unaryPlus_pdl1vz$('BUTILKA');
     $receiver_0_0.child_2usv9w$($receiver_0_1.create());
     $receiver_0.child_2usv9w$($receiver_0_0.create());
-    var $receiver_0_2 = new RDOMBuilder_init(div$lambda(null));
+    var $receiver_0_2 = new RDOMBuilder_init(div$lambda_1(null));
     switch (this.state.selected.name) {
       case 'Loading':
-        var $receiver_0_3 = new RDOMBuilder_init(h1$lambda(null));
+        var $receiver_0_3 = new RDOMBuilder_init(h1$lambda_1(null));
         $receiver_0_3.unaryPlus_pdl1vz$('Loading...');
         $receiver_0_2.child_2usv9w$($receiver_0_3.create());
         break;
@@ -1632,6 +2347,10 @@
           return $receiver.goRequest(), Unit;
         }.bind(null, this)), getCallableRef('goMyNotifications', function ($receiver) {
           return $receiver.goMyNotifications(), Unit;
+        }.bind(null, this)), getCallableRef('goAddLoh', function ($receiver) {
+          return $receiver.goAddLoh_0(), Unit;
+        }.bind(null, this)), getCallableRef('goAddDrugs', function ($receiver) {
+          return $receiver.goAddDrugs_0(), Unit;
         }.bind(null, this)));
         break;
       case 'InputCaseInfo':
@@ -1656,6 +2375,16 @@
         break;
       case 'Stats':
         statsComponent($receiver_0_2, getCallableRef('goUser', function ($receiver) {
+          return $receiver.goUser_0(), Unit;
+        }.bind(null, this)), this.props.coroutineScope);
+        break;
+      case 'AddLoh':
+        addLohComponent($receiver_0_2, getCallableRef('goUser', function ($receiver) {
+          return $receiver.goUser_0(), Unit;
+        }.bind(null, this)), this.props.coroutineScope);
+        break;
+      case 'AddDrugs':
+        addDrugsComponent($receiver_0_2, getCallableRef('goUser', function ($receiver) {
           return $receiver.goUser_0(), Unit;
         }.bind(null, this)), this.props.coroutineScope);
         break;
@@ -1728,22 +2457,36 @@
   ApplicationComponent.prototype.goStats = function () {
     setState(this, ApplicationComponent$goStats$lambda);
   };
+  function ApplicationComponent$goAddLoh$lambda($receiver) {
+    $receiver.selected = Views$AddLoh_getInstance();
+    return Unit;
+  }
+  ApplicationComponent.prototype.goAddLoh_0 = function () {
+    setState(this, ApplicationComponent$goAddLoh$lambda);
+  };
+  function ApplicationComponent$goAddDrugs$lambda($receiver) {
+    $receiver.selected = Views$AddDrugs_getInstance();
+    return Unit;
+  }
+  ApplicationComponent.prototype.goAddDrugs_0 = function () {
+    setState(this, ApplicationComponent$goAddDrugs$lambda);
+  };
   ApplicationComponent.$metadata$ = {
     kind: Kind_CLASS,
     simpleName: 'ApplicationComponent',
     interfaces: [RComponent]
   };
-  function span$lambda(closure$classes) {
+  function span$lambda_1(closure$classes) {
     return function (it) {
       return new SPAN_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function button$lambda(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+  function button$lambda_1(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
     return function (it) {
       return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
     };
   }
-  function div$lambda_0(closure$classes) {
+  function div$lambda_2(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -1774,15 +2517,15 @@
     };
   }
   HomeComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda_0(null));
-    var $receiver_0_0 = new RDOMBuilder_init(button$lambda(null, null, null, 'App-buttons'));
-    var $receiver_0_1 = new RDOMBuilder_init(span$lambda(null));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_2(null));
+    var $receiver_0_0 = new RDOMBuilder_init(button$lambda_1(null, null, null, 'App-buttons'));
+    var $receiver_0_1 = new RDOMBuilder_init(span$lambda_1(null));
     $receiver_0_1.unaryPlus_pdl1vz$('\u0412\u0445\u043E\u0434');
     $receiver_0_0.child_2usv9w$($receiver_0_1.create());
     set_onClickFunction($receiver_0_0.attrs, HomeComponent$render$lambda$lambda$lambda$lambda(this));
     $receiver_0.child_2usv9w$($receiver_0_0.create());
-    var $receiver_0_2 = new RDOMBuilder_init(button$lambda(null, null, null, 'App-buttons'));
-    var $receiver_0_3 = new RDOMBuilder_init(span$lambda(null));
+    var $receiver_0_2 = new RDOMBuilder_init(button$lambda_1(null, null, null, 'App-buttons'));
+    var $receiver_0_3 = new RDOMBuilder_init(span$lambda_1(null));
     $receiver_0_3.unaryPlus_pdl1vz$('\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F');
     $receiver_0_2.child_2usv9w$($receiver_0_3.create());
     set_onClickFunction($receiver_0_2.attrs, HomeComponent$render$lambda$lambda$lambda$lambda_0(this));
@@ -1794,32 +2537,32 @@
     simpleName: 'HomeComponent',
     interfaces: [RComponent]
   };
-  function h1$lambda_0(closure$classes) {
+  function h1$lambda_2(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function input$lambda(closure$type, closure$formEncType, closure$formMethod, closure$name, closure$classes) {
+  function input$lambda_1(closure$type, closure$formEncType, closure$formMethod, closure$name, closure$classes) {
     return function (it) {
       return new INPUT_init(attributesMapOf_0(['type', closure$type != null ? enumEncode(closure$type) : null, 'formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'name', closure$name, 'class', closure$classes]), it);
     };
   }
-  function p$lambda(closure$classes) {
+  function p$lambda_1(closure$classes) {
     return function (it) {
       return new P_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function span$lambda_0(closure$classes) {
+  function span$lambda_2(closure$classes) {
     return function (it) {
       return new SPAN_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function button$lambda_0(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+  function button$lambda_2(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
     return function (it) {
       return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
     };
   }
-  function div$lambda_1(closure$classes) {
+  function div$lambda_3(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -1891,50 +2634,50 @@
     };
   }
   LoginComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda_1(''));
-    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_1(null));
-    var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_0('pageTitle'));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_3(''));
+    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_3(null));
+    var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
     $receiver_0_1.unaryPlus_pdl1vz$('\u0412\u043E\u0439\u0442\u0438');
     $receiver_0_0.child_2usv9w$($receiver_0_1.create());
     $receiver_0.child_2usv9w$($receiver_0_0.create());
-    var $receiver_0_2 = new RDOMBuilder_init(div$lambda_1(null));
-    var $receiver_0_3 = new RDOMBuilder_init(p$lambda(null));
-    var $receiver_0_4 = new RDOMBuilder_init(input$lambda(InputType.text, null, null, 'login', null));
+    var $receiver_0_2 = new RDOMBuilder_init(div$lambda_3(null));
+    var $receiver_0_3 = new RDOMBuilder_init(p$lambda_1(null));
+    var $receiver_0_4 = new RDOMBuilder_init(input$lambda_1(InputType.text, null, null, 'login', null));
     var $receiver_1 = $receiver_0_4.attrs;
     $receiver_1.placeholder = '\u0418\u043C\u044F \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u0435\u043B\u044F';
     set_onChangeFunction($receiver_1, LoginComponent$render$lambda$lambda$lambda$lambda$lambda$lambda(this));
     $receiver_0_3.child_2usv9w$($receiver_0_4.create());
     $receiver_0_2.child_2usv9w$($receiver_0_3.create());
     $receiver_0.child_2usv9w$($receiver_0_2.create());
-    var $receiver_0_5 = new RDOMBuilder_init(div$lambda_1(null));
-    var $receiver_0_6 = new RDOMBuilder_init(p$lambda(null));
-    var $receiver_0_7 = new RDOMBuilder_init(input$lambda(InputType.password, null, null, 'password', null));
+    var $receiver_0_5 = new RDOMBuilder_init(div$lambda_3(null));
+    var $receiver_0_6 = new RDOMBuilder_init(p$lambda_1(null));
+    var $receiver_0_7 = new RDOMBuilder_init(input$lambda_1(InputType.password, null, null, 'password', null));
     var $receiver_2 = $receiver_0_7.attrs;
     $receiver_2.placeholder = '\u041F\u0430\u0440\u043E\u043B\u044C';
     set_onChangeFunction($receiver_2, LoginComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_0(this));
     $receiver_0_6.child_2usv9w$($receiver_0_7.create());
     $receiver_0_5.child_2usv9w$($receiver_0_6.create());
     $receiver_0.child_2usv9w$($receiver_0_5.create());
-    var $receiver_0_8 = new RDOMBuilder_init(div$lambda_1(null));
-    var $receiver_0_9 = new RDOMBuilder_init(p$lambda(null));
-    var $receiver_0_10 = new RDOMBuilder_init(button$lambda_0(null, null, null, 'App-buttons'));
-    var $receiver_0_11 = new RDOMBuilder_init(span$lambda_0(null));
+    var $receiver_0_8 = new RDOMBuilder_init(div$lambda_3(null));
+    var $receiver_0_9 = new RDOMBuilder_init(p$lambda_1(null));
+    var $receiver_0_10 = new RDOMBuilder_init(button$lambda_2(null, null, null, 'App-buttons'));
+    var $receiver_0_11 = new RDOMBuilder_init(span$lambda_2(null));
     $receiver_0_11.unaryPlus_pdl1vz$('\u0412\u0425\u041E\u0414');
     $receiver_0_10.child_2usv9w$($receiver_0_11.create());
     set_onClickFunction($receiver_0_10.attrs, LoginComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_1(this));
     $receiver_0_9.child_2usv9w$($receiver_0_10.create());
     $receiver_0_8.child_2usv9w$($receiver_0_9.create());
-    var $receiver_0_12 = new RDOMBuilder_init(p$lambda(null));
-    var $receiver_0_13 = new RDOMBuilder_init(button$lambda_0(null, null, null, 'App-buttons'));
-    var $receiver_0_14 = new RDOMBuilder_init(span$lambda_0(null));
+    var $receiver_0_12 = new RDOMBuilder_init(p$lambda_1(null));
+    var $receiver_0_13 = new RDOMBuilder_init(button$lambda_2(null, null, null, 'App-buttons'));
+    var $receiver_0_14 = new RDOMBuilder_init(span$lambda_2(null));
     $receiver_0_14.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
     $receiver_0_13.child_2usv9w$($receiver_0_14.create());
     set_onClickFunction($receiver_0_13.attrs, LoginComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_2(this));
     $receiver_0_12.child_2usv9w$($receiver_0_13.create());
     $receiver_0_8.child_2usv9w$($receiver_0_12.create());
     $receiver_0.child_2usv9w$($receiver_0_8.create());
-    var $receiver_0_15 = new RDOMBuilder_init(div$lambda_1(null));
-    var $receiver_0_16 = new RDOMBuilder_init(h1$lambda_0(null));
+    var $receiver_0_15 = new RDOMBuilder_init(div$lambda_3(null));
+    var $receiver_0_16 = new RDOMBuilder_init(h1$lambda_2(null));
     $receiver_0_16.unaryPlus_pdl1vz$(this.state.errorMessage);
     $receiver_0_15.child_2usv9w$($receiver_0_16.create());
     $receiver_0.child_2usv9w$($receiver_0_15.create());
@@ -2037,12 +2780,12 @@
   function logOutUser() {
     currentUser = null;
   }
-  function h1$lambda_1(closure$classes) {
+  function h1$lambda_3(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function div$lambda_2(closure$classes) {
+  function div$lambda_4(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -2057,9 +2800,9 @@
     RComponent_init(this);
   }
   NotFoundComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda_2(''));
-    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_2(null));
-    var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_1('pageTitle'));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_4(''));
+    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_4(null));
+    var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_3('pageTitle'));
     $receiver_0_1.unaryPlus_pdl1vz$('Not Found');
     $receiver_0_0.child_2usv9w$($receiver_0_1.create());
     $receiver_0.child_2usv9w$($receiver_0_0.create());
@@ -2070,7 +2813,7 @@
     simpleName: 'NotFoundComponent',
     interfaces: [RComponent]
   };
-  function h1$lambda_2(closure$classes) {
+  function h1$lambda_4(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
@@ -2080,22 +2823,22 @@
       return new IMG_init(attributesMapOf_0(['alt', closure$alt, 'src', closure$src, 'class', closure$classes]), it);
     };
   }
-  function span$lambda_1(closure$classes) {
+  function span$lambda_3(closure$classes) {
     return function (it) {
       return new SPAN_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function button$lambda_1(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+  function button$lambda_3(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
     return function (it) {
       return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
     };
   }
-  function p$lambda_0(closure$classes) {
+  function p$lambda_2(closure$classes) {
     return function (it) {
       return new P_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function div$lambda_3(closure$classes) {
+  function div$lambda_5(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -2183,39 +2926,39 @@
     };
   }
   MyNotificationComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda_3(null));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_5(null));
     switch (this.state.selected.name) {
       case 'Loading':
-        var $receiver_0_0 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
+        var $receiver_0_0 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
         $receiver_0_0.unaryPlus_pdl1vz$('\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430...');
         this.checkNotification_0();
         $receiver_0.child_2usv9w$($receiver_0_0.create());
         break;
       case 'ThereIsNotRequest':
-        var $receiver_0_1 = new RDOMBuilder_init(p$lambda_0(null));
-        var $receiver_0_2 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
+        var $receiver_0_1 = new RDOMBuilder_init(p$lambda_2(null));
+        var $receiver_0_2 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
         $receiver_0_2.unaryPlus_pdl1vz$('\u0417\u0434\u0435\u0441\u044C \u043F\u043E\u043A\u0430 \u043F\u0443\u0441\u0442\u043E');
         $receiver_0_1.child_2usv9w$($receiver_0_2.create());
         $receiver_0.child_2usv9w$($receiver_0_1.create());
         break;
       case 'ThereIsRequest':
-        var $receiver_0_3 = new RDOMBuilder_init(div$lambda_3(null));
-        var $receiver_0_4 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
+        var $receiver_0_3 = new RDOMBuilder_init(div$lambda_5(null));
+        var $receiver_0_4 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
         $receiver_0_4.unaryPlus_pdl1vz$('\u0414\u043B\u044F \u0432\u0430\u0441 \u0435\u0441\u0442\u044C \u0434\u0435\u043B\u043E \u2116 ' + this.state.notification.case_number);
         $receiver_0_3.child_2usv9w$($receiver_0_4.create());
-        var $receiver_0_5 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
+        var $receiver_0_5 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
         $receiver_0_5.unaryPlus_pdl1vz$('\u041B\u043E\u0445: ' + this.state.notification.loh.fullname);
         $receiver_0_3.child_2usv9w$($receiver_0_5.create());
-        var $receiver_0_6 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
+        var $receiver_0_6 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
         $receiver_0_6.unaryPlus_pdl1vz$('\u0410\u0434\u0440\u0435\u0441: ' + this.state.notification.loh.registrationAddress);
         $receiver_0_3.child_2usv9w$($receiver_0_6.create());
-        var $receiver_0_7 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
-        $receiver_0_7.unaryPlus_pdl1vz$('\u041F\u0430\u0441\u043F\u043E\u0440\u0442: ' + this.state.notification.loh.passportSerialNumber + ', \u0412\u044B\u0434\u0430\u043D ' + this.state.notification.loh.issuedBy + ' ' + this.state.notification.loh.dateOfIssue);
+        var $receiver_0_7 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
+        $receiver_0_7.unaryPlus_pdl1vz$('\u041F\u0430\u0441\u043F\u043E\u0440\u0442: ' + this.state.notification.loh.passportSerialNumber + ', \u0412\u044B\u0434\u0430\u043D ' + this.state.notification.loh.issued);
         $receiver_0_3.child_2usv9w$($receiver_0_7.create());
-        var $receiver_0_8 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
+        var $receiver_0_8 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
         $receiver_0_8.unaryPlus_pdl1vz$('\u041A\u043E\u0434 \u043F\u043E\u0434\u0440\u0430\u0437\u0434\u0435\u043B\u0435\u043D\u0438\u044F: ' + this.state.notification.loh.subdivisionCode);
         $receiver_0_3.child_2usv9w$($receiver_0_8.create());
-        var $receiver_0_9 = new RDOMBuilder_init(h1$lambda_2('pageTitle'));
+        var $receiver_0_9 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
         $receiver_0_9.unaryPlus_pdl1vz$('\u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C \u043F\u043E\u0434\u0431\u0440\u043E\u0441: ' + this.state.notification.drugName + ', ' + this.state.notification.drugMass + ' \u0433\u0440\u0430\u043C\u043C');
         $receiver_0_3.child_2usv9w$($receiver_0_9.create());
         var $receiver_0_10 = new RDOMBuilder_init(img$lambda(null, null, null));
@@ -2226,9 +2969,9 @@
       default:Kotlin.noWhenBranchMatched();
         break;
     }
-    var $receiver_0_11 = new RDOMBuilder_init(p$lambda_0(null));
-    var $receiver_0_12 = new RDOMBuilder_init(button$lambda_1(null, null, null, 'App-buttons'));
-    var $receiver_0_13 = new RDOMBuilder_init(span$lambda_1(null));
+    var $receiver_0_11 = new RDOMBuilder_init(p$lambda_2(null));
+    var $receiver_0_12 = new RDOMBuilder_init(button$lambda_3(null, null, null, 'App-buttons'));
+    var $receiver_0_13 = new RDOMBuilder_init(span$lambda_3(null));
     $receiver_0_13.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
     $receiver_0_12.child_2usv9w$($receiver_0_13.create());
     set_onClickFunction($receiver_0_12.attrs, MyNotificationComponent$render$lambda$lambda$lambda$lambda$lambda(this));
@@ -2325,32 +3068,32 @@
     simpleName: 'MyNotificationComponent',
     interfaces: [RComponent]
   };
-  function h1$lambda_3(closure$classes) {
+  function h1$lambda_5(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function input$lambda_0(closure$type, closure$formEncType, closure$formMethod, closure$name, closure$classes) {
+  function input$lambda_2(closure$type, closure$formEncType, closure$formMethod, closure$name, closure$classes) {
     return function (it) {
       return new INPUT_init(attributesMapOf_0(['type', closure$type != null ? enumEncode(closure$type) : null, 'formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'name', closure$name, 'class', closure$classes]), it);
     };
   }
-  function p$lambda_1(closure$classes) {
+  function p$lambda_3(closure$classes) {
     return function (it) {
       return new P_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function span$lambda_2(closure$classes) {
+  function span$lambda_4(closure$classes) {
     return function (it) {
       return new SPAN_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function button$lambda_2(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+  function button$lambda_4(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
     return function (it) {
       return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
     };
   }
-  function div$lambda_4(closure$classes) {
+  function div$lambda_6(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -2518,96 +3261,96 @@
     };
   }
   RegisterComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda_4(null));
-    var $receiver_0_0 = new RDOMBuilder_init(h1$lambda_3('pageTitle'));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_6(null));
+    var $receiver_0_0 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
     $receiver_0_0.unaryPlus_pdl1vz$('\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F');
     $receiver_0.child_2usv9w$($receiver_0_0.create());
     $receiver.child_2usv9w$($receiver_0.create());
-    var $receiver_0_1 = new RDOMBuilder_init(div$lambda_4('reg-box'));
-    var $receiver_0_2 = new RDOMBuilder_init(div$lambda_4('reg-input-box'));
-    var $receiver_0_3 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_4 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, 'fio', null));
+    var $receiver_0_1 = new RDOMBuilder_init(div$lambda_6('reg-box'));
+    var $receiver_0_2 = new RDOMBuilder_init(div$lambda_6('reg-input-box'));
+    var $receiver_0_3 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_4 = new RDOMBuilder_init(input$lambda_2(InputType.text, null, null, 'fio', null));
     var $receiver_1 = $receiver_0_4.attrs;
     $receiver_1.placeholder = '\u0424\u0430\u043C\u0438\u043B\u0438\u044F \u0418\u043C\u044F \u041E\u0442\u0447\u0435\u0441\u0442\u0432\u043E';
     set_onChangeFunction($receiver_1, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda(this));
     $receiver_0_3.child_2usv9w$($receiver_0_4.create());
     $receiver_0_2.child_2usv9w$($receiver_0_3.create());
-    var $receiver_0_5 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_6 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u041D\u0430\u0438\u043C\u0435\u043D\u043E\u0432\u0430\u043D\u0438\u0435 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438', null));
+    var $receiver_0_5 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_6 = new RDOMBuilder_init(input$lambda_2(InputType.text, null, null, '\u041D\u0430\u0438\u043C\u0435\u043D\u043E\u0432\u0430\u043D\u0438\u0435 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438', null));
     var $receiver_2 = $receiver_0_6.attrs;
     $receiver_2.placeholder = '\u041D\u0430\u0438\u043C\u0435\u043D\u043E\u0432\u0430\u043D\u0438\u0435 \u043E\u0440\u0433\u0430\u043D\u0438\u0437\u0430\u0446\u0438\u0438';
     set_onChangeFunction($receiver_2, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_0(this));
     $receiver_0_5.child_2usv9w$($receiver_0_6.create());
     $receiver_0_2.child_2usv9w$($receiver_0_5.create());
-    var $receiver_0_7 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_8 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u041D\u043E\u043C\u0435\u0440 \u0443\u0434\u043E\u0441\u0442\u043E\u0432\u0435\u0440\u0435\u043D\u0438\u044F', null));
+    var $receiver_0_7 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_8 = new RDOMBuilder_init(input$lambda_2(InputType.text, null, null, '\u041D\u043E\u043C\u0435\u0440 \u0443\u0434\u043E\u0441\u0442\u043E\u0432\u0435\u0440\u0435\u043D\u0438\u044F', null));
     var $receiver_3 = $receiver_0_8.attrs;
     $receiver_3.placeholder = '\u041D\u043E\u043C\u0435\u0440 \u0443\u0434\u043E\u0441\u0442\u043E\u0432\u0435\u0440\u0435\u043D\u0438\u044F';
     set_onChangeFunction($receiver_3, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_1(this));
     $receiver_0_7.child_2usv9w$($receiver_0_8.create());
     $receiver_0_2.child_2usv9w$($receiver_0_7.create());
-    var $receiver_0_9 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_10 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u041B\u0438\u0447\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440', null));
+    var $receiver_0_9 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_10 = new RDOMBuilder_init(input$lambda_2(InputType.text, null, null, '\u041B\u0438\u0447\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440', null));
     var $receiver_4 = $receiver_0_10.attrs;
     $receiver_4.placeholder = '\u041B\u0438\u0447\u043D\u044B\u0439 \u043D\u043E\u043C\u0435\u0440';
     set_onChangeFunction($receiver_4, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_2(this));
     $receiver_0_9.child_2usv9w$($receiver_0_10.create());
     $receiver_0_2.child_2usv9w$($receiver_0_9.create());
-    var $receiver_0_11 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_12 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u0414\u043E\u043B\u0436\u043D\u043E\u0441\u0442\u044C', null));
+    var $receiver_0_11 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_12 = new RDOMBuilder_init(input$lambda_2(InputType.text, null, null, '\u0414\u043E\u043B\u0436\u043D\u043E\u0441\u0442\u044C', null));
     var $receiver_5 = $receiver_0_12.attrs;
     $receiver_5.placeholder = '\u0414\u043E\u043B\u0436\u043D\u043E\u0441\u0442\u044C';
     set_onChangeFunction($receiver_5, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_3(this));
     $receiver_0_11.child_2usv9w$($receiver_0_12.create());
     $receiver_0_2.child_2usv9w$($receiver_0_11.create());
-    var $receiver_0_13 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_14 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u0412\u044B\u0434\u0430\u043D\u043E', null));
+    var $receiver_0_13 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_14 = new RDOMBuilder_init(input$lambda_2(InputType.text, null, null, '\u0412\u044B\u0434\u0430\u043D\u043E', null));
     var $receiver_6 = $receiver_0_14.attrs;
     $receiver_6.placeholder = '\u0412\u044B\u0434\u0430\u043D\u043E';
     set_onChangeFunction($receiver_6, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_4(this));
     $receiver_0_13.child_2usv9w$($receiver_0_14.create());
     $receiver_0_2.child_2usv9w$($receiver_0_13.create());
     $receiver_0_1.child_2usv9w$($receiver_0_2.create());
-    var $receiver_0_15 = new RDOMBuilder_init(div$lambda_4('reg-input-box'));
-    var $receiver_0_16 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_17 = new RDOMBuilder_init(input$lambda_0(InputType.text, null, null, '\u041B\u043E\u0433\u0438\u043D', null));
+    var $receiver_0_15 = new RDOMBuilder_init(div$lambda_6('reg-input-box'));
+    var $receiver_0_16 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_17 = new RDOMBuilder_init(input$lambda_2(InputType.text, null, null, '\u041B\u043E\u0433\u0438\u043D', null));
     var $receiver_7 = $receiver_0_17.attrs;
     $receiver_7.placeholder = '\u041B\u043E\u0433\u0438\u043D';
     set_onChangeFunction($receiver_7, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_5(this));
     $receiver_0_16.child_2usv9w$($receiver_0_17.create());
     $receiver_0_15.child_2usv9w$($receiver_0_16.create());
-    var $receiver_0_18 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_19 = new RDOMBuilder_init(input$lambda_0(InputType.password, null, null, '\u041F\u0430\u0440\u043E\u043B\u044C', null));
+    var $receiver_0_18 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_19 = new RDOMBuilder_init(input$lambda_2(InputType.password, null, null, '\u041F\u0430\u0440\u043E\u043B\u044C', null));
     var $receiver_8 = $receiver_0_19.attrs;
     $receiver_8.placeholder = '\u041F\u0430\u0440\u043E\u043B\u044C';
     set_onChangeFunction($receiver_8, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_6(this));
     $receiver_0_18.child_2usv9w$($receiver_0_19.create());
     $receiver_0_15.child_2usv9w$($receiver_0_18.create());
-    var $receiver_0_20 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_21 = new RDOMBuilder_init(input$lambda_0(InputType.tel, null, null, '\u0422\u0435\u043B\u0435\u0444\u043E\u043D', null));
+    var $receiver_0_20 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_21 = new RDOMBuilder_init(input$lambda_2(InputType.tel, null, null, '\u0422\u0435\u043B\u0435\u0444\u043E\u043D', null));
     var $receiver_9 = $receiver_0_21.attrs;
     $receiver_9.placeholder = '\u0422\u0435\u043B\u0435\u0444\u043E\u043D';
     set_onChangeFunction($receiver_9, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_7(this));
     $receiver_0_20.child_2usv9w$($receiver_0_21.create());
     $receiver_0_15.child_2usv9w$($receiver_0_20.create());
-    var $receiver_0_22 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_23 = new RDOMBuilder_init(input$lambda_0(InputType.email, null, null, 'E-mail', null));
+    var $receiver_0_22 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_23 = new RDOMBuilder_init(input$lambda_2(InputType.email, null, null, 'E-mail', null));
     var $receiver_10 = $receiver_0_23.attrs;
     $receiver_10.placeholder = 'E-mail';
     set_onChangeFunction($receiver_10, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_8(this));
     $receiver_0_22.child_2usv9w$($receiver_0_23.create());
     $receiver_0_15.child_2usv9w$($receiver_0_22.create());
-    var $receiver_0_24 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_25 = new RDOMBuilder_init(button$lambda_2(null, null, null, 'App-buttons'));
-    var $receiver_0_26 = new RDOMBuilder_init(span$lambda_2(null));
+    var $receiver_0_24 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_25 = new RDOMBuilder_init(button$lambda_4(null, null, null, 'App-buttons'));
+    var $receiver_0_26 = new RDOMBuilder_init(span$lambda_4(null));
     $receiver_0_26.unaryPlus_pdl1vz$('\u0420\u0435\u0433\u0438\u0441\u0442\u0440\u0430\u0446\u0438\u044F');
     $receiver_0_25.child_2usv9w$($receiver_0_26.create());
     set_onClickFunction($receiver_0_25.attrs, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_9(this));
     $receiver_0_24.child_2usv9w$($receiver_0_25.create());
     $receiver_0_15.child_2usv9w$($receiver_0_24.create());
-    var $receiver_0_27 = new RDOMBuilder_init(p$lambda_1(null));
-    var $receiver_0_28 = new RDOMBuilder_init(button$lambda_2(null, null, null, 'App-buttons'));
-    var $receiver_0_29 = new RDOMBuilder_init(span$lambda_2(null));
+    var $receiver_0_27 = new RDOMBuilder_init(p$lambda_3(null));
+    var $receiver_0_28 = new RDOMBuilder_init(button$lambda_4(null, null, null, 'App-buttons'));
+    var $receiver_0_29 = new RDOMBuilder_init(span$lambda_4(null));
     $receiver_0_29.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
     $receiver_0_28.child_2usv9w$($receiver_0_29.create());
     set_onClickFunction($receiver_0_28.attrs, RegisterComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_10(this));
@@ -2615,8 +3358,8 @@
     $receiver_0_15.child_2usv9w$($receiver_0_27.create());
     $receiver_0_1.child_2usv9w$($receiver_0_15.create());
     $receiver.child_2usv9w$($receiver_0_1.create());
-    var $receiver_0_30 = new RDOMBuilder_init(div$lambda_4(null));
-    var $receiver_0_31 = new RDOMBuilder_init(h1$lambda_3(null));
+    var $receiver_0_30 = new RDOMBuilder_init(div$lambda_6(null));
+    var $receiver_0_31 = new RDOMBuilder_init(h1$lambda_5(null));
     $receiver_0_31.unaryPlus_pdl1vz$(this.state.errorMessage);
     $receiver_0_30.child_2usv9w$($receiver_0_31.create());
     $receiver.child_2usv9w$($receiver_0_30.create());
@@ -2807,27 +3550,27 @@
     simpleName: 'RegisterComponent',
     interfaces: [RComponent]
   };
-  function span$lambda_3(closure$classes) {
+  function span$lambda_5(closure$classes) {
     return function (it) {
       return new SPAN_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function button$lambda_3(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+  function button$lambda_5(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
     return function (it) {
       return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
     };
   }
-  function h1$lambda_4(closure$classes) {
+  function h1$lambda_6(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function p$lambda_2(closure$classes) {
+  function p$lambda_4(closure$classes) {
     return function (it) {
       return new P_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function div$lambda_5(closure$classes) {
+  function div$lambda_7(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -2917,18 +3660,18 @@
     };
   }
   RequestComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda_5(null));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_7(null));
     switch (this.state.selected.name) {
       case 'Loading':
-        var $receiver_0_0 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
+        var $receiver_0_0 = new RDOMBuilder_init(h1$lambda_6('pageTitle'));
         $receiver_0_0.unaryPlus_pdl1vz$('\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430...');
         this.checkRequest_0();
         $receiver_0.child_2usv9w$($receiver_0_0.create());
         break;
       case 'ThereIsNotRequest':
-        var $receiver_0_1 = new RDOMBuilder_init(p$lambda_2(null));
-        var $receiver_0_2 = new RDOMBuilder_init(button$lambda_3(null, null, null, 'App-buttons'));
-        var $receiver_0_3 = new RDOMBuilder_init(span$lambda_3(null));
+        var $receiver_0_1 = new RDOMBuilder_init(p$lambda_4(null));
+        var $receiver_0_2 = new RDOMBuilder_init(button$lambda_5(null, null, null, 'App-buttons'));
+        var $receiver_0_3 = new RDOMBuilder_init(span$lambda_5(null));
         $receiver_0_3.unaryPlus_pdl1vz$('\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C \u0437\u0430\u044F\u0432\u043A\u0443');
         $receiver_0_2.child_2usv9w$($receiver_0_3.create());
         set_onClickFunction($receiver_0_2.attrs, RequestComponent$render$lambda$lambda$lambda$lambda$lambda(this));
@@ -2936,16 +3679,16 @@
         $receiver_0.child_2usv9w$($receiver_0_1.create());
         break;
       case 'ThereIsRequest':
-        var $receiver_0_4 = new RDOMBuilder_init(h1$lambda_4('pageTitle'));
+        var $receiver_0_4 = new RDOMBuilder_init(h1$lambda_6('pageTitle'));
         $receiver_0_4.unaryPlus_pdl1vz$('\u0412\u0430\u0448\u0430 \u0437\u0430\u044F\u0432\u043A\u0430 \u043E\u0431\u0440\u0430\u0431\u0430\u0442\u044B\u0432\u0430\u0435\u0442\u0441\u044F');
         $receiver_0.child_2usv9w$($receiver_0_4.create());
         break;
       default:Kotlin.noWhenBranchMatched();
         break;
     }
-    var $receiver_0_5 = new RDOMBuilder_init(p$lambda_2(null));
-    var $receiver_0_6 = new RDOMBuilder_init(button$lambda_3(null, null, null, 'App-buttons'));
-    var $receiver_0_7 = new RDOMBuilder_init(span$lambda_3(null));
+    var $receiver_0_5 = new RDOMBuilder_init(p$lambda_4(null));
+    var $receiver_0_6 = new RDOMBuilder_init(button$lambda_5(null, null, null, 'App-buttons'));
+    var $receiver_0_7 = new RDOMBuilder_init(span$lambda_5(null));
     $receiver_0_7.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
     $receiver_0_6.child_2usv9w$($receiver_0_7.create());
     set_onClickFunction($receiver_0_6.attrs, RequestComponent$render$lambda$lambda$lambda$lambda$lambda_0(this));
@@ -3104,27 +3847,27 @@
     simpleName: 'RequestComponent',
     interfaces: [RComponent]
   };
-  function span$lambda_4(closure$classes) {
+  function span$lambda_6(closure$classes) {
     return function (it) {
       return new SPAN_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function button$lambda_4(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+  function button$lambda_6(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
     return function (it) {
       return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
     };
   }
-  function h1$lambda_5(closure$classes) {
+  function h1$lambda_7(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function p$lambda_3(closure$classes) {
+  function p$lambda_5(closure$classes) {
     return function (it) {
       return new P_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function div$lambda_6(closure$classes) {
+  function div$lambda_8(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -3201,34 +3944,34 @@
   StatsComponent.prototype.render_ss14n$ = function ($receiver) {
     switch (this.state.selected.name) {
       case 'Loading':
-        var $receiver_0 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
+        var $receiver_0 = new RDOMBuilder_init(h1$lambda_7('pageTitle'));
         $receiver_0.unaryPlus_pdl1vz$('\u0417\u0430\u0433\u0440\u0443\u0437\u043A\u0430...');
         this.getStats_0();
         $receiver.child_2usv9w$($receiver_0.create());
         break;
       case 'StatsReady':
-        var $receiver_0_0 = new RDOMBuilder_init(div$lambda_6(null));
+        var $receiver_0_0 = new RDOMBuilder_init(div$lambda_8(null));
         var tmp$;
-        var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
+        var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_7('pageTitle'));
         $receiver_0_1.unaryPlus_pdl1vz$('\u041E\u0442\u043A\u0440\u044B\u0442\u044B\u0445 \u0434\u0435\u043B: ' + this.state.stat.openedCases);
         $receiver_0_0.child_2usv9w$($receiver_0_1.create());
-        var $receiver_0_2 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
+        var $receiver_0_2 = new RDOMBuilder_init(h1$lambda_7('pageTitle'));
         $receiver_0_2.unaryPlus_pdl1vz$('\u0417\u0430\u043A\u0440\u044B\u0442\u044B\u0445 \u0434\u0435\u043B: ' + this.state.stat.closedCasses);
         $receiver_0_0.child_2usv9w$($receiver_0_2.create());
-        var $receiver_0_3 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
+        var $receiver_0_3 = new RDOMBuilder_init(h1$lambda_7('pageTitle'));
         $receiver_0_3.unaryPlus_pdl1vz$('\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u0445 \u043B\u043E\u0445\u043E\u0432: ' + this.state.stat.availableLohs);
         $receiver_0_0.child_2usv9w$($receiver_0_3.create());
         tmp$ = this.state.stat.drugs.iterator();
         while (tmp$.hasNext()) {
           var drug = tmp$.next();
-          var $receiver_0_4 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
+          var $receiver_0_4 = new RDOMBuilder_init(h1$lambda_7('pageTitle'));
           $receiver_0_4.unaryPlus_pdl1vz$(drug.first + ': ' + drug.second + ' \u0433\u0440.');
           $receiver_0_0.child_2usv9w$($receiver_0_4.create());
         }
 
-        var $receiver_0_5 = new RDOMBuilder_init(p$lambda_3(null));
-        var $receiver_0_6 = new RDOMBuilder_init(button$lambda_4(null, null, null, 'App-buttons'));
-        var $receiver_0_7 = new RDOMBuilder_init(span$lambda_4(null));
+        var $receiver_0_5 = new RDOMBuilder_init(p$lambda_5(null));
+        var $receiver_0_6 = new RDOMBuilder_init(button$lambda_6(null, null, null, 'App-buttons'));
+        var $receiver_0_7 = new RDOMBuilder_init(span$lambda_6(null));
         $receiver_0_7.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
         $receiver_0_6.child_2usv9w$($receiver_0_7.create());
         set_onClickFunction($receiver_0_6.attrs, StatsComponent$render$lambda$lambda$lambda$lambda$lambda(this));
@@ -3309,43 +4052,45 @@
     simpleName: 'StatsComponent',
     interfaces: [RComponent]
   };
-  function span$lambda_5(closure$classes) {
+  function span$lambda_7(closure$classes) {
     return function (it) {
       return new SPAN_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function button$lambda_5(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+  function button$lambda_7(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
     return function (it) {
       return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
     };
   }
-  function h1$lambda_6(closure$classes) {
+  function h1$lambda_8(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function p$lambda_4(closure$classes) {
+  function p$lambda_6(closure$classes) {
     return function (it) {
       return new P_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function div$lambda_7(closure$classes) {
+  function div$lambda_9(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function userComponent$lambda(closure$goInputCaseInfo, closure$goHome, closure$goRequest, closure$goMyNotifications, closure$goStats) {
+  function userComponent$lambda(closure$goInputCaseInfo, closure$goHome, closure$goRequest, closure$goMyNotifications, closure$goStats, closure$goAddLoh, closure$goAddDrugs) {
     return function ($receiver) {
       $receiver.attrs.goInputCaseInfo = closure$goInputCaseInfo;
       $receiver.attrs.goHome = closure$goHome;
       $receiver.attrs.goRequest = closure$goRequest;
       $receiver.attrs.goMyNotifications = closure$goMyNotifications;
       $receiver.attrs.goStats = closure$goStats;
+      $receiver.attrs.goAddLoh = closure$goAddLoh;
+      $receiver.attrs.goAddDrugs = closure$goAddDrugs;
       return Unit;
     };
   }
-  function userComponent($receiver, goInputCaseInfo, goHome, goStats, goRequest, goMyNotifications) {
-    return $receiver.child_bzgiuu$(getKClass(UserComponent), userComponent$lambda(goInputCaseInfo, goHome, goRequest, goMyNotifications, goStats));
+  function userComponent($receiver, goInputCaseInfo, goHome, goStats, goRequest, goMyNotifications, goAddLoh, goAddDrugs) {
+    return $receiver.child_bzgiuu$(getKClass(UserComponent), userComponent$lambda(goInputCaseInfo, goHome, goRequest, goMyNotifications, goStats, goAddLoh, goAddDrugs));
   }
   function UserComponent() {
     RComponent_init(this);
@@ -3376,6 +4121,18 @@
   }
   function UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_3(this$UserComponent) {
     return function (it) {
+      this$UserComponent.props.goAddLoh();
+      return Unit;
+    };
+  }
+  function UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_4(this$UserComponent) {
+    return function (it) {
+      this$UserComponent.props.goAddDrugs();
+      return Unit;
+    };
+  }
+  function UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_5(this$UserComponent) {
+    return function (it) {
       it.preventDefault();
       logOutUser();
       this$UserComponent.props.goHome();
@@ -3383,57 +4140,73 @@
     };
   }
   UserComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda_7(null));
-    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_7('user'));
-    var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_6('pageTitle'));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_9(null));
+    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_9('user'));
+    var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_8('pageTitle'));
     $receiver_0_1.unaryPlus_pdl1vz$('\u0414\u043E\u0431\u0440\u043E \u043F\u043E\u0436\u0430\u043B\u043E\u0432\u0430\u0442\u044C ');
     $receiver_0_0.child_2usv9w$($receiver_0_1.create());
-    var $receiver_0_2 = new RDOMBuilder_init(h1$lambda_6('pageTitle'));
+    var $receiver_0_2 = new RDOMBuilder_init(h1$lambda_8('pageTitle'));
     $receiver_0_2.unaryPlus_pdl1vz$(ensureNotNull(currentUser != null ? currentUser.full_name : null));
     $receiver_0_0.child_2usv9w$($receiver_0_2.create());
     if (ensureNotNull(currentUser != null ? currentUser.isMajor : null)) {
-      var $receiver_0_3 = new RDOMBuilder_init(p$lambda_4(null));
-      var $receiver_0_4 = new RDOMBuilder_init(button$lambda_5(null, null, null, 'App-buttons'));
-      var $receiver_0_5 = new RDOMBuilder_init(span$lambda_5(null));
+      var $receiver_0_3 = new RDOMBuilder_init(p$lambda_6(null));
+      var $receiver_0_4 = new RDOMBuilder_init(button$lambda_7(null, null, null, 'App-buttons'));
+      var $receiver_0_5 = new RDOMBuilder_init(span$lambda_7(null));
       $receiver_0_5.unaryPlus_pdl1vz$('\u041F\u043E\u0434\u0430\u0442\u044C \u0437\u0430\u044F\u0432\u043A\u0443');
       $receiver_0_4.child_2usv9w$($receiver_0_5.create());
       set_onClickFunction($receiver_0_4.attrs, UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda(this));
       $receiver_0_3.child_2usv9w$($receiver_0_4.create());
       $receiver_0_0.child_2usv9w$($receiver_0_3.create());
-      var $receiver_0_6 = new RDOMBuilder_init(p$lambda_4(null));
-      var $receiver_0_7 = new RDOMBuilder_init(button$lambda_5(null, null, null, 'App-buttons'));
-      var $receiver_0_8 = new RDOMBuilder_init(span$lambda_5(null));
+      var $receiver_0_6 = new RDOMBuilder_init(p$lambda_6(null));
+      var $receiver_0_7 = new RDOMBuilder_init(button$lambda_7(null, null, null, 'App-buttons'));
+      var $receiver_0_8 = new RDOMBuilder_init(span$lambda_7(null));
       $receiver_0_8.unaryPlus_pdl1vz$('C\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0430');
       $receiver_0_7.child_2usv9w$($receiver_0_8.create());
       set_onClickFunction($receiver_0_7.attrs, UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_0(this));
       $receiver_0_6.child_2usv9w$($receiver_0_7.create());
       $receiver_0_0.child_2usv9w$($receiver_0_6.create());
     } else {
-      var $receiver_0_9 = new RDOMBuilder_init(p$lambda_4(null));
-      var $receiver_0_10 = new RDOMBuilder_init(button$lambda_5(null, null, null, 'App-buttons'));
-      var $receiver_0_11 = new RDOMBuilder_init(span$lambda_5(null));
+      var $receiver_0_9 = new RDOMBuilder_init(p$lambda_6(null));
+      var $receiver_0_10 = new RDOMBuilder_init(button$lambda_7(null, null, null, 'App-buttons'));
+      var $receiver_0_11 = new RDOMBuilder_init(span$lambda_7(null));
       $receiver_0_11.unaryPlus_pdl1vz$('\u041C\u043E\u0438 \u0443\u0432\u0435\u0434\u043E\u043C\u043B\u0435\u043D\u0438\u044F');
       $receiver_0_10.child_2usv9w$($receiver_0_11.create());
       set_onClickFunction($receiver_0_10.attrs, UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_1(this));
       $receiver_0_9.child_2usv9w$($receiver_0_10.create());
       $receiver_0_0.child_2usv9w$($receiver_0_9.create());
-      var $receiver_0_12 = new RDOMBuilder_init(p$lambda_4(null));
-      var $receiver_0_13 = new RDOMBuilder_init(button$lambda_5(null, null, null, 'App-buttons'));
-      var $receiver_0_14 = new RDOMBuilder_init(span$lambda_5(null));
+      var $receiver_0_12 = new RDOMBuilder_init(p$lambda_6(null));
+      var $receiver_0_13 = new RDOMBuilder_init(button$lambda_7(null, null, null, 'App-buttons'));
+      var $receiver_0_14 = new RDOMBuilder_init(span$lambda_7(null));
       $receiver_0_14.unaryPlus_pdl1vz$('\u0412\u043D\u0435\u0441\u0435\u043D\u0438\u0435 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u043E \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0438');
       $receiver_0_13.child_2usv9w$($receiver_0_14.create());
       set_onClickFunction($receiver_0_13.attrs, UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_2(this));
       $receiver_0_12.child_2usv9w$($receiver_0_13.create());
       $receiver_0_0.child_2usv9w$($receiver_0_12.create());
+      var $receiver_0_15 = new RDOMBuilder_init(p$lambda_6(null));
+      var $receiver_0_16 = new RDOMBuilder_init(button$lambda_7(null, null, null, 'App-buttons'));
+      var $receiver_0_17 = new RDOMBuilder_init(span$lambda_7(null));
+      $receiver_0_17.unaryPlus_pdl1vz$('\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043B\u043E\u0445\u0430');
+      $receiver_0_16.child_2usv9w$($receiver_0_17.create());
+      set_onClickFunction($receiver_0_16.attrs, UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_3(this));
+      $receiver_0_15.child_2usv9w$($receiver_0_16.create());
+      $receiver_0_0.child_2usv9w$($receiver_0_15.create());
+      var $receiver_0_18 = new RDOMBuilder_init(p$lambda_6(null));
+      var $receiver_0_19 = new RDOMBuilder_init(button$lambda_7(null, null, null, 'App-buttons'));
+      var $receiver_0_20 = new RDOMBuilder_init(span$lambda_7(null));
+      $receiver_0_20.unaryPlus_pdl1vz$('\u0414\u043E\u0431\u0430\u0432\u0438\u0442\u044C \u043D\u0430\u0440\u043A\u043E\u0442\u0443');
+      $receiver_0_19.child_2usv9w$($receiver_0_20.create());
+      set_onClickFunction($receiver_0_19.attrs, UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_4(this));
+      $receiver_0_18.child_2usv9w$($receiver_0_19.create());
+      $receiver_0_0.child_2usv9w$($receiver_0_18.create());
     }
-    var $receiver_0_15 = new RDOMBuilder_init(p$lambda_4(null));
-    var $receiver_0_16 = new RDOMBuilder_init(button$lambda_5(null, null, null, 'App-buttons'));
-    var $receiver_0_17 = new RDOMBuilder_init(span$lambda_5(null));
-    $receiver_0_17.unaryPlus_pdl1vz$('\u0412\u044B\u0445\u043E\u0434');
-    $receiver_0_16.child_2usv9w$($receiver_0_17.create());
-    set_onClickFunction($receiver_0_16.attrs, UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_3(this));
-    $receiver_0_15.child_2usv9w$($receiver_0_16.create());
-    $receiver_0_0.child_2usv9w$($receiver_0_15.create());
+    var $receiver_0_21 = new RDOMBuilder_init(p$lambda_6(null));
+    var $receiver_0_22 = new RDOMBuilder_init(button$lambda_7(null, null, null, 'App-buttons'));
+    var $receiver_0_23 = new RDOMBuilder_init(span$lambda_7(null));
+    $receiver_0_23.unaryPlus_pdl1vz$('\u0412\u044B\u0445\u043E\u0434');
+    $receiver_0_22.child_2usv9w$($receiver_0_23.create());
+    set_onClickFunction($receiver_0_22.attrs, UserComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_5(this));
+    $receiver_0_21.child_2usv9w$($receiver_0_22.create());
+    $receiver_0_0.child_2usv9w$($receiver_0_21.create());
     $receiver_0.child_2usv9w$($receiver_0_0.create());
     $receiver.child_2usv9w$($receiver_0.create());
   };
@@ -3460,6 +4233,8 @@
     Views$Request_instance = new Views('Request', 7);
     Views$MyNotifications_instance = new Views('MyNotifications', 8);
     Views$Stats_instance = new Views('Stats', 9);
+    Views$AddLoh_instance = new Views('AddLoh', 10);
+    Views$AddDrugs_instance = new Views('AddDrugs', 11);
   }
   var Views$Loading_instance;
   function Views$Loading_getInstance() {
@@ -3511,13 +4286,23 @@
     Views_initFields();
     return Views$Stats_instance;
   }
+  var Views$AddLoh_instance;
+  function Views$AddLoh_getInstance() {
+    Views_initFields();
+    return Views$AddLoh_instance;
+  }
+  var Views$AddDrugs_instance;
+  function Views$AddDrugs_getInstance() {
+    Views_initFields();
+    return Views$AddDrugs_instance;
+  }
   Views.$metadata$ = {
     kind: Kind_CLASS,
     simpleName: 'Views',
     interfaces: [Enum]
   };
   function Views$values() {
-    return [Views$Loading_getInstance(), Views$Home_getInstance(), Views$Register_getInstance(), Views$Login_getInstance(), Views$User_getInstance(), Views$InputCaseInfo_getInstance(), Views$NotFound_getInstance(), Views$Request_getInstance(), Views$MyNotifications_getInstance(), Views$Stats_getInstance()];
+    return [Views$Loading_getInstance(), Views$Home_getInstance(), Views$Register_getInstance(), Views$Login_getInstance(), Views$User_getInstance(), Views$InputCaseInfo_getInstance(), Views$NotFound_getInstance(), Views$Request_getInstance(), Views$MyNotifications_getInstance(), Views$Stats_getInstance(), Views$AddLoh_getInstance(), Views$AddDrugs_getInstance()];
   }
   Views.values = Views$values;
   function Views$valueOf(name) {
@@ -3542,36 +4327,40 @@
         return Views$MyNotifications_getInstance();
       case 'Stats':
         return Views$Stats_getInstance();
+      case 'AddLoh':
+        return Views$AddLoh_getInstance();
+      case 'AddDrugs':
+        return Views$AddDrugs_getInstance();
       default:throwISE('No enum constant view.Views.' + name);
     }
   }
   Views.valueOf_61zpoe$ = Views$valueOf;
-  function input$lambda_1(closure$type, closure$formEncType, closure$formMethod, closure$name, closure$classes) {
+  function input$lambda_3(closure$type, closure$formEncType, closure$formMethod, closure$name, closure$classes) {
     return function (it) {
       return new INPUT_init(attributesMapOf_0(['type', closure$type != null ? enumEncode(closure$type) : null, 'formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'name', closure$name, 'class', closure$classes]), it);
     };
   }
-  function span$lambda_6(closure$classes) {
+  function span$lambda_8(closure$classes) {
     return function (it) {
       return new SPAN_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function button$lambda_6(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
+  function button$lambda_8(closure$formEncType, closure$formMethod, closure$type, closure$classes) {
     return function (it) {
       return new BUTTON_init(attributesMapOf_0(['formenctype', closure$formEncType != null ? enumEncode(closure$formEncType) : null, 'formmethod', closure$formMethod != null ? enumEncode(closure$formMethod) : null, 'type', closure$type != null ? enumEncode(closure$type) : null, 'class', closure$classes]), it);
     };
   }
-  function h1$lambda_7(closure$classes) {
+  function h1$lambda_9(closure$classes) {
     return function (it) {
       return new H1_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function p$lambda_5(closure$classes) {
+  function p$lambda_7(closure$classes) {
     return function (it) {
       return new P_init(attributesMapOf('class', closure$classes), it);
     };
   }
-  function div$lambda_8(closure$classes) {
+  function div$lambda_10(closure$classes) {
     return function (it) {
       return new DIV_init(attributesMapOf('class', closure$classes), it);
     };
@@ -3680,63 +4469,63 @@
     };
   }
   InputCaseInfoComponent.prototype.render_ss14n$ = function ($receiver) {
-    var $receiver_0 = new RDOMBuilder_init(div$lambda_8(null));
-    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_8(null));
-    var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_7('pageTitle'));
+    var $receiver_0 = new RDOMBuilder_init(div$lambda_10(null));
+    var $receiver_0_0 = new RDOMBuilder_init(div$lambda_10(null));
+    var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_9('pageTitle'));
     $receiver_0_1.unaryPlus_pdl1vz$('\u0412\u043D\u0435\u0441\u0435\u043D\u0438\u0435 \u0438\u043D\u0444\u043E\u0440\u043C\u0430\u0446\u0438\u0438 \u043E \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0438');
     $receiver_0_0.child_2usv9w$($receiver_0_1.create());
-    var $receiver_0_2 = new RDOMBuilder_init(p$lambda_5(null));
-    var $receiver_0_3 = new RDOMBuilder_init(input$lambda_1(InputType.text, null, null, 'case_number', null));
+    var $receiver_0_2 = new RDOMBuilder_init(p$lambda_7(null));
+    var $receiver_0_3 = new RDOMBuilder_init(input$lambda_3(InputType.text, null, null, 'case_number', null));
     var $receiver_1 = $receiver_0_3.attrs;
     $receiver_1.placeholder = '\u041D\u043E\u043C\u0435\u0440 \u0434\u0435\u043B\u0430';
     set_onChangeFunction($receiver_1, InputCaseInfoComponent$render$lambda$lambda$lambda$lambda$lambda$lambda(this));
     $receiver_0_2.child_2usv9w$($receiver_0_3.create());
     $receiver_0_0.child_2usv9w$($receiver_0_2.create());
-    var $receiver_0_4 = new RDOMBuilder_init(p$lambda_5(null));
-    var $receiver_0_5 = new RDOMBuilder_init(input$lambda_1(InputType.text, null, null, '\u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438', null));
+    var $receiver_0_4 = new RDOMBuilder_init(p$lambda_7(null));
+    var $receiver_0_5 = new RDOMBuilder_init(input$lambda_3(InputType.text, null, null, '\u0421\u043E\u0442\u0440\u0443\u0434\u043D\u0438\u043A\u0438', null));
     var $receiver_2 = $receiver_0_5.attrs;
     $receiver_2.placeholder = '\u0423\u0447\u0430\u0432\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0435 \u0432 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u0438';
     set_onChangeFunction($receiver_2, InputCaseInfoComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_0(this));
     $receiver_0_4.child_2usv9w$($receiver_0_5.create());
     $receiver_0_0.child_2usv9w$($receiver_0_4.create());
-    var $receiver_0_6 = new RDOMBuilder_init(p$lambda_5(null));
-    var $receiver_0_7 = new RDOMBuilder_init(input$lambda_1(InputType.text, null, null, '\u041D\u043E\u043C\u0435\u0440 \u043F\u0430\u0441\u043F\u043E\u0440\u0442\u0430 \u041B\u041E\u0425\u0430', null));
+    var $receiver_0_6 = new RDOMBuilder_init(p$lambda_7(null));
+    var $receiver_0_7 = new RDOMBuilder_init(input$lambda_3(InputType.text, null, null, '\u041D\u043E\u043C\u0435\u0440 \u043F\u0430\u0441\u043F\u043E\u0440\u0442\u0430 \u041B\u041E\u0425\u0430', null));
     var $receiver_3 = $receiver_0_7.attrs;
     $receiver_3.placeholder = '\u041D\u043E\u043C\u0435\u0440 \u043F\u0430\u0441\u043F\u043E\u0440\u0442\u0430 \u041B\u041E\u0425\u0430';
     set_onChangeFunction($receiver_3, InputCaseInfoComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_1(this));
     $receiver_0_6.child_2usv9w$($receiver_0_7.create());
     $receiver_0_0.child_2usv9w$($receiver_0_6.create());
-    var $receiver_0_8 = new RDOMBuilder_init(p$lambda_5(null));
-    var $receiver_0_9 = new RDOMBuilder_init(input$lambda_1(InputType.text, null, null, '\u0421\u0432\u0438\u0434\u0435\u0442\u0435\u043B\u044C', null));
+    var $receiver_0_8 = new RDOMBuilder_init(p$lambda_7(null));
+    var $receiver_0_9 = new RDOMBuilder_init(input$lambda_3(InputType.text, null, null, '\u0421\u0432\u0438\u0434\u0435\u0442\u0435\u043B\u044C', null));
     var $receiver_4 = $receiver_0_9.attrs;
     $receiver_4.placeholder = '\u0421\u0432\u0438\u0434\u0435\u0442\u0435\u043B\u044C';
     set_onChangeFunction($receiver_4, InputCaseInfoComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_2(this));
     $receiver_0_8.child_2usv9w$($receiver_0_9.create());
     $receiver_0_0.child_2usv9w$($receiver_0_8.create());
-    var $receiver_0_10 = new RDOMBuilder_init(p$lambda_5(null));
-    var $receiver_0_11 = new RDOMBuilder_init(input$lambda_1(InputType.text, null, null, '\u041E\u0431\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u044F', null));
+    var $receiver_0_10 = new RDOMBuilder_init(p$lambda_7(null));
+    var $receiver_0_11 = new RDOMBuilder_init(input$lambda_3(InputType.text, null, null, '\u041E\u0431\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u044F', null));
     var $receiver_5 = $receiver_0_11.attrs;
     $receiver_5.placeholder = '\u041E\u0431\u0441\u0442\u043E\u044F\u0442\u0435\u043B\u044C\u0441\u0442\u0432\u0430 \u0437\u0430\u0434\u0435\u0440\u0436\u0430\u043D\u0438\u044F';
     set_onChangeFunction($receiver_5, InputCaseInfoComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_3(this));
     $receiver_0_10.child_2usv9w$($receiver_0_11.create());
     $receiver_0_0.child_2usv9w$($receiver_0_10.create());
-    var $receiver_0_12 = new RDOMBuilder_init(p$lambda_5(null));
-    var $receiver_0_13 = new RDOMBuilder_init(button$lambda_6(null, null, null, 'App-buttons'));
-    var $receiver_0_14 = new RDOMBuilder_init(span$lambda_6(null));
+    var $receiver_0_12 = new RDOMBuilder_init(p$lambda_7(null));
+    var $receiver_0_13 = new RDOMBuilder_init(button$lambda_8(null, null, null, 'App-buttons'));
+    var $receiver_0_14 = new RDOMBuilder_init(span$lambda_8(null));
     $receiver_0_14.unaryPlus_pdl1vz$('\u041E\u0442\u043F\u0440\u0430\u0432\u0438\u0442\u044C');
     $receiver_0_13.child_2usv9w$($receiver_0_14.create());
     set_onClickFunction($receiver_0_13.attrs, InputCaseInfoComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_4(this));
     $receiver_0_12.child_2usv9w$($receiver_0_13.create());
     $receiver_0_0.child_2usv9w$($receiver_0_12.create());
-    var $receiver_0_15 = new RDOMBuilder_init(p$lambda_5(null));
-    var $receiver_0_16 = new RDOMBuilder_init(button$lambda_6(null, null, null, 'App-buttons'));
-    var $receiver_0_17 = new RDOMBuilder_init(span$lambda_6(null));
+    var $receiver_0_15 = new RDOMBuilder_init(p$lambda_7(null));
+    var $receiver_0_16 = new RDOMBuilder_init(button$lambda_8(null, null, null, 'App-buttons'));
+    var $receiver_0_17 = new RDOMBuilder_init(span$lambda_8(null));
     $receiver_0_17.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
     $receiver_0_16.child_2usv9w$($receiver_0_17.create());
     set_onClickFunction($receiver_0_16.attrs, InputCaseInfoComponent$render$lambda$lambda$lambda$lambda$lambda$lambda_5(this));
     $receiver_0_15.child_2usv9w$($receiver_0_16.create());
     $receiver_0_0.child_2usv9w$($receiver_0_15.create());
-    var $receiver_0_18 = new RDOMBuilder_init(h1$lambda_7(null));
+    var $receiver_0_18 = new RDOMBuilder_init(h1$lambda_9(null));
     $receiver_0_18.unaryPlus_pdl1vz$(this.state.errorMessage);
     $receiver_0_0.child_2usv9w$($receiver_0_18.create());
     $receiver_0.child_2usv9w$($receiver_0_0.create());
@@ -3882,13 +4671,21 @@
     simpleName: 'InputCaseInfoComponent',
     interfaces: [RComponent]
   };
+  Object.defineProperty(Drug, 'Companion', {
+    get: Drug$Companion_getInstance
+  });
+  Object.defineProperty(Drug, '$serializer', {
+    get: Drug$$serializer_getInstance
+  });
+  var package$model = _.model || (_.model = {});
+  package$model.Drug_init_2u6d5w$ = Drug_init;
+  package$model.Drug = Drug;
   Object.defineProperty(LoginData, 'Companion', {
     get: LoginData$Companion_getInstance
   });
   Object.defineProperty(LoginData, '$serializer', {
     get: LoginData$$serializer_getInstance
   });
-  var package$model = _.model || (_.model = {});
   package$model.LoginData_init_2u6d5w$ = LoginData_init;
   package$model.LoginData = LoginData;
   Object.defineProperty(Loh, 'Companion', {
@@ -3897,7 +4694,7 @@
   Object.defineProperty(Loh, '$serializer', {
     get: Loh$$serializer_getInstance
   });
-  package$model.Loh_init_l722jo$ = Loh_init;
+  package$model.Loh_init_ci9grf$ = Loh_init;
   package$model.Loh = Loh;
   Object.defineProperty(Notification, 'Companion', {
     get: Notification$Companion_getInstance
@@ -3942,6 +4739,8 @@
   package$rpc.StatusCodeException = StatusCodeException;
   package$rpc.Transport = Transport;
   var package$services = _.services || (_.services = {});
+  package$services.AddDrugsService = AddDrugsService;
+  package$services.AddLohService = AddLohService;
   package$services.LoginService = LoginService;
   package$services.NotificationService = NotificationService;
   package$services.RankRequestService = RankRequestService;
@@ -3949,9 +4748,15 @@
   package$services.ReportService = ReportService;
   package$services.StatsService = StatsService;
   var package$view = _.view || (_.view = {});
+  package$view.addDrugsComponent_f51ssq$ = addDrugsComponent;
+  package$view.AddDrugsPageState = AddDrugsPageState;
+  $$importsForInline$$['kotlin-react-dom'] = $module$kotlin_react_dom;
+  package$view.AddDrugsComponent = AddDrugsComponent;
+  package$view.addLohComponent_f51ssq$ = addLohComponent;
+  package$view.AddLohPageState = AddLohPageState;
+  package$view.AddLohComponent = AddLohComponent;
   package$view.ApplicationPageState = ApplicationPageState;
   package$view.ApplicationProps = ApplicationProps;
-  $$importsForInline$$['kotlin-react-dom'] = $module$kotlin_react_dom;
   package$view.ApplicationComponent = ApplicationComponent;
   package$view.homeComponent_uj3g23$ = homeComponent;
   package$view.HomeComponent = HomeComponent;
@@ -4009,7 +4814,7 @@
   package$view.IsStats = IsStats;
   package$view.StatsPageState = StatsPageState;
   package$view.StatsComponent = StatsComponent;
-  package$view.userComponent_oddfz6$ = userComponent;
+  package$view.userComponent_gyimta$ = userComponent;
   package$view.UserComponent = UserComponent;
   Object.defineProperty(Views, 'Loading', {
     get: Views$Loading_getInstance
@@ -4041,10 +4846,17 @@
   Object.defineProperty(Views, 'Stats', {
     get: Views$Stats_getInstance
   });
+  Object.defineProperty(Views, 'AddLoh', {
+    get: Views$AddLoh_getInstance
+  });
+  Object.defineProperty(Views, 'AddDrugs', {
+    get: Views$AddDrugs_getInstance
+  });
   package$view.Views = Views;
   package$view.inputCaseInfoComponent_wx2li7$ = inputCaseInfoComponent;
   package$view.InputCaseInfoPageState = InputCaseInfoPageState;
   package$view.InputCaseInfoComponent = InputCaseInfoComponent;
+  Drug$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   LoginData$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   Loh$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;
   Notification$$serializer.prototype.patch_mynpiu$ = GeneratedSerializer.prototype.patch_mynpiu$;

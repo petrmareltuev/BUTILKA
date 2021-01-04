@@ -26,8 +26,7 @@ actual class NotificationService{
                                         it[Lohs.fullname],
                                         it[Lohs.passportSerialNumber],
                                         it[Lohs.registrationAddress],
-                                        it[Lohs.issuedBy],
-                                        it[Lohs.dateOfIssue],
+                                        it[Lohs.issued],
                                         it[Lohs.subdivisionCode]
                                 )
                             },

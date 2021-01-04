@@ -10,5 +10,7 @@ enum class Views {
     NotFound,
     Request,
     MyNotifications,
-    Stats
+    Stats,
+    AddLoh,
+    AddDrugs
 }

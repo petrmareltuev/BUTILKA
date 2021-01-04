@@ -26,3 +26,11 @@ expect class NotificationService{
 expect class StatsService{
     suspend fun getStats(loginData: LoginData): Stat
 }
+
+expect class AddLohService{
+    suspend fun addLoh(loh: Loh): String
+}
+
+expect class AddDrugsService{
+    suspend fun addDrugs(drug: Drug): Boolean
+}

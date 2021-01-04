@@ -36,14 +36,15 @@ fun Application.main() {
         request()
         notification()
         stats()
+        addLoh()
+        addDrugs()
     }
     database{
         Lohs.insertIgnore {
             it[fullname] = "Иван Голунов"
             it[passportSerialNumber] = "1337420360"
             it[registrationAddress] = "г. Москва, ул. Пушкина. д. Колотушкина"
-            it[issuedBy] = "ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ"
-            it[dateOfIssue] = "12.09.2020"
+            it[issued] = "ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ 12.09.2020"
             it[subdivisionCode] = "870-912"
             it[jailed]= false
         }
@@ -51,8 +52,7 @@ fun Application.main() {
             it[fullname] = "Вася Тракторист"
             it[passportSerialNumber] = "9306592847"
             it[registrationAddress] = "г. Челябинск, ул. Сталелитейная. д.23 "
-            it[issuedBy] = "ГУ МВД ПО Г. ЧЕЛЯБИНСК"
-            it[dateOfIssue] = "11.11.2010"
+            it[issued] = "ГУ МВД ПО Г. ЧЕЛЯБИНСК 11.11.2010"
             it[subdivisionCode] = "810-812"
             it[jailed]= false
         }
@@ -60,43 +60,11 @@ fun Application.main() {
             it[fullname] = "Твой батя"
             it[passportSerialNumber] = "9838471048"
             it[registrationAddress] = "г. Чита, ул. Ленина. д. 6"
-            it[issuedBy] = "ГУ МВД ПО ЧИТИНСКОЙ ОБЛАСТИ"
-            it[dateOfIssue] = "02.06.1998"
+            it[issued] = "ГУ МВД ПО ЧИТИНСКОЙ ОБЛАСТИ 02.06.1998"
             it[subdivisionCode] = "100-641"
             it[jailed]= false
         }
-        Drugs.insertIgnore {
-            it[drugType] = "Марихуана"
-            it[drugMass] = 20
-        }
-        Drugs.insertIgnore {
-            it[drugType] = "Гашиш"
-            it[drugMass] = 15
-        }
-        Drugs.insertIgnore {
-            it[drugType] = "Кокаин"
-            it[drugMass] = 5
-        }
-        Drugs.insertIgnore {
-            it[drugType] = "Лсд"
-            it[drugMass] = 1
-        }
-        Drugs.insertIgnore {
-            it[drugType] = "Героин"
-            it[drugMass] = 5
-        }
-        Drugs.insertIgnore {
-            it[drugType] = "Метамфетамин"
-            it[drugMass] = 9
-        }
-        Drugs.insertIgnore {
-            it[drugType] = "Амфетамин"
-            it[drugMass] = 10
-        }
-        Drugs.insertIgnore {
-            it[drugType] = "Курительные смеси"
-            it[drugMass] = 30
-        }
+
 
     }
 }

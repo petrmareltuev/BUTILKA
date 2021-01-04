@@ -7,12 +7,14 @@ import react.RProps
 import react.RState
 import react.dom.*
 
-fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit, goStats: () -> Unit, goRequest: () -> Unit, goMyNotifications: () -> Unit) = child(UserComponent::class) {
+fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit, goStats: () -> Unit, goRequest: () -> Unit, goMyNotifications: () -> Unit, goAddLoh: () -> Unit, goAddDrugs: () -> Unit) = child(UserComponent::class) {
     attrs.goInputCaseInfo = goInputCaseInfo
     attrs.goHome = goHome
     attrs.goRequest = goRequest
     attrs.goMyNotifications = goMyNotifications
     attrs.goStats = goStats
+    attrs.goAddLoh = goAddLoh
+    attrs.goAddDrugs = goAddDrugs
 }
 
 external interface UserProps: RProps {
@@ -21,6 +23,8 @@ external interface UserProps: RProps {
     var goRequest: () -> Unit
     var goStats: () -> Unit
     var goMyNotifications: () -> Unit
+    var goAddLoh: () -> Unit
+    var goAddDrugs: () -> Unit
 }
 
 class UserComponent : RComponent<UserProps, RState>() {
@@ -80,6 +84,32 @@ class UserComponent : RComponent<UserProps, RState>() {
                             attrs {
                                 onClickFunction = {
                                     props.goInputCaseInfo()
+                                }
+                            }
+
+                        }
+                    }
+                    p {
+                        button(classes = "App-buttons") {
+                            span {
+                                +"Добавить лоха"
+                            }
+                            attrs {
+                                onClickFunction = {
+                                    props.goAddLoh()
+                                }
+                            }
+
+                        }
+                    }
+                    p {
+                        button(classes = "App-buttons") {
+                            span {
+                                +"Добавить наркоту"
+                            }
+                            attrs {
+                                onClickFunction = {
+                                    props.goAddDrugs()
                                 }
                             }
 
