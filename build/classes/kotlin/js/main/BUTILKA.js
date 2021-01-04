@@ -8,6 +8,8 @@
   var GeneratedSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.internal.GeneratedSerializer;
   var MissingFieldException = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.MissingFieldException;
   var Kind_CLASS = Kotlin.Kind.CLASS;
+  var PairSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.internal.PairSerializer;
+  var ArrayListSerializer = $module$kotlinx_serialization_kotlinx_serialization_runtime.kotlinx.serialization.internal.ArrayListSerializer;
   var CSSBuilder = $module$kotlin_css_js.kotlinx.css.CSSBuilder;
   var css = $module$kotlin_css_js.kotlinx.css;
   var get_px = $module$kotlin_css_js.kotlinx.css.get_px_rcaex3$;
@@ -747,9 +749,12 @@
   Report.prototype.equals = function (other) {
     return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.username, other.username) && Kotlin.equals(this.password, other.password) && Kotlin.equals(this.case_number, other.case_number) && Kotlin.equals(this.participants, other.participants) && Kotlin.equals(this.victim, other.victim) && Kotlin.equals(this.witness, other.witness) && Kotlin.equals(this.comment, other.comment)))));
   };
-  function Stat(username) {
+  function Stat(openedCases, closedCasses, availableLohs, drugs) {
     Stat$Companion_getInstance();
-    this.username = username;
+    this.openedCases = openedCases;
+    this.closedCasses = closedCasses;
+    this.availableLohs = availableLohs;
+    this.drugs = drugs;
   }
   function Stat$Companion() {
     Stat$Companion_instance = this;
@@ -769,8 +774,11 @@
     }return Stat$Companion_instance;
   }
   function Stat$$serializer() {
-    this.descriptor_c3spsu$_0 = new SerialClassDescImpl('model.Stat', this, 1);
-    this.descriptor.addElement_ivxn3r$('username', false);
+    this.descriptor_c3spsu$_0 = new SerialClassDescImpl('model.Stat', this, 4);
+    this.descriptor.addElement_ivxn3r$('openedCases', false);
+    this.descriptor.addElement_ivxn3r$('closedCasses', false);
+    this.descriptor.addElement_ivxn3r$('availableLohs', false);
+    this.descriptor.addElement_ivxn3r$('drugs', false);
     Stat$$serializer_instance = this;
   }
   Object.defineProperty(Stat$$serializer.prototype, 'descriptor', {
@@ -780,20 +788,38 @@
   });
   Stat$$serializer.prototype.serialize_awe97i$ = function (encoder, value) {
     var output = encoder.beginStructure_r0sa6z$(this.descriptor, []);
-    output.encodeStringElement_bgm7zs$(this.descriptor, 0, value.username);
+    output.encodeIntElement_4wpqag$(this.descriptor, 0, value.openedCases);
+    output.encodeIntElement_4wpqag$(this.descriptor, 1, value.closedCasses);
+    output.encodeIntElement_4wpqag$(this.descriptor, 2, value.availableLohs);
+    output.encodeSerializableElement_blecud$(this.descriptor, 3, new ArrayListSerializer(new PairSerializer(internal.StringSerializer, internal.IntSerializer)), value.drugs);
     output.endStructure_qatsm0$(this.descriptor);
   };
   Stat$$serializer.prototype.deserialize_nts5qn$ = function (decoder) {
     var index;
     var bitMask0 = 0;
-    var local0;
+    var local0
+    , local1
+    , local2
+    , local3;
     var input = decoder.beginStructure_r0sa6z$(this.descriptor, []);
     loopLabel: while (true) {
       index = input.decodeElementIndex_qatsm0$(this.descriptor);
       switch (index) {
         case 0:
-          local0 = input.decodeStringElement_3zr2iy$(this.descriptor, 0);
+          local0 = input.decodeIntElement_3zr2iy$(this.descriptor, 0);
           bitMask0 |= 1;
+          break;
+        case 1:
+          local1 = input.decodeIntElement_3zr2iy$(this.descriptor, 1);
+          bitMask0 |= 2;
+          break;
+        case 2:
+          local2 = input.decodeIntElement_3zr2iy$(this.descriptor, 2);
+          bitMask0 |= 4;
+          break;
+        case 3:
+          local3 = (bitMask0 & 8) === 0 ? input.decodeSerializableElement_s44l7r$(this.descriptor, 3, new ArrayListSerializer(new PairSerializer(internal.StringSerializer, internal.IntSerializer))) : input.updateSerializableElement_ehubvl$(this.descriptor, 3, new ArrayListSerializer(new PairSerializer(internal.StringSerializer, internal.IntSerializer)), local3);
+          bitMask0 |= 8;
           break;
         case -1:
           break loopLabel;
@@ -801,10 +827,10 @@
       }
     }
     input.endStructure_qatsm0$(this.descriptor);
-    return Stat_init(bitMask0, local0, null);
+    return Stat_init(bitMask0, local0, local1, local2, local3, null);
   };
   Stat$$serializer.prototype.childSerializers = function () {
-    return [internal.StringSerializer];
+    return [internal.IntSerializer, internal.IntSerializer, internal.IntSerializer, new ArrayListSerializer(new PairSerializer(internal.StringSerializer, internal.IntSerializer))];
   };
   Stat$$serializer.$metadata$ = {
     kind: Kind_OBJECT,
@@ -817,12 +843,24 @@
       new Stat$$serializer();
     }return Stat$$serializer_instance;
   }
-  function Stat_init(seen1, username, serializationConstructorMarker) {
+  function Stat_init(seen1, openedCases, closedCasses, availableLohs, drugs, serializationConstructorMarker) {
     var $this = serializationConstructorMarker || Object.create(Stat.prototype);
     if ((seen1 & 1) === 0)
-      throw new MissingFieldException('username');
+      throw new MissingFieldException('openedCases');
     else
-      $this.username = username;
+      $this.openedCases = openedCases;
+    if ((seen1 & 2) === 0)
+      throw new MissingFieldException('closedCasses');
+    else
+      $this.closedCasses = closedCasses;
+    if ((seen1 & 4) === 0)
+      throw new MissingFieldException('availableLohs');
+    else
+      $this.availableLohs = availableLohs;
+    if ((seen1 & 8) === 0)
+      throw new MissingFieldException('drugs');
+    else
+      $this.drugs = drugs;
     return $this;
   }
   Stat.$metadata$ = {
@@ -831,21 +869,33 @@
     interfaces: []
   };
   Stat.prototype.component1 = function () {
-    return this.username;
+    return this.openedCases;
   };
-  Stat.prototype.copy_61zpoe$ = function (username) {
-    return new Stat(username === void 0 ? this.username : username);
+  Stat.prototype.component2 = function () {
+    return this.closedCasses;
+  };
+  Stat.prototype.component3 = function () {
+    return this.availableLohs;
+  };
+  Stat.prototype.component4 = function () {
+    return this.drugs;
+  };
+  Stat.prototype.copy_lnta9a$ = function (openedCases, closedCasses, availableLohs, drugs) {
+    return new Stat(openedCases === void 0 ? this.openedCases : openedCases, closedCasses === void 0 ? this.closedCasses : closedCasses, availableLohs === void 0 ? this.availableLohs : availableLohs, drugs === void 0 ? this.drugs : drugs);
   };
   Stat.prototype.toString = function () {
-    return 'Stat(username=' + Kotlin.toString(this.username) + ')';
+    return 'Stat(openedCases=' + Kotlin.toString(this.openedCases) + (', closedCasses=' + Kotlin.toString(this.closedCasses)) + (', availableLohs=' + Kotlin.toString(this.availableLohs)) + (', drugs=' + Kotlin.toString(this.drugs)) + ')';
   };
   Stat.prototype.hashCode = function () {
     var result = 0;
-    result = result * 31 + Kotlin.hashCode(this.username) | 0;
+    result = result * 31 + Kotlin.hashCode(this.openedCases) | 0;
+    result = result * 31 + Kotlin.hashCode(this.closedCasses) | 0;
+    result = result * 31 + Kotlin.hashCode(this.availableLohs) | 0;
+    result = result * 31 + Kotlin.hashCode(this.drugs) | 0;
     return result;
   };
   Stat.prototype.equals = function (other) {
-    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && Kotlin.equals(this.username, other.username))));
+    return this === other || (other !== null && (typeof other === 'object' && (Object.getPrototypeOf(this) === Object.getPrototypeOf(other) && (Kotlin.equals(this.openedCases, other.openedCases) && Kotlin.equals(this.closedCasses, other.closedCasses) && Kotlin.equals(this.availableLohs, other.availableLohs) && Kotlin.equals(this.drugs, other.drugs)))));
   };
   function User(username, password, full_name, organization, certificate_id, personal_id, issued, duty, phone, email, isMajor) {
     User$Companion_getInstance();
@@ -3158,17 +3208,32 @@
         break;
       case 'StatsReady':
         var $receiver_0_0 = new RDOMBuilder_init(div$lambda_6(null));
+        var tmp$;
         var $receiver_0_1 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
-        $receiver_0_1.unaryPlus_pdl1vz$('\u0414\u043B\u044F \u0432\u0430\u0441 \u0435\u0441\u0442\u044C \u0434\u0435\u043B\u043E \u2116 ' + this.state.stat.username);
+        $receiver_0_1.unaryPlus_pdl1vz$('\u041E\u0442\u043A\u0440\u044B\u0442\u044B\u0445 \u0434\u0435\u043B: ' + this.state.stat.openedCases);
         $receiver_0_0.child_2usv9w$($receiver_0_1.create());
-        var $receiver_0_2 = new RDOMBuilder_init(p$lambda_3(null));
-        var $receiver_0_3 = new RDOMBuilder_init(button$lambda_4(null, null, null, 'App-buttons'));
-        var $receiver_0_4 = new RDOMBuilder_init(span$lambda_4(null));
-        $receiver_0_4.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
-        $receiver_0_3.child_2usv9w$($receiver_0_4.create());
-        set_onClickFunction($receiver_0_3.attrs, StatsComponent$render$lambda$lambda$lambda$lambda$lambda(this));
-        $receiver_0_2.child_2usv9w$($receiver_0_3.create());
+        var $receiver_0_2 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
+        $receiver_0_2.unaryPlus_pdl1vz$('\u0417\u0430\u043A\u0440\u044B\u0442\u044B\u0445 \u0434\u0435\u043B: ' + this.state.stat.closedCasses);
         $receiver_0_0.child_2usv9w$($receiver_0_2.create());
+        var $receiver_0_3 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
+        $receiver_0_3.unaryPlus_pdl1vz$('\u0414\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u0445 \u043B\u043E\u0445\u043E\u0432: ' + this.state.stat.availableLohs);
+        $receiver_0_0.child_2usv9w$($receiver_0_3.create());
+        tmp$ = this.state.stat.drugs.iterator();
+        while (tmp$.hasNext()) {
+          var drug = tmp$.next();
+          var $receiver_0_4 = new RDOMBuilder_init(h1$lambda_5('pageTitle'));
+          $receiver_0_4.unaryPlus_pdl1vz$(drug.first + ': ' + drug.second + ' \u0433\u0440.');
+          $receiver_0_0.child_2usv9w$($receiver_0_4.create());
+        }
+
+        var $receiver_0_5 = new RDOMBuilder_init(p$lambda_3(null));
+        var $receiver_0_6 = new RDOMBuilder_init(button$lambda_4(null, null, null, 'App-buttons'));
+        var $receiver_0_7 = new RDOMBuilder_init(span$lambda_4(null));
+        $receiver_0_7.unaryPlus_pdl1vz$('\u041D\u0430\u0437\u0430\u0434');
+        $receiver_0_6.child_2usv9w$($receiver_0_7.create());
+        set_onClickFunction($receiver_0_6.attrs, StatsComponent$render$lambda$lambda$lambda$lambda$lambda(this));
+        $receiver_0_5.child_2usv9w$($receiver_0_6.create());
+        $receiver_0_0.child_2usv9w$($receiver_0_5.create());
         $receiver.child_2usv9w$($receiver_0_0.create());
         break;
       default:Kotlin.noWhenBranchMatched();
@@ -3856,7 +3921,7 @@
   Object.defineProperty(Stat, '$serializer', {
     get: Stat$$serializer_getInstance
   });
-  package$model.Stat_init_lmlwo5$ = Stat_init;
+  package$model.Stat_init_cw9dc3$ = Stat_init;
   package$model.Stat = Stat;
   Object.defineProperty(User, 'Companion', {
     get: User$Companion_getInstance

@@ -46,7 +46,13 @@ class StatsComponent : RComponent<StatsProps, StatsPageState>() {
 
             IsStats.StatsReady -> div {
 
-                h1 (classes ="pageTitle"){+"Для вас есть дело № ${state.stat.username}" }
+                h1 (classes ="pageTitle"){+"Открытых дел: ${state.stat.openedCases}" }
+                h1 (classes ="pageTitle"){+"Закрытых дел: ${state.stat.closedCasses}" }
+                h1 (classes ="pageTitle"){+"Доступных лохов: ${state.stat.availableLohs}" }
+
+                for (drug in state.stat.drugs){
+                    h1 (classes ="pageTitle"){+"${drug.first}: ${drug.second} гр." }
+                }
 
                 p {
                     button(classes = "App-buttons") {
