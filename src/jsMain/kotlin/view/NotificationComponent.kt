@@ -56,7 +56,7 @@ class MyNotificationComponent : RComponent<MyNotificationProps, MyNotificationPa
                     h1 (classes ="pageTitle"){+"Для вас есть дело № ${state.notification.case_number}" }
                     h1 (classes ="pageTitle"){+"Лох: ${state.notification.loh.fullname}" }
                     h1 (classes ="pageTitle"){+"Адрес: ${state.notification.loh.registrationAddress}" }
-                    h1 (classes ="pageTitle"){+"Паспорт: ${state.notification.loh.passportSerialNumber}, Выдан ${state.notification.loh.issued}" }
+                    h1 (classes ="pageTitle"){+"Паспорт: ${state.notification.loh.passportSerialNumber}, Выдан ${state.notification.loh.issued} " }
                     h1 (classes ="pageTitle"){+"Код подразделения: ${state.notification.loh.subdivisionCode}" }
                     h1 (classes ="pageTitle"){+"Необходим подброс: ${state.notification.drugName}, ${state.notification.drugMass} грамм" }
                     img {

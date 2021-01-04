@@ -10,3 +10,9 @@ data class Loh(
         var issued:String,
         var subdivisionCode:String
 )
+
+@Serializable
+data class LohUpdate(
+        var loh:Loh,
+        var oldPassport: String
+)

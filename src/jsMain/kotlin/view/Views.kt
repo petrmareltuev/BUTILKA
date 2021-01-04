@@ -12,5 +12,6 @@ enum class Views {
     MyNotifications,
     Stats,
     AddLoh,
-    AddDrugs
+    AddDrugs,
+    ChangeLohInfo
 }

@@ -7,7 +7,7 @@ import react.RProps
 import react.RState
 import react.dom.*
 
-fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit, goStats: () -> Unit, goRequest: () -> Unit, goMyNotifications: () -> Unit, goAddLoh: () -> Unit, goAddDrugs: () -> Unit) = child(UserComponent::class) {
+fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit, goStats: () -> Unit, goRequest: () -> Unit, goMyNotifications: () -> Unit, goAddLoh: () -> Unit, goAddDrugs: () -> Unit, goChangeLohInfo: () -> Unit) = child(UserComponent::class) {
     attrs.goInputCaseInfo = goInputCaseInfo
     attrs.goHome = goHome
     attrs.goRequest = goRequest
@@ -15,6 +15,7 @@ fun RBuilder.userComponent(goInputCaseInfo: () -> Unit, goHome: () -> Unit, goSt
     attrs.goStats = goStats
     attrs.goAddLoh = goAddLoh
     attrs.goAddDrugs = goAddDrugs
+    attrs.goChangeLohInfo = goChangeLohInfo
 }
 
 external interface UserProps: RProps {
@@ -25,6 +26,7 @@ external interface UserProps: RProps {
     var goMyNotifications: () -> Unit
     var goAddLoh: () -> Unit
     var goAddDrugs: () -> Unit
+    var goChangeLohInfo: () -> Unit
 }
 
 class UserComponent : RComponent<UserProps, RState>() {
@@ -114,6 +116,20 @@ class UserComponent : RComponent<UserProps, RState>() {
                             }
 
                         }
+                    }
+                }
+
+                p {
+                    button(classes = "App-buttons") {
+                        span {
+                            +"Изменить данные о лохе"
+                        }
+                        attrs {
+                            onClickFunction = {
+                                props.goChangeLohInfo()
+                            }
+                        }
+
                     }
                 }
 

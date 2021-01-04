@@ -34,3 +34,8 @@ expect class AddLohService{
 expect class AddDrugsService{
     suspend fun addDrugs(drug: Drug): Boolean
 }
+
+expect class ChangeLohInfoService{
+    suspend fun checkLoh(lohPassport: String): Boolean
+    suspend fun changeLohInfo(lohUpdate: LohUpdate): Boolean
+}

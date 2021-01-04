@@ -38,6 +38,7 @@ fun Application.main() {
         stats()
         addLoh()
         addDrugs()
+        changeLohInfo()
     }
     database{
         Lohs.insertIgnore {

@@ -34,7 +34,7 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
                     Views.Home -> homeComponent(::goLogin, ::goRegister)
                     Views.Login -> loginComponent(::goHome, ::goUser, props.coroutineScope)
                     Views.Register -> registerComponent(::goHome, ::goUser, props.coroutineScope)
-                    Views.User -> userComponent(::goInputCaseInfo, ::goHome, ::goStats, ::goRequest, ::goMyNotifications, ::goAddLoh, ::goAddDrugs)
+                    Views.User -> userComponent(::goInputCaseInfo, ::goHome, ::goStats, ::goRequest, ::goMyNotifications, ::goAddLoh, ::goAddDrugs, ::goChangeLohInfo)
                     Views.InputCaseInfo -> inputCaseInfoComponent(::goHome, ::goUser,  props.coroutineScope)
                     Views.NotFound -> notFoundComponent()
                     Views.Request -> requestComponent(::goUser, props.coroutineScope)
@@ -42,6 +42,7 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
                     Views.Stats -> statsComponent(::goUser, props.coroutineScope)
                     Views.AddLoh -> addLohComponent(::goUser, props.coroutineScope)
                     Views.AddDrugs -> addDrugsComponent(::goUser, props.coroutineScope)
+                    Views.ChangeLohInfo -> changeLohInfoComponent(::goUser, props.coroutineScope)
                 }
             }
         }
@@ -111,4 +112,9 @@ class ApplicationComponent : RComponent<ApplicationProps, ApplicationPageState>(
         }
     }
 
+    private fun goChangeLohInfo() {
+        setState {
+            selected = Views.ChangeLohInfo
+        }
+    }
 }
