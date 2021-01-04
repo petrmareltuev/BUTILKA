@@ -14,20 +14,20 @@ actual class ChangeLohInfoService{
         return checkLohPass(lohPassport)
     }
 
-    actual suspend fun changeLohInfo(lohUpdate: LohUpdate): Boolean{
-        if(checkLohPass(lohUpdate.oldPassport)){
-            return false
-        } else
-            database{
-            Lohs.update({Lohs.passportSerialNumber eq lohUpdate.oldPassport}) {
-                it[Lohs.fullname] = lohUpdate.loh.fullname
-                it[Lohs.passportSerialNumber] = lohUpdate.loh.passportSerialNumber
-                it[Lohs.registrationAddress] = lohUpdate.loh.registrationAddress
-                it[Lohs.issued] = lohUpdate.loh.issued
-                it[Lohs.subdivisionCode] = lohUpdate.loh.subdivisionCode
+    actual suspend fun changeLohInfo(lohUpdate: LohUpdate): Boolean {
+        if (checkLohPass(lohUpdate.oldPassport)) {
+            return database {
+                Lohs.update({ Lohs.passportSerialNumber eq lohUpdate.oldPassport }) {
+                    it[Lohs.fullname] = lohUpdate.loh.fullname
+                    it[Lohs.passportSerialNumber] = lohUpdate.loh.passportSerialNumber
+                    it[Lohs.registrationAddress] = lohUpdate.loh.registrationAddress
+                    it[Lohs.issued] = lohUpdate.loh.issued
+                    it[Lohs.subdivisionCode] = lohUpdate.loh.subdivisionCode
+                }.let {true}
             }
-        }.let { return true }
+        } else {return false}
     }
+
 
     private fun checkLohPass(lohPassport: String):Boolean{
         return database {

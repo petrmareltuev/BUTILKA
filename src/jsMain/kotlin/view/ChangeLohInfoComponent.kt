@@ -10,6 +10,7 @@ import kotlinx.coroutines.launch
 import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
 import kotlinx.html.js.onClickFunction
+import kotlinx.html.visible
 import model.*
 import react.*
 import react.dom.*
@@ -61,95 +62,92 @@ class ChangeLohInfoComponent : RComponent<ChangeLohInfoProps, ChangeLohInfoPageS
 
     override fun RBuilder.render() {
         div("") {
-            div {
-                h1 (classes= "pageTitle"){ +"Найти лоха" }
-            }
-            when (state.lohExists){
-                IsLohExists.LohExists -> {
-                    div{
 
-                        p {
-                            input(type = InputType.text, name = "Серия и номер паспорта") {
-                                attrs {
-                                    placeholder = "Серия и номер паспорта"
-                                    onChangeFunction = {
-                                        state.passportSerialNumber = it.inputValue
-                                        setState {
-                                            errorMessage = ""
+            div{
+                when (state.lohExists){
+                    IsLohExists.LohExists -> div(classes = "reg-input-box"){
+
+                        h1 (classes= "pageTitle"){ +"Лох найден" }
+                            p {
+                                input(type = InputType.text, name = "Новая Серия и номер паспорта") {
+                                    attrs {
+                                        placeholder = "Серия и номер паспорта"
+                                        onChangeFunction = {
+                                            state.passportSerialNumber = it.inputValue
+                                            setState{
+                                                errorMessage = ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            p {
+                                input(type = InputType.text, name = "fio") {
+                                    attrs {
+                                        placeholder = "Фамилия Имя Отчество"
+                                        onChangeFunction = {
+                                            state.fullName = it.inputValue
+                                            setState {
+                                                errorMessage = ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            p {
+                                input(type = InputType.text, name = "Адрес") {
+                                    attrs {
+                                        placeholder = "Адрес"
+                                        onChangeFunction = {
+                                            state.registrationAddress = it.inputValue
+                                            setState {
+                                                errorMessage = ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            p{
+                                input(type = InputType.text, name = "Выдано") {
+                                    attrs {
+                                        placeholder = "Выдано"
+                                        onChangeFunction = {
+                                            state.issued = it.inputValue
+                                            setState {
+                                                errorMessage = ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            p {
+                                input(type = InputType.text, name = "Код подразделения") {
+                                    attrs {
+                                        placeholder = "Код подразделения"
+                                        onChangeFunction = {
+                                            state.subdivisionCode = it.inputValue
+                                            setState {
+                                                errorMessage = ""
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                            p{
+                                button(classes = "App-buttons") {
+                                    span {
+                                        +"Изменить данные лоха"
+                                    }
+                                    attrs {
+                                        onClickFunction = {
+                                            changelohinfo()
                                         }
                                     }
                                 }
                             }
                         }
-                        p {
-                            input(type = InputType.text, name = "fio") {
-                                attrs {
-                                    placeholder = "Фамилия Имя Отчество"
-                                    onChangeFunction = {
-                                        state.fullName = it.inputValue
-                                        setState {
-                                            errorMessage = ""
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        p {
-                            input(type = InputType.text, name = "Адрес") {
-                                attrs {
-                                    placeholder = "Адрес"
-                                    onChangeFunction = {
-                                        state.registrationAddress = it.inputValue
-                                        setState {
-                                            errorMessage = ""
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        p{
-                            input(type = InputType.text, name = "Выдано") {
-                                attrs {
-                                    placeholder = "Выдано"
-                                    onChangeFunction = {
-                                        state.issued = it.inputValue
-                                        setState {
-                                            errorMessage = ""
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        p {
-                            input(type = InputType.text, name = "Код подразделения") {
-                                attrs {
-                                    placeholder = "Код подразделения"
-                                    onChangeFunction = {
-                                        state.subdivisionCode = it.inputValue
-                                        setState {
-                                            errorMessage = ""
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        p{
-                            button(classes = "App-buttons") {
-                                span {
-                                    +"Изменить данные лоха"
-                                }
-                                attrs {
-                                    onClickFunction = {
-                                        it.preventDefault()
-                                        changelohinfo()
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                IsLohExists.LohDoesntExists -> {
-                    div {
+                    IsLohExists.LohDoesntExists -> div(classes = "reg-input-box") {
+
                         p {
                             input(type = InputType.text, name = "passport") {
                                 attrs {
@@ -171,18 +169,14 @@ class ChangeLohInfoComponent : RComponent<ChangeLohInfoProps, ChangeLohInfoPageS
                                 }
                                 attrs {
                                     onClickFunction = {
-                                        it.preventDefault()
                                         doCheck()
                                     }
                                 }
                             }
                         }
                     }
-
                 }
             }
-
-
 
             p {
                 button(classes = "App-buttons") {
@@ -228,7 +222,6 @@ class ChangeLohInfoComponent : RComponent<ChangeLohInfoProps, ChangeLohInfoPageS
 
         val loh = Loh(state.fullName, state.passportSerialNumber, state.registrationAddress, state.issued, state.subdivisionCode)
 
-        console.log(loh)
         val validateLoh = Validation<Loh> {
 
             Loh::fullname {
@@ -260,13 +253,19 @@ class ChangeLohInfoComponent : RComponent<ChangeLohInfoProps, ChangeLohInfoPageS
                 if (changeLohInfoService.changeLohInfo(LohUpdate(loh, state.oldPassportSerialNumber))) {
                     setState {
                         errorMessage = "Информация изменена"
-                        state.lohExists = IsLohExists.LohDoesntExists
+                        lohExists = IsLohExists.LohDoesntExists
                     }
                 } else {
                     setState {
                         errorMessage = "Ошибка"
                     }
                 }
+            }
+        }
+        else
+        {
+            setState{
+                errorMessage=validationResult.errors.first().message
             }
         }
 
