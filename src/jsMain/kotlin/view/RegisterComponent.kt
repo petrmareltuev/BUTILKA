@@ -10,6 +10,8 @@ import kotlinx.html.InputType
 import kotlinx.html.js.onChangeFunction
 import kotlinx.html.js.onClickFunction
 import model.User
+import model.inputBoolean
+import org.w3c.dom.HTMLInputElement
 import react.*
 import react.dom.*
 import services.RegisterService
@@ -39,6 +41,7 @@ interface RegisterPageState: RState{
     var email: String
 
     var errorMessage: String
+    var isMajor: Boolean
 }
 
 class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
@@ -55,6 +58,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
         phone = ""
         email = ""
         errorMessage = ""
+        isMajor = false
     }
 
     private val coroutineContext
@@ -137,6 +141,19 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
                             placeholder = "Выдано"
                             onChangeFunction = {
                                 state.issued = it.inputValue
+                                setState {
+                                    errorMessage = ""
+                                }
+                            }
+                        }
+                    }
+                }
+                div {
+                    label( classes = "isMajor_label"){ +"Майор" }
+                    input( type = InputType.checkBox,  name = "Майор") {
+                        attrs {
+                            onChangeFunction = {
+                                state.isMajor = it.inputBoolean
                                 setState {
                                     errorMessage = ""
                                 }
@@ -233,7 +250,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
     }
 
     private fun doRegister() {
-        val user = User(state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email, true)
+        val user = User(state.username, state.password, state.fullName, state.organization, state.certificateId, state.personalId, state.issued, state.duty, state.phone, state.email, state.isMajor)
 
         val validateUser = Validation<User> {
 
@@ -273,9 +290,7 @@ class RegisterComponent : RComponent<RegisterProps, RegisterPageState>() {
             }
         }
         val validationResult = validateUser(user)
-        console.log(Valid(user)==validationResult)
-        console.log(validationResult)
-
+        console.log(user)
 
         if(Valid(user)==validationResult){
             val registerService = RegisterService(coroutineContext)

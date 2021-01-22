@@ -102,3 +102,9 @@ body {
   display: flex;
   flex-direction: column
 }
+
+.isMajor_label{
+  text-align: center;
+  font-size: 28px;
+  color: #FFFFFF;
+}

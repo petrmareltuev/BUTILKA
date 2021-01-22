@@ -1,24 +1,24 @@
-16:57:10.022 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
-16:57:10.108 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
-16:57:10.109 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 8
-16:57:10.111 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
-16:57:10.112 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
-16:57:10.113 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
-16:57:10.114 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
-16:57:10.116 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
-16:57:10.116 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
-16:57:10.116 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
-16:57:10.116 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
-16:57:10.128 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
-16:57:10.128 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
-16:57:10.143 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 1361051648 bytes
-16:57:10.144 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
-16:57:10.145 [main] DEBUG io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
-16:57:10.145 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
-16:57:10.166 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.workdir: /tmp (io.netty.tmpdir)
-16:57:10.167 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.deleteLibAfterLoading: true
-16:57:10.167 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.tryPatchShadedId: true
-16:57:10.190 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - Unable to load the library 'netty_transport_native_epoll_x86_64', trying other loading mechanism.
+13:01:23.610 [main] DEBUG io.netty.util.internal.logging.InternalLoggerFactory - Using SLF4J as the default logging framework
+13:01:23.749 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+13:01:23.766 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 8
+13:01:23.804 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.theUnsafe: available
+13:01:23.804 [main] DEBUG io.netty.util.internal.PlatformDependent0 - sun.misc.Unsafe.copyMemory: available
+13:01:23.805 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Buffer.address: available
+13:01:23.845 [main] DEBUG io.netty.util.internal.PlatformDependent0 - direct buffer constructor: available
+13:01:23.864 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.Bits.unaligned: available, true
+13:01:23.865 [main] DEBUG io.netty.util.internal.PlatformDependent0 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable prior to Java9
+13:01:23.866 [main] DEBUG io.netty.util.internal.PlatformDependent0 - java.nio.DirectByteBuffer.<init>(long, int): available
+13:01:23.866 [main] DEBUG io.netty.util.internal.PlatformDependent - sun.misc.Unsafe: available
+13:01:23.882 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+13:01:23.883 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+13:01:23.897 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.maxDirectMemory: 1361051648 bytes
+13:01:23.898 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+13:01:23.902 [main] DEBUG io.netty.util.internal.CleanerJava6 - java.nio.ByteBuffer.cleaner(): available
+13:01:23.903 [main] DEBUG io.netty.util.internal.PlatformDependent - -Dio.netty.noPreferDirect: false
+13:01:23.953 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.workdir: /tmp (io.netty.tmpdir)
+13:01:23.954 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.deleteLibAfterLoading: true
+13:01:23.955 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - -Dio.netty.native.tryPatchShadedId: true
+13:01:24.062 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - Unable to load the library 'netty_transport_native_epoll_x86_64', trying other loading mechanism.
 java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
 	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
 	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
@@ -39,7 +39,7 @@ java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.l
 	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create(NettyApplicationEngine.kt:186)
 	at io.ktor.server.netty.NettyApplicationEngine.<init>(NettyApplicationEngine.kt:74)
 	at io.ktor.server.netty.EngineMain.main(EngineMain.kt:22)
-16:57:10.196 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - netty_transport_native_epoll_x86_64 cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
+13:01:24.083 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - netty_transport_native_epoll_x86_64 cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
 java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.library.path
 	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
 	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
@@ -67,7 +67,7 @@ java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll_x86_64 in java.l
 		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
 		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
 		... 7 common frames omitted
-16:57:10.199 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - Unable to load the library 'netty_transport_native_epoll', trying other loading mechanism.
+13:01:24.098 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - Unable to load the library 'netty_transport_native_epoll', trying other loading mechanism.
 java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path
 	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
 	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
@@ -88,7 +88,7 @@ java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.
 	at io.ktor.server.netty.EventLoopGroupProxy$Companion.create(NettyApplicationEngine.kt:186)
 	at io.ktor.server.netty.NettyApplicationEngine.<init>(NettyApplicationEngine.kt:74)
 	at io.ktor.server.netty.EngineMain.main(EngineMain.kt:22)
-16:57:10.201 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - netty_transport_native_epoll cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
+13:01:24.101 [main] DEBUG io.netty.util.internal.NativeLibraryLoader - netty_transport_native_epoll cannot be loaded from java.library.path, now trying export to -Dio.netty.native.workdir: /tmp
 java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.path
 	at java.lang.ClassLoader.loadLibrary(ClassLoader.java:1860)
 	at java.lang.Runtime.loadLibrary0(Runtime.java:871)
@@ -116,63 +116,48 @@ java.lang.UnsatisfiedLinkError: no netty_transport_native_epoll in java.library.
 		at io.netty.util.internal.NativeLibraryLoader.loadLibraryByHelper(NativeLibraryLoader.java:361)
 		at io.netty.util.internal.NativeLibraryLoader.loadLibrary(NativeLibraryLoader.java:339)
 		... 7 common frames omitted
-16:57:10.241 [main] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 8
-16:57:10.300 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-16:57:10.300 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-16:57:10.320 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
-16:57:10.320 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
-16:57:10.333 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
-16:57:10.431 [main] INFO Application - No ktor.deployment.watch patterns specified, automatic reload is not active
-16:57:14.048 [main] DEBUG Exposed - INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Иван Голунов', 'ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ 12.09.2020', false, '1337420360', 'г. Москва, ул. Пушкина. д. Колотушкина', '870-912') ON CONFLICT DO NOTHING
+13:01:24.213 [main] DEBUG io.netty.channel.MultithreadEventLoopGroup - -Dio.netty.eventLoopThreads: 8
+13:01:24.315 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+13:01:24.315 [main] DEBUG io.netty.util.internal.InternalThreadLocalMap - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+13:01:24.378 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.noKeySetOptimization: false
+13:01:24.379 [main] DEBUG io.netty.channel.nio.NioEventLoop - -Dio.netty.selectorAutoRebuildThreshold: 512
+13:01:24.421 [main] DEBUG io.netty.util.internal.PlatformDependent - org.jctools-core.MpscChunkedArrayQueue: available
+13:01:24.977 [main] INFO Application - No ktor.deployment.watch patterns specified, automatic reload is not active
+13:01:32.290 [main] DEBUG Exposed - INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Иван Голунов', 'ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ 12.09.2020', false, '1337420360', 'г. Москва, ул. Пушкина. д. Колотушкина', '870-912') ON CONFLICT DO NOTHING
 SQL: INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Иван Голунов', 'ГУ МВД ПО МОРДОРСКОЙ ОБЛАСТИ 12.09.2020', false, '1337420360', 'г. Москва, ул. Пушкина. д. Колотушкина', '870-912') ON CONFLICT DO NOTHING
-16:57:14.052 [main] DEBUG Exposed - INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Вася Тракторист', 'ГУ МВД ПО Г. ЧЕЛЯБИНСК 11.11.2010', false, '9306592847', 'г. Челябинск, ул. Сталелитейная. д.23 ', '810-812') ON CONFLICT DO NOTHING
+13:01:32.307 [main] DEBUG Exposed - INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Вася Тракторист', 'ГУ МВД ПО Г. ЧЕЛЯБИНСК 11.11.2010', false, '9306592847', 'г. Челябинск, ул. Сталелитейная. д.23 ', '810-812') ON CONFLICT DO NOTHING
 SQL: INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Вася Тракторист', 'ГУ МВД ПО Г. ЧЕЛЯБИНСК 11.11.2010', false, '9306592847', 'г. Челябинск, ул. Сталелитейная. д.23 ', '810-812') ON CONFLICT DO NOTHING
-16:57:14.055 [main] DEBUG Exposed - INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Твой батя', 'ГУ МВД ПО ЧИТИНСКОЙ ОБЛАСТИ 02.06.1998', false, '9838471048', 'г. Чита, ул. Ленина. д. 6', '100-641') ON CONFLICT DO NOTHING
+13:01:32.319 [main] DEBUG Exposed - INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Твой батя', 'ГУ МВД ПО ЧИТИНСКОЙ ОБЛАСТИ 02.06.1998', false, '9838471048', 'г. Чита, ул. Ленина. д. 6', '100-641') ON CONFLICT DO NOTHING
 SQL: INSERT INTO lohs (fullname, "issuedBy", jailed, "passportSerialNumber", "registrationAddress", "subdivisionCode") VALUES ('Твой батя', 'ГУ МВД ПО ЧИТИНСКОЙ ОБЛАСТИ 02.06.1998', false, '9838471048', 'г. Чита, ул. Ленина. д. 6', '100-641') ON CONFLICT DO NOTHING
-16:57:14.057 [main] INFO Application - Responding at http://0.0.0.0:8081
-16:57:14.134 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 9565 (auto-detected)
-16:57:14.137 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
-16:57:14.137 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
-16:57:14.139 [main] DEBUG io.netty.util.NetUtil - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
-16:57:14.139 [main] DEBUG io.netty.util.NetUtil - /proc/sys/net/core/somaxconn: 128
-16:57:14.142 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 3c:a0:67:ff:fe:f5:24:ad (auto-detected)
-16:57:14.159 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
-16:57:14.159 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
-16:57:14.193 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 8
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 8
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
-16:57:14.194 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-16:57:14.205 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
-16:57:14.205 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
-16:57:14.205 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-16:57:14.874 [nioEventLoopGroup-3-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
-16:57:14.874 [nioEventLoopGroup-3-1] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
-16:57:14.876 [nioEventLoopGroup-3-1] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@33a4ff2f
-16:57:14.981 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
-16:57:14.981 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
-16:57:14.982 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
-16:57:14.982 [nioEventLoopGroup-3-1] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
-login request: {"username":"admin123","password":"admin123"}
-16:58:25.127 [nioEventLoopGroup-4-1] DEBUG Exposed - SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
-SQL: SELECT users."userId", users.username, users."password", users.fullname, users.organization, users."certificateId", users."personId", users.issued, users.duty, users.phone, users.email, users."isMajor", users.busy FROM users WHERE users.username = 'admin123' AND users."password" = 'admin123'
-checkLoh: "1231231231"
-16:58:30.551 [nioEventLoopGroup-4-2] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."passportSerialNumber" = '1231231231'
-SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."passportSerialNumber" = '1231231231'
-changeLohInfo: {"loh":{"fullname":"Шумаев Адей Моисович","passportSerialNumber":"1231231232","registrationAddress":"г. Нижний Гогород","issued":"ыва","subdivisionCode":"758930"},"oldPassport":"1231231231"}
-16:59:18.955 [nioEventLoopGroup-4-3] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."passportSerialNumber" = '1231231231'
-SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."passportSerialNumber" = '1231231231'
-16:59:19.129 [nioEventLoopGroup-4-3] DEBUG Exposed - UPDATE lohs SET fullname='Шумаев Адей Моисович', "passportSerialNumber"='1231231232', "registrationAddress"='г. Нижний Гогород', "issuedBy"='ыва', "subdivisionCode"='758930' WHERE lohs."passportSerialNumber" = '1231231231'
-SQL: UPDATE lohs SET fullname='Шумаев Адей Моисович', "passportSerialNumber"='1231231232', "registrationAddress"='г. Нижний Гогород', "issuedBy"='ыва', "subdivisionCode"='758930' WHERE lohs."passportSerialNumber" = '1231231231'
-changeLohInfo: {"loh":{"fullname":"Шумаев Адей Моисович","passportSerialNumber":"1231231232","registrationAddress":"г. Нижний Гогород","issued":"ыва","subdivisionCode":"758930"},"oldPassport":"1231231231"}
-16:59:43.361 [nioEventLoopGroup-4-4] DEBUG Exposed - SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."passportSerialNumber" = '1231231231'
-SQL: SELECT lohs."lohId", lohs.fullname, lohs."passportSerialNumber", lohs."registrationAddress", lohs."issuedBy", lohs."subdivisionCode", lohs.jailed FROM lohs WHERE lohs."passportSerialNumber" = '1231231231'
-17:00:47.062 [nioEventLoopGroup-4-2] WARN Application - Shutdown URL was called: server is going down
+13:01:32.320 [main] INFO Application - Responding at http://0.0.0.0:8081
+13:01:32.377 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.processId: 8528 (auto-detected)
+13:01:32.379 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv4Stack: false
+13:01:32.379 [main] DEBUG io.netty.util.NetUtil - -Djava.net.preferIPv6Addresses: false
+13:01:32.410 [main] DEBUG io.netty.util.NetUtil - Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%lo)
+13:01:32.411 [main] DEBUG io.netty.util.NetUtil - /proc/sys/net/core/somaxconn: 128
+13:01:32.441 [main] DEBUG io.netty.channel.DefaultChannelId - -Dio.netty.machineId: 3c:a0:67:ff:fe:f5:24:ad (auto-detected)
+13:01:32.479 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+13:01:32.479 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+13:01:32.546 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numHeapArenas: 8
+13:01:32.546 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.numDirectArenas: 8
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.pageSize: 8192
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxOrder: 11
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.chunkSize: 16777216
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.tinyCacheSize: 512
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.smallCacheSize: 256
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.normalCacheSize: 64
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimInterval: 8192
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.useCacheForAllThreads: true
+13:01:32.547 [main] DEBUG io.netty.buffer.PooledByteBufAllocator - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+13:01:32.569 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.allocator.type: pooled
+13:01:32.569 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.threadLocalDirectBufferSize: 0
+13:01:32.569 [main] DEBUG io.netty.buffer.ByteBufUtil - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+13:01:33.513 [nioEventLoopGroup-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkAccessible: true
+13:01:33.514 [nioEventLoopGroup-3-2] DEBUG io.netty.buffer.AbstractByteBuf - -Dio.netty.buffer.checkBounds: true
+13:01:33.515 [nioEventLoopGroup-3-2] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@683733ad
+13:01:34.390 [nioEventLoopGroup-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxCapacityPerThread: 4096
+13:01:34.390 [nioEventLoopGroup-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.maxSharedCapacityFactor: 2
+13:01:34.391 [nioEventLoopGroup-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.linkCapacity: 16
+13:01:34.391 [nioEventLoopGroup-3-2] DEBUG io.netty.util.Recycler - -Dio.netty.recycler.ratio: 8
